@@ -1,0 +1,7 @@
+# Snapshots Wayback : 15 Mo de HTML archivé, matière première régénérable
+# via scripts/fetch_wayback.py. Le texte extrait sert de base de réécriture,
+# il n'a pas vocation à être versionné.
+content/wayback/
+
+# OS
+.DS_Store
