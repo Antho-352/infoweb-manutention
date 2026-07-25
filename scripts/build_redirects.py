@@ -82,6 +82,14 @@ OVERRIDES = {
     '/categorie/aimant-de-levage/': ('301', '/aimant-de-levage/', 'catégorie → famille'),
     '/categorie/palan-treuils/': ('301', '/treuil-palonnier/', 'catégorie → famille'),
     '/equipements-dentrepot/': ('301', '/stockage/', 'hub hérité → univers'),
+    # Anciennes URLs de catégorie e-commerce : nos archives de catégorie les remplacent
+    '/categorie/gerbeur/': ('301', '/gerbeur/', 'catégorie héritée → archive famille'),
+    '/categorie/chariot-elevateur-diesel/': ('301', '/chariot-elevateur/diesel/', 'catégorie héritée → famille'),
+    '/equipements-dentrepot/entrepot-abris-elements-dentrepot/': ('301', '/stockage/', 'chemin profond → univers'),
+    '/accessoire/crics/crics-et-chariots-elevateurs/': ('301', '/chariot-elevateur/', 'chemin profond, volume marginal'),
+    # Ces deux URLs SONT les archives de catégorie créées : aucun article à recréer
+    '/table-elevatrice/': ('ARCHIVE', '', 'archive de la catégorie table-elevatrice'),
+    '/stockage/': ('ARCHIVE', '', 'archive de la catégorie stockage'),
     '/accueil/': ('301', '/', 'doublon home'),
     '/blog/': ('301', '/', 'hub vide'),
     # Transpalettes : prix → silo prix ; le reste recréé
@@ -91,7 +99,6 @@ OVERRIDES = {
         ('301', '/transpalette/prix/', 'intention prix, cannibalisation'),
     # Hors-sujet assumé (dilution ère précédente)
     '/accessoire/les-remorques-pour-voitures-lesquelles-choisir/': ('410', '', 'hors sujet — remorques auto'),
-    '/accessoire/crics/crics-et-chariots-elevateurs/': ('RECREATE', '', 'limite mais lié chariots — conservé'),
     '/outillage/parksidelidl-bricolage/': ('410', '', 'hors sujet — outillage grand public'),
     '/btp/le-prix-de-la-renovation-de-locaux-et-entrepots-industriels/': ('410', '', 'hors sujet — BTP réno'),
     '/btp/8-conseils-choisir-bacs-de-retention/': ('301', '/stockage/', 'connexe stockage'),
@@ -232,7 +239,7 @@ php = php.replace('__MAP__', php_map).replace('__GONE__', php_gone)
 with open(OUT_PHP, 'w') as f:
     f.write(php)
 
-n = {'RECREATE': 0, '301': 0, '410': 0}
+n = {'RECREATE': 0, '301': 0, '410': 0, 'ARCHIVE': 0}
 for r in rows_out:
     n[r['action']] += 1
 print(f"OK — {OUT_CSV}")

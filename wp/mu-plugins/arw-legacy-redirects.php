@@ -72,16 +72,20 @@ function arw_legacy_redirects(): void {
 }
 
 const ARW_LEGACY_301 = [
+    '/accessoire/crics/crics-et-chariots-elevateurs/' => '/chariot-elevateur/',
     '/blog/' => '/',
     '/btp/8-conseils-choisir-bacs-de-retention/' => '/stockage/',
     '/categorie/aimant-de-levage/' => '/aimant-de-levage/',
+    '/categorie/chariot-elevateur-diesel/' => '/chariot-elevateur/diesel/',
     '/categorie/chariot-elevateur-electrique/' => '/chariot-elevateur/electrique/',
     '/categorie/chariot-elevateur-gaz/' => '/chariot-elevateur/gaz/',
+    '/categorie/gerbeur/' => '/gerbeur/',
     '/categorie/palan-treuils/' => '/treuil-palonnier/',
     '/chariot-elevateur/caces-chariot-elevateur-que-dois-je-savoir/' => '/caces-chariot-elevateur-guide-complet/',
     '/chariot-elevateur/cest-quoi-le-caces-1/' => '/caces-chariot-elevateur-guide-complet/',
     '/chariot-elevateur/classement-des-marques-chariot-elevateur/' => '/entreprise/le-classement-marques-chariot-elevateur-avis-et-comparatifs/',
     '/chariot-elevateur/quel-prix-pour-un-prix-chariot-elevateur-neuf-noatre-avis/' => '/chariot-elevateur/prix/',
+    '/equipements-dentrepot/entrepot-abris-elements-dentrepot/' => '/stockage/',
     '/fabricants-chariots-elevateurs/' => '/entreprise/le-classement-marques-chariot-elevateur-avis-et-comparatifs/',
     '/levage-nacelles-tables-elevatrices/levage/elevateur-monte-charge/' => '/monte-charge/',
     '/levage-nacelles-tables-elevatrices/tables-elevatrices-moto/' => '/table-elevatrice/',

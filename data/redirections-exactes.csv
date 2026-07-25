@@ -20,7 +20,6 @@ url_source,action,url_cible,motif,trafic_actuel,volume_cumule,top_mot_cle
 /chariot-elevateur/comment-descendre-dun-chariot-elevateur/,RECREATE,,ranke — recréée à l’identique,1,550,consigne de sécurité chariot élévateur
 /,RECREATE,,ranke — recréée à l’identique,1,384,appareil pour lever des charges lourdes
 /pont-roulant/guide-sur-la-securite-des-ponts-roulants/,RECREATE,,ranke — recréée à l’identique,1,370,consignes de sécurité pont roulant
-/table-elevatrice/,RECREATE,,ranke — recréée à l’identique,1,342,chariot table élévatrice
 /rayonnage/roll-de-manutention-transport-simplifie/,RECREATE,,ranke — recréée à l’identique,1,291,roll transport
 /entreprise/itm-logistique-alimentaire-international/,RECREATE,,ranke — recréée à l’identique,1,260,itm logistique
 /pont-roulant/les-avantages-des-ponts-roulants-pour-un-levage-securise/,RECREATE,,ranke — recréée à l’identique,1,126,chariot pont roulant
@@ -33,7 +32,6 @@ url_source,action,url_cible,motif,trafic_actuel,volume_cumule,top_mot_cle
 /chariot-elevateur/principales-caracteristiques-et-avantages-de-la-technologie-des-batteries-lithium-ion/,RECREATE,,ranke — recréée à l’identique,1,10,local charge batterie chariot élévateur
 /chariot-elevateur/guide-complet-un-chariot-elevateur-diesel/,RECREATE,,ranke — recréée à l’identique,1,10,chariot élévateur gaz ou diesel
 /transpalette/comment-financer-lachat-dun-transpalette-professionnel/,RECREATE,,ranke — recréée à l’identique,1,10,financement chariot élévateur
-/accessoire/crics/crics-et-chariots-elevateurs/,RECREATE,,limite mais lié chariots — conservé,1,10,cric captur
 /rayonnage/les-5-avantages-du-rayonnage-industriel-pour-votre-entrepot/,RECREATE,,ranke — recréée à l’identique,1,10,les inconvénients du stockage dynamique
 /table-elevatrice/comparatif-tables-elevatrices/,RECREATE,,ranke — recréée à l’identique,1,0,tables élévatrices électriques fixes
 /entreprise/maintenance-industrielle-a-angers-un-levier-pour-la-performance-des-entreprises/,RECREATE,,ranke — recréée à l’identique,1,0,maintenance gerbeur angers
@@ -42,17 +40,13 @@ url_source,action,url_cible,motif,trafic_actuel,volume_cumule,top_mot_cle
 /entreprise/brenntag-cest-qui-distribution-de-produits-chimiques/,RECREATE,,ranke — recréée à l’identique,0,1900,brenntag
 /transpalette/securite-incendie-precautions-transpalettes-electriques/,RECREATE,,ranke — recréée à l’identique,0,1004,transpal electrique
 /entreprise/assurance-decennale-et-dommage-ouvrage/,RECREATE,,ranke — recréée à l’identique,0,842,décennale et dommage ouvrage
-/categorie/gerbeur/,RECREATE,,ranke — recréée à l’identique,0,800,gerbeur
 /manutention/gerbeur/,RECREATE,,ranke — recréée à l’identique,0,548,un gerbeur
 /rayonnage/roll-transport-solution-pratique/,RECREATE,,ranke — recréée à l’identique,0,390,palan def
 /chariot-elevateur/tout-savoir-sur-lassurance-des-chariots-elevateurs/,RECREATE,,ranke — recréée à l’identique,0,380,accident fenwick
-/categorie/chariot-elevateur-diesel/,RECREATE,,ranke — recréée à l’identique,0,379,chariot elevateur thermique
-/stockage/,RECREATE,,ranke — recréée à l’identique,0,327,schema palettier
 /chariot-elevateur/accessoires-pour-chariots-elevateurs/,RECREATE,,ranke — recréée à l’identique,0,290,accessoire pour chariot elevateur
 /table-elevatrice/comment-les-entrepots-logistiques-hubs-stimulent-la-croissance-economique-et-le-developpementhow-entrepot-logistique-hubs-drive-economic-growth-and-development/,RECREATE,,ranke — recréée à l’identique,0,260,hubs logistiques
 /rayonnage/chariot-logistique-ptimiser-ses-flux-facilement/,RECREATE,,ranke — recréée à l’identique,0,221,chariots logistique
 /pont-roulant/6-avantages-du-pont-roulant-a-portique/,RECREATE,,ranke — recréée à l’identique,0,160,portique roulant
-/equipements-dentrepot/entrepot-abris-elements-dentrepot/,RECREATE,,ranke — recréée à l’identique,0,120,porte entrepot
 /pont-roulant/les-ponts-roulants-et-la-securite-au-travail-pratiques-et-innovations/,RECREATE,,ranke — recréée à l’identique,0,70,manutention pont roulant
 /chariot-elevateur/ou-acheter-des-chariots-a-mat-retractable-doccasion/,RECREATE,,ranke — recréée à l’identique,0,60,mat chariot elevateur occasion
 /entreprise/5-raisons-societe-de-levage-et-manutention/,RECREATE,,ranke — recréée à l’identique,0,50,manutention professionnelle
@@ -92,6 +86,7 @@ url_source,action,url_cible,motif,trafic_actuel,volume_cumule,top_mot_cle
 /chariot-elevateur/classement-des-marques-chariot-elevateur/,301,/entreprise/le-classement-marques-chariot-elevateur-avis-et-comparatifs/,cannibalisation marques,1,380,marque de chariot elevateur
 /produit/treuil-a-cable-electrique-400-800-kg-palan-electrique/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,366,treuil palan electrique
 /categorie/aimant-de-levage/,301,/aimant-de-levage/,catégorie → famille,1,360,aimant de levage
+/table-elevatrice/,ARCHIVE,,archive de la catégorie table-elevatrice,1,342,chariot table élévatrice
 /produit/chariot-elevateur-a-gaz-2t/,301,/chariot-elevateur/gaz/,fiche produit absorbée par famille,1,328,chariot elevateur au gaz
 /table-elevatrice/levage-ponts-roulants-potences/pont-roulant-a-commande-manuelle/,301,/pont-roulant/,article catalogue absorbé par famille,1,250,télécommande pont roulant
 /produit/treuil-electrique-pa1200-palan-220-v-telecommande-avec-un-cable-de-15-m/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,210,palan électrique 220v
@@ -111,16 +106,21 @@ url_source,action,url_cible,motif,trafic_actuel,volume_cumule,top_mot_cle
 /table-elevatrice/pont-roulant-a-commande-electrique-la-solution-efficace-et-precise-pour-les-operations-de-levage-regulieres/,301,/pont-roulant/,article catalogue absorbé par famille,1,30,pont roulant pas cher
 /produit/1t-chariot-a-engrenage-avec-chaine-factories-curve-geared-trolley/,301,/transpalette/,fiche produit absorbée par famille,1,30,porter des charges lourdes avec des sangles
 /transpalette/5-astuces-pour-trouver-un-transpalette-pas-cher/,301,/transpalette/prix/,"intention prix, cannibalisation",1,20,transpalette prix pas cher
+/accessoire/crics/crics-et-chariots-elevateurs/,301,/chariot-elevateur/,"chemin profond, volume marginal",1,10,cric captur
 /produit/chariot-elevateur-a-gaz-25t/,301,/chariot-elevateur/gaz/,fiche produit absorbée par famille,1,10,kit gaz chariot élévateur
 /produit/chariot-elevateur-electrique-5t/,301,/chariot-elevateur/electrique/,fiche produit absorbée par famille,1,0,chariot élévateur électrique 5t
 /chariot-elevateur/cest-quoi-le-caces-1/,301,/caces-chariot-elevateur-guide-complet/,cannibalisation CACES,0,6200,caces 1
 /levage-nacelles-tables-elevatrices/tables-elevatrices-moto/,301,/table-elevatrice/,page morte → famille,0,3587,table elevatrice moto
+/categorie/gerbeur/,301,/gerbeur/,catégorie héritée → archive famille,0,800,gerbeur
 /produit/palan-electrique-500-1000-kg-treuil-palan-a-chaine-a-levier-1800-w/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,772,palan électrique a chaine
 /produit/elevateur-magnetique-a-aimant-en-acier-capacite-poids-1000-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,0,552,acier magnétique
+/categorie/chariot-elevateur-diesel/,301,/chariot-elevateur/diesel/,catégorie héritée → famille,0,379,chariot elevateur thermique
+/stockage/,ARCHIVE,,archive de la catégorie stockage,0,327,schema palettier
 /produit/palan-chaine-3-m-2-crochets-de-2-tonnes/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,291,palan electrique 2 tonnes
 /project/fenwick/,301,/gerbeur/le-gerbeur-fenwick-tout-savoir-sur-cet-appareil/,page projet morte → article Fenwick,0,210,ce fenwick
 /accueil/vehicule-remorques/,410,,hors sujet,0,150,petite remorque fermée pour voiture
 /produit/chariot-elevateur-diesel-4x4-2t/,301,/chariot-elevateur/diesel/,fiche produit absorbée par famille,0,120,chariot elevateur 4x4
+/equipements-dentrepot/entrepot-abris-elements-dentrepot/,301,/stockage/,chemin profond → univers,0,120,porte entrepot
 /produit/palan-a-chaine-05-tonne-de-6-m/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,100,palan a chaine 5 tonnes
 /produit/grue-de-levage-2t/,301,/levage/,fiche produit absorbée par famille,0,70,poutre de levage
 /produit/treuil-de-levage-chaine-3t/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,70,treuil 3t
