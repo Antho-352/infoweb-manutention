@@ -14,53 +14,91 @@ Spécification des modèles de page avant écriture du code. Découle de `strate
 
 ---
 
-## 1. Page d'accueil
+## 1. L'identité média — pourquoi elle passe avant le reste
 
-### Ce que cette page doit faire
+Une première version de ce document traitait la couche éditoriale comme secondaire, au motif que le trafic d'articles ne convertit pas. Le raisonnement était incomplet et il est corrigé ici.
 
-Elle ne fera pas de trafic de recherche au-delà des requêtes de marque, et ce n'est pas grave. Son rôle est ailleurs, et il est décisif :
+**Les articles ne convertissent pas le visiteur. Ils convertissent l'annonceur.** Un loueur qui envisage un partenariat de génération de devis, une marque qui achète un article sponsorisé, un organisme de formation qui accepte de figurer dans l'annuaire, un journaliste ou un blog qui décide de nous citer : tous jugent sur la même chose, et ce n'est ni notre outil ni notre annuaire. C'est de savoir si le site ressemble à un média établi. La vente d'espace éditorial est l'un des trois piliers de monétisation du projet ; l'apparence média en est la condition d'accès directe.
 
-**Les 167 domaines référents du domaine pointent tous vers elle.** Aucune page interne n'a de jus. La fonction première de l'accueil est donc de **redistribuer cette autorité vers les pages qui rapportent** — familles, prix, annuaire, outil. Chaque lien sortant de l'accueil est un choix d'allocation d'autorité, pas un élément de décoration.
+Il y a donc deux publics, et la page d'accueil doit servir les deux sans en sacrifier un :
 
-Second rôle : c'est la page que regardera un annonceur avant d'acheter un article sponsorisé, et un loueur avant d'accepter un partenariat. Elle doit avoir l'air d'un média sérieux tenu par quelqu'un de compétent.
+| Public | Ce qu'il cherche | Ce qui le convainc |
+|---|---|---|
+| Le professionnel qui achète ou loue | une réponse, un prix, un prestataire | l'outil, les prix, l'annuaire, les guides |
+| L'annonceur, le partenaire, le pair | un média crédible et vivant | une une éditoriale, des rubriques, des signatures, un rythme, des contenus originaux |
 
-### Sections, dans l'ordre (l'ordre mobile est le même)
+Ce qui rend un site « média » — et qui doit être visible sans cliquer :
 
-**1 — Proposition**
-Une phrase factuelle, pas un slogan : ce qu'est le site et pour qui. Suivie de deux actions primaires, et pas plus : *Quel engin me faut-il ?* (l'outil) et *Trouver un prestataire près de chez moi* (l'annuaire). Aucune image d'illustration décorative, aucun carrousel.
+1. **Une hiérarchie éditoriale** : une une, des rubriques identifiées, des formats distincts.
+2. **Des signatures** : chaque article porte un auteur, une date de publication et une date de vérification.
+3. **Un rythme** : des dates récentes, une publication régulière.
+4. **Des contenus originaux** : le baromètre des prix n'est pas seulement un aimant à liens, c'est la preuve qu'on produit de la donnée que personne d'autre n'a. C'est ce qui fait citer un média.
+5. **Une rédaction identifiable** : page auteur réelle, ligne éditoriale explicite, charte de transparence.
 
-**2 — Sélecteur d'engin**
-L'outil, avec sa première question posée directement dans la page. Un utilisateur doit pouvoir commencer sans cliquer. C'est le différenciateur du site et l'entrée des deux voies de monétisation.
-*Au lancement, tant que l'outil n'existe pas, cette section est occupée par le bloc « Combien ça coûte » qui remonte en position 2.*
+### Les rubriques éditoriales
 
-**3 — Le matériel, famille par famille**
-Le moteur de distribution d'autorité. Une grille de cartes, une par famille, avec **ancre descriptive** (« Chariots élévateurs », pas « En savoir plus ») et une ligne de contexte. Dès que les prix existent, chaque carte porte sa fourchette d'entrée — c'est ce qui transforme une grille de navigation en grille de décision.
+Cinq rubriques, qui structurent la navigation et la page d'accueil :
 
-**4 — Combien ça coûte**
-Intention d'achat maximale. Quatre à six cartes vers les pages prix, chacune avec sa fourchette et sa date de constat visible. C'est le bloc qui prouve immédiatement que le site donne ce que les autres cachent.
+| Rubrique | Contenu | Catégories |
+|---|---|---|
+| **Équipements** | le matériel, famille par famille | les 11 familles existantes |
+| **Réglementation** | CACES, VGP, autorisation de conduite, obligations | `reglementation`, `securite` |
+| **Coûts** | budgets, TCO, achat contre location, financement | `couts` |
+| **Exploitation** | méthodes d'entrepôt, flux, maintenance, gestion de parc | `exploitation` |
+| **Marché** | constructeurs, distributeurs, marques | `entreprise` + `/marque/{x}/` |
 
-**5 — Trouver un prestataire**
-Sélecteur département puis ville, plus les trois entrées d'usage : louer, faire réparer, faire contrôler. Entrée directe vers les pages annuaire.
-
-**6 — Obligations et réglementation**
-CACES, VGP, autorisation de conduite. C'est le plus gros gisement de volume de la niche et le bloc qui installe la crédibilité auprès d'un préventeur.
-
-**7 — Derniers guides**
-Six articles, format sobre. Volontairement modeste : ce n'est pas un magazine, et le trafic d'articles n'est pas l'objectif.
-
-**8 — Qui écrit ici**
-Photo, nom, parcours en trois lignes, lien vers la page auteur. Indispensable pour l'E-E-A-T sur du contenu sécurité et réglementation, et indispensable pour vendre de l'espace éditorial.
-
-**9 — Newsletter**
-Capture B2B, une ligne de promesse, un champ, une case de consentement.
-
-### Ce que l'accueil ne contient pas
-
-Pas de carrousel. Pas d'actualités. Pas de fil social. Pas de mur de logos partenaires tant qu'il n'y a pas de vrais partenaires. Pas de compteurs (« 10 000 visiteurs ! »). Pas de témoignages fabriqués.
+Les pages prix restent nestées sous leur famille (`/chariot-elevateur/prix/`) : la rubrique Coûts accueille les articles de budget et de financement, qui sont un contenu différent et ne les cannibalisent pas.
 
 ---
 
-## 2. Page pilier
+## 2. Page d'accueil
+
+### Ce que cette page doit faire
+
+Deux fonctions, à tenir ensemble.
+
+**Distribuer l'autorité.** Les 167 domaines référents du domaine pointent tous vers elle, aucune page interne n'a de jus. Chaque lien sortant de l'accueil est un choix d'allocation, pas de la décoration.
+
+**Ressembler à un média.** Un annonceur qui arrive ici doit voir une publication vivante, pas un tunnel de conversion.
+
+La résolution tient dans un constat simple : **le bloc des rubriques fait les deux à la fois.** Il se lit comme le sommaire d'un magazine et il redistribue l'autorité vers les pages qui rapportent.
+
+### Sections, dans l'ordre (l'ordre mobile est le même)
+
+**1 — La une**
+Le contenu phare du moment : un dossier, le baromètre, un grand guide. Titre, chapô, signature, date, une image qui informe. C'est la première chose que voit un annonceur, et c'est ce qui dit « ce média publie ».
+
+**2 — Les essentiels**
+Trois à quatre contenus de référence, ceux qu'on veut voir cités. Format cartes, avec rubrique, titre et date.
+
+**3 — Les rubriques**
+Le cœur de la page. Chaque rubrique affiche son nom, sa promesse en une ligne, et ses trois ou quatre dernières publications. Pour Équipements, la grille des familles avec **ancres descriptives** et fourchette d'entrée dès que les prix existent.
+
+Ce bloc est à la fois le sommaire du média et le moteur de redistribution d'autorité.
+
+**4 — Combien ça coûte**
+Intention d'achat maximale, et démonstration éditoriale : des fourchettes datées, avec leur date de constat visible. C'est ce que personne d'autre ne publie.
+
+**5 — Quel engin vous faut-il ?**
+L'outil, première question posée directement dans la page.
+*Tant qu'il n'existe pas, la section est simplement absente — on ne met pas de promesse à la place.*
+
+**6 — Trouver un prestataire**
+Sélecteur département puis ville, et les trois entrées d'usage : louer, faire réparer, faire contrôler.
+
+**7 — La rédaction**
+Qui écrit, avec quel parcours, selon quelle méthode. Liens vers la page auteur, la ligne éditoriale et la charte de transparence. Sur du contenu sécurité et réglementation, c'est ce bloc qui fait la différence — pour Google comme pour un préventeur.
+
+**8 — Newsletter**
+Une ligne de promesse, un champ, une case de consentement.
+
+### Ce que l'accueil ne contient pas
+
+Pas de carrousel. Pas de fil social. Pas de mur de logos partenaires tant qu'il n'y a pas de vrais partenaires. Pas de compteurs de visiteurs. Pas de témoignages fabriqués. Et pas de brèves d'actualité : on est un média de décision, pas un média d'actualité — ce choix reste ferme.
+
+---
+
+## 3. Page pilier
 
 `/manutention/`, `/levage/`, `/stockage/` — archives de catégorie de niveau pilier.
 
@@ -77,7 +115,7 @@ Recette bloquante : deux piliers ne doivent jamais afficher la même liste d'art
 
 ---
 
-## 3. Page famille
+## 4. Page famille
 
 `/chariot-elevateur/`, `/gerbeur/`… — archives de catégorie de niveau famille. **C'est une page qui rapporte.**
 
@@ -97,7 +135,7 @@ Recette bloquante : deux piliers ne doivent jamais afficher la même liste d'art
 
 ---
 
-## 4. Article
+## 5. Article
 
 Le volume. Sa valeur ne se mesure pas à son trafic mais à ce qu'il **transmet** aux pages qui rapportent.
 
@@ -119,7 +157,7 @@ Les deux dernières lignes corrigent les défauts P3 et P4 de pluscestsimple : d
 
 ---
 
-## 5. Comparatif « les meilleurs… »
+## 6. Comparatif « les meilleurs… »
 
 Gabarit d'affiliation pure.
 
@@ -129,7 +167,7 @@ Aucun formulaire de devis sur ce gabarit.
 
 ---
 
-## 6. Page prix
+## 7. Page prix
 
 `/{famille}/prix/`. Intention d'achat maximale, et la page la plus exposée en crédibilité.
 
@@ -139,7 +177,7 @@ Tous les montants viennent de `arw_prix`. Mention obligatoire sous chaque bloc. 
 
 ---
 
-## 7. Annuaire — page croisement géo
+## 8. Annuaire — page croisement géo
 
 Bloc de contenu local unique **en premier**, avant la liste : fourchette tarifaire locale, contraintes locales pertinentes, tissu économique. C'est ce bloc qui décide si la page mérite d'exister. Puis la liste filtrable, la carte, la FAQ contextualisée, le CTA devis, et les liens vers les zones voisines et vers la famille.
 
@@ -147,13 +185,13 @@ Une page sans ce bloc reste en brouillon et n'est jamais publiée.
 
 ---
 
-## 8. Annuaire — fiche établissement
+## 9. Annuaire — fiche établissement
 
 Coordonnées, activités (louer / vendre / réparer / contrôler / former), machines et marques couvertes, zone d'intervention. Balisage `LocalBusiness`. CTA de demande de devis. Et le bouton **« Revendiquer cette fiche »**, qui est la mécanique d'amorçage des partenariats commerciaux.
 
 ---
 
-## 9. Page outil
+## 10. Page outil
 
 `/outils/quel-engin-de-manutention/`. L'outil en haut, puis **tout le contenu rédactionnel rendu côté serveur** : tableau comparatif des familles, arbre de décision en texte, cas d'usage, limites. Un outil seul ne se positionne pas.
 
@@ -161,23 +199,39 @@ Balisage `FAQPage` et `HowTo`. JavaScript vanilla, chargé sur cette page unique
 
 ---
 
-## 10. Navigation, en-tête, pied de page
+## 11. Navigation, en-tête, pied de page
 
-**Navigation : quatre entrées.**
+**Navigation : les cinq rubriques.**
 
 ```
-Matériel ▾   Réglementation   Annuaire   Quel engin ?
+Équipements ▾   Réglementation   Coûts   Exploitation   Marché        [ Annuaire ]
 ```
 
-Un seul niveau de déroulant, sous *Matériel*, listant les familles. Pas de méga-menu, pas de barre latérale. Les pages prix sont atteintes depuis l'accueil et depuis chaque page famille — elles n'ont pas besoin d'une entrée de menu, et lui en donner une recréerait le hub transverse qu'on a écarté.
+C'est la navigation d'un média : elle donne à voir l'univers éditorial, pas un tunnel. Un seul niveau de déroulant, sous *Équipements*, listant les familles.
 
-Chaque pilier ouvert plus tard prend une entrée. À sept entrées, on regroupe.
+L'**Annuaire** est traité en bouton distinct plutôt qu'en entrée de menu — c'est un service, pas une rubrique, et le distinguer visuellement le rend plus visible qu'une sixième entrée noyée dans la liste. Les outils sont accessibles depuis l'accueil et depuis les pages concernées.
 
-**Pied de page** : mentions légales, confidentialité, transparence affiliation, contact, à propos. Rien d'autre — pas de nuage de tags, pas de plan de site déguisé.
+Les pages prix n'ont pas d'entrée de menu : leur accès passe par l'accueil et par chaque page famille. Leur donner une entrée recréerait le hub transverse écarté pour cannibalisation. La rubrique *Coûts* pointe vers les articles de budget et de financement, qui sont un contenu distinct.
+
+Pas de méga-menu, pas de barre latérale. Chaque pilier ouvert plus tard s'insère dans *Équipements*, pas en entrée supplémentaire.
+
+**Pied de page** : mentions légales, confidentialité, transparence affiliation, ligne éditoriale, contact, à propos. Rien d'autre — pas de nuage de tags, pas de plan de site déguisé.
 
 ---
 
-## 11. Direction visuelle
+## 12. Gabarit dossier
+
+Le format long qui installe le statut de média. Un dossier n'est pas un article : c'est un ensemble de pages présentées comme un tout, avec une page de tête et une navigation interne.
+
+Page de tête : titre, chapô, sommaire du dossier, signature, date de publication et de mise à jour. Chaque volet du dossier est un article normal, qui porte un bandeau « Ce contenu fait partie du dossier X » et la navigation vers les volets voisins.
+
+Premiers dossiers prévus : **le baromètre des prix de la manutention** (le contenu original qui fait citer), **CACES et autorisation de conduite** (le plus gros gisement de volume), **acheter ou louer**.
+
+Techniquement : une taxonomie non hiérarchique `dossier`, pas une catégorie — un article appartient à un seul silo mais peut entrer dans un dossier transverse sans casser la règle « un article, un silo ».
+
+---
+
+## 13. Direction visuelle
 
 Registre industriel sobre. Le lecteur est un professionnel, la page doit avoir l'air d'un outil de travail.
 
@@ -189,7 +243,7 @@ Registre industriel sobre. Le lecteur est un professionnel, la page doit avoir l
 
 ---
 
-## 12. Performance et sécurité
+## 14. Performance et sécurité
 
 **Zéro JavaScript par défaut.** Deux exceptions, chargées uniquement sur leur page : le sélecteur d'engin et la carte de l'annuaire.
 
@@ -199,13 +253,15 @@ Sécurité : reprise de `inc/security.php` de pluscestsimple (CSP, HSTS, `X-Fram
 
 ---
 
-## 13. Ordre de construction
+## 15. Ordre de construction
 
-1. Socle : `theme.json`, styles de base, en-tête, pied de page, fil d'Ariane, SEO et Schema
-2. Gabarit article — c'est le volume, et les 63 pages à recréer en dépendent
-3. Gabarit famille et gabarit pilier
-4. Page d'accueil
-5. Gabarit prix
-6. Gabarit outil
-7. Gabarits annuaire (croisement et fiche), avec la brique base de données
-8. Gabarit comparatif affiliation
+1. Socle : `theme.json`, styles de base, en-tête à cinq rubriques, pied de page, fil d'Ariane, SEO et Schema
+2. **Gabarit article avec signature complète** — auteur, date de publication, date de vérification, rubrique. C'est le volume, les 63 pages à recréer en dépendent, et c'est la brique qui rend le site lisible comme un média.
+3. Pages d'identité éditoriale : auteur, ligne éditoriale, charte de transparence, contact, mentions légales. Elles sont dans les premières livraisons, pas en fin de liste — sans elles, aucun annonceur ne prend le site au sérieux.
+4. Gabarit famille et gabarit pilier
+5. Page d'accueil
+6. Gabarit prix
+7. Gabarit dossier, puis premier dossier
+8. Gabarit outil
+9. Gabarits annuaire (croisement et fiche), avec la brique base de données
+10. Gabarit comparatif affiliation
