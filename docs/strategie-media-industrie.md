@@ -51,11 +51,31 @@ Six pages piliers, zéro clic. Elles se positionnent pourtant correctement (posi
 
 Le même constat vaut sur infoweb-manutention : les pages qui rankaient encore étaient des articles (`/gerbeur/le-gerbeur-fenwick…`, `/chariot-elevateur/norme-passage…`), pas les pages de catégorie, qui plafonnaient à 1 visite.
 
-**Deux causes se cumulent, et il faut les distinguer.** Les défauts structurels documentés dans l'audit de pluscestsimple (boucle non filtrée, hiérarchie corrompue, aucun lien descendant) expliquent une partie du résultat. Mais la cause principale est plus simple : **le terme de tête d'un pilier — « travaux », « décoration », « manutention » — n'est pas un objectif réaliste pour un site sans autorité massive.**
+**Trois causes se cumulent, et il faut les distinguer.**
 
-**Conséquence sur notre plan.** Une page pilier n'est pas un actif de trafic, c'est de la plomberie : elle structure le silo, distribue le jus, et sert de point d'atterrissage au maillage. On la construit une fois, proprement, et on n'y réinvestit pas. Le moteur de trafic, ce sont les articles de décision, l'annuaire et les outils.
+1. **Les pages piliers de pluscestsimple sont jeunes** : mises en place récemment, avec une partie des articles rédigés non encore publiés, un maillage interne pas revérifié depuis l'audit, et aucun backlink externe pointant dessus. Un pilier ne se juge pas à ce stade — il lui faut le temps, le maillage et les liens.
+2. Les défauts structurels documentés dans l'audit (boucle non filtrée, hiérarchie corrompue, aucun lien descendant) en expliquent une autre part.
+3. Le terme de tête d'un pilier — « travaux », « décoration », « manutention » — n'est de toute façon pas un objectif réaliste à court terme.
 
-Corollaire : les requêtes de décision que je citais (« quel gerbeur choisir », « prix location nacelle ») ne sont **pas** des requêtes de page pilier. Ce sont des requêtes d'articles et de pages familles. C'est là qu'il faut mettre l'effort, et c'est là qu'est le trou réel.
+**La bonne conclusion n'est donc pas « les piliers ne servent à rien ».** Elle est plus utile : **on ne juge pas une page pilier au trafic**, parce que ce n'est pas son métier. On la juge à ce qu'elle distribue — est-ce qu'elle liste réellement son silo, est-ce qu'elle transmet aux pages qui convertissent, est-ce qu'elle capte les liens externes qu'on lui envoie.
+
+### 1.6 Le trafic n'est pas l'objectif — hiérarchie des pages par valeur business
+
+Le vrai enseignement de ces chiffres est ailleurs, et il vaut pour notre site : **le trafic d'articles de blog ne génère pas de business.** Les 706 clics sur « muralière » ne vendent rien. C'est du volume, de l'autorité et du jus — pas du chiffre d'affaires.
+
+Et symétriquement : les requêtes qui rapportent sont plus concurrentielles, mécaniquement, parce que tout le monde les vise. C'est le prix à payer, pas une anomalie à contourner.
+
+D'où la hiérarchie qui doit gouverner l'allocation de l'effort :
+
+| Couche | Exemples | Rôle | Se juge à |
+|---|---|---|---|
+| **Pages qui rapportent** | famille, prix, comparatif « les meilleurs », croisement annuaire, outil | encaissent les leads, les clics affiliés, les demandes de devis | leads, clics `/go/`, devis |
+| **Articles de décision** | « quel gerbeur choisir », « CACES obligatoire ou pas », « VGP tous les combien » | captent la longue traîne qualifiée et **alimentent les pages qui rapportent** en maillage et en jus | trafic **transmis** aux pages qui rapportent |
+| **Pages piliers** | `/manutention/`, `/stockage/` | structurent le silo, reçoivent les backlinks externes, redistribuent | qualité de la distribution, pas trafic propre |
+
+Conséquence sur le pilotage : le KPI de tête n'est pas le trafic total, c'est le **trafic arrivant sur les pages qui rapportent** plus le nombre de leads et de clics affiliés. Un article qui fait 2 000 visites sans jamais envoyer personne vers une page famille est un échec déguisé en succès — c'est exactement le piège dans lequel tombe la majorité des sites de contenu.
+
+Conséquence sur la production : on ne publie pas d'article de décision sans savoir vers quelle page qui rapporte il pointe. Ce lien est défini dans le brief, avant rédaction, pas ajouté après coup.
 
 ### 1.3 Comment ils gagnent de l'argent — et ce qu'on peut reprendre
 
@@ -434,7 +454,7 @@ Plus les pages système (mentions légales, contact, à propos/auteur, transpare
 
 1. **Plan de redirections** — inverser le sens du cluster marques (§3.3). Fait, régénéré.
 2. **Phase 0 inchangée** — les 69 pages à recréer sont toutes dans le pilier Manutention. Le pivot ne retarde rien.
-3. **Effort éditorial** — réallouer du pilier vers l'article. Les pages piliers sont construites une fois, proprement, et ne sont plus retouchées (§1.5). Le budget de production va aux articles de décision, à l'annuaire et à l'outil.
+3. **Effort éditorial** — piloté par la valeur business (§1.6), pas par le trafic. Les piliers sont construits une fois et jugés sur ce qu'ils distribuent, pas sur leurs visites. Chaque article de décision est briefé avec la page qui rapporte vers laquelle il pointe, définie avant rédaction. KPI de tête : trafic arrivant sur les pages qui rapportent, leads, clics affiliés.
 4. **Thème** — spécifié par les 9 gabarits ; construit après la remise en ligne, sur un WordPress déjà en production.
 5. **Annuaire** — un seul, loueurs, ~1 390 pages, publication par lots de 100 avec mesure d'indexation à J+30, collecte GMB en séance commune, entités multi-activités dès la vague 1.
 6. **Outil** — sélecteur d'engin de manutention. CACES écarté (concurrent installé, risque juridique), capacité résiduelle et TCO en réserve.
