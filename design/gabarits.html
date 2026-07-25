@@ -123,6 +123,19 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 .prod p{font-size:13.5px;color:var(--sub);margin-bottom:9px}
 .spec{display:flex;flex-wrap:wrap;gap:6px}
 .spec span{background:#f0ece1;border-radius:6px;padding:3px 9px;font-size:11.5px;font-weight:650}
+/* le produit est le sujet : sa description et ses caractéristiques
+   priment visuellement sur le résumé forts/faibles qui les commente */
+.pdet h3{font-size:23px;margin-bottom:10px}
+.pdet .desc{font-size:15.5px;line-height:1.68;color:#23272c}
+.pdet .desc p{font-size:inherit;line-height:inherit;color:inherit;margin-bottom:11px}
+.pdet .desc p:last-child{margin-bottom:0}
+.specs{border:1px solid var(--rul);border-radius:12px;overflow:hidden;margin-top:20px;background:var(--card)}
+.specs h4{background:#efece4;padding:10px 15px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--sub);font-weight:800}
+.specg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}
+.specg > div{padding:12px 15px;border-top:1px solid var(--rul);border-right:1px solid var(--rul)}
+.specg dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.specg dd{font-size:16px;font-weight:800;letter-spacing:-.02em}
+.specg dd small{display:block;font-size:11.5px;font-weight:500;color:var(--mut);letter-spacing:0;margin-top:2px}
 /* sommaire des produits, ancres internes */
 .jump{background:var(--card);border:1px solid var(--rul);border-radius:12px;padding:16px 18px;margin:26px 0}
 .jump b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
@@ -135,16 +148,17 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 /* fiche produit détaillée */
 .pdet{background:var(--card);border:1px solid var(--rul);border-radius:14px;padding:20px;margin-bottom:20px;scroll-margin-top:120px}
 .phead{display:grid;grid-template-columns:132px minmax(0,1fr) auto;gap:20px;align-items:center}
-.pmz{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
-.pm{border-radius:11px;padding:14px 16px}
-.pm.up{background:#eef7f1;border:1px solid #cfe6d9}
-.pm.dn{background:#fdf0ef;border:1px solid #f2d5d2}
-.pm b{display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:10px}
+/* résumé secondaire : plus compact et plus léger que le produit */
+.pmz{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.pm{border-radius:10px;padding:12px 14px}
+.pm.up{background:#f3f9f5;border:1px solid #dcebe3}
+.pm.dn{background:#fdf5f4;border:1px solid #f0dedb}
+.pm b{display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:8px}
 .pm.up b{color:#25714a}.pm.dn b{color:#b1382f}
 .pm ul{list-style:none;margin:0}
-.pm li{display:grid;grid-template-columns:17px 1fr;gap:9px;padding:7px 0;border-top:1px solid rgba(0,0,0,.06);font-size:13.5px;line-height:1.4;align-items:start}
+.pm li{display:grid;grid-template-columns:16px 1fr;gap:8px;padding:6px 0;border-top:1px solid rgba(0,0,0,.05);font-size:13px;line-height:1.4;align-items:start}
 .pm li:first-child{border-top:0;padding-top:0}
-.pm li::before{font-size:11px;font-weight:800;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;margin-top:2px}
+.pm li::before{font-size:10px;font-weight:800;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;margin-top:2px}
 .pm.up li::before{content:"✓";background:#2fa06a}
 .pm.dn li::before{content:"✕";background:#dc5b50}
 /* notre avis en 30 secondes */
@@ -345,10 +359,23 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
       <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
         <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
       <div><span class="rank">N° 1 · Notre choix</span><h3>Jungheinrich EJE 116</h3>
-        <p>Autonomie réelle tenue sur une journée complète, timon court qui pardonne les allées de moins de 2,20 m. Réseau SAV le plus dense de la sélection — c'est ce qui fait la différence sur un parc.</p>
-        <div class="spec"><span>1 600 kg</span><span>Li-ion 24 V</span><span>720 mm hors-tout</span><span>~5 h d'autonomie</span><span>Charge 2 h</span><span>Garantie 2 ans</span></div></div>
+        <div class="desc">
+          <p>Transpalette à conducteur accompagnant conçu pour un usage quotidien en entrepôt : chargement de camion depuis le quai, alimentation de lignes de préparation, navette entre zones. La batterie lithium-ion se recharge pendant les pauses, ce qui supprime la batterie de rechange et le local de charge — deux postes que les comparatifs ne comptent presque jamais.</p>
+          <p>Le timon court et le rayon de braquage réduit lui permettent de manœuvrer en allée de 2,20 m, là où la plupart des concurrents demandent 2,50 m. La commande proportionnelle dose la vitesse au millimètre en approche de palette, ce qui compte quand on charge en hauteur ou près d'un rack.</p>
+        </div></div>
       <div class="buy"><div class="p">4 200 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
     </div>
+
+    <div class="specs"><h4>Caractéristiques</h4><dl class="specg">
+      <div><dt>Capacité de charge</dt><dd>1 600 kg</dd></div>
+      <div><dt>Batterie</dt><dd>Li-ion 24 V<small>24 Ah, charge d'opportunité</small></dd></div>
+      <div><dt>Autonomie constatée</dt><dd>≈ 5 h<small>usage mixte, une équipe</small></dd></div>
+      <div><dt>Largeur hors-tout</dt><dd>720 mm</dd></div>
+      <div><dt>Longueur de fourches</dt><dd>1 150 mm</dd></div>
+      <div><dt>Hauteur de levée</dt><dd>122 mm</dd></div>
+      <div><dt>Temps de charge</dt><dd>2 h<small>80 % en 1 h</small></dd></div>
+      <div><dt>Garantie</dt><dd>2 ans<small>pièces et main-d'œuvre</small></dd></div>
+    </dl></div>
 
     <div class="pmz">
       <div class="pm up"><b>Points forts</b><ul>
@@ -373,10 +400,23 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
       <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
         <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
       <div><span class="rank">N° 2 · Meilleur rapport prix</span><h3>Pramac QX 18</h3>
-        <p>Capacité supérieure et prix nettement inférieur. La contrepartie est un maillage SAV plus lâche : à réserver aux sites qui acceptent un délai d'intervention de 48 h.</p>
-        <div class="spec"><span>1 800 kg</span><span>Li-ion 24 V</span><span>730 mm hors-tout</span><span>~4 h d'autonomie</span><span>Charge 3 h</span><span>Garantie 2 ans</span></div></div>
+        <div class="desc">
+          <p>La plus forte capacité de la sélection à 1 800 kg, pour 900 € de moins que le premier. Le chargeur est intégré à la machine : pas de station séparée à installer, ce qui simplifie l'implantation sur un site où l'espace de charge n'était pas prévu.</p>
+          <p>Le compromis se situe sur l'après-vente. Le réseau est réel mais inégal selon les régions, avec des délais d'intervention qui montent à 48 h hors des zones bien couvertes. Sur un parc mono-machine et un flux tendu, ce délai coûte plus cher que l'économie réalisée à l'achat.</p>
+        </div></div>
       <div class="buy"><div class="p">3 300 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
     </div>
+
+    <div class="specs"><h4>Caractéristiques</h4><dl class="specg">
+      <div><dt>Capacité de charge</dt><dd>1 800 kg</dd></div>
+      <div><dt>Batterie</dt><dd>Li-ion 24 V<small>20 Ah, chargeur intégré</small></dd></div>
+      <div><dt>Autonomie constatée</dt><dd>≈ 4 h<small>usage mixte, une équipe</small></dd></div>
+      <div><dt>Largeur hors-tout</dt><dd>730 mm</dd></div>
+      <div><dt>Longueur de fourches</dt><dd>1 150 mm</dd></div>
+      <div><dt>Hauteur de levée</dt><dd>115 mm</dd></div>
+      <div><dt>Temps de charge</dt><dd>3 h</dd></div>
+      <div><dt>Garantie</dt><dd>2 ans<small>pièces et main-d'œuvre</small></dd></div>
+    </dl></div>
 
     <div class="pmz">
       <div class="pm up"><b>Points forts</b><ul>
