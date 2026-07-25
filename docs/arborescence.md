@@ -1,5 +1,7 @@
 # Arborescence et plan de nommage d'URL — infoweb-manutention.fr
 
+> ⚠️ **Document partiellement remplacé le 2026-07-25 par [strategie-media-industrie.md](strategie-media-industrie.md)**, qui acte le pivot en média de décision multi-piliers. Ce qui change : les familles occupent les préfixes racine hérités sous un pilier `/manutention/` (§3.2 de la stratégie), l'annuaire n°1 devient les loueurs avec granularité ville (§5), et un seul outil est retenu — le sélecteur CACES (§6). Le détail des familles et les règles de maillage ci-dessous restent valides.
+
 Date : 2026-07-24. Découle de l'analyse (docs/analyse-critique-brief.md) et des décisions actées : phase 0 immédiate, chariots+levage en parallèle, annuaire par VGP/SAV, pas d'occasion.
 
 ## Principe directeur

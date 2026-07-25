@@ -6,6 +6,7 @@ Média professionnel manutention/levage sur domaine expiré. Monétisation : aff
 
 | Fichier | Contenu |
 |---|---|
+| [docs/strategie-media-industrie.md](docs/strategie-media-industrie.md) | **Document directeur** — positionnement média de décision, cocon, cannibalisation, annuaire, outil unique, gabarits de thème |
 | [docs/analyse-critique-brief.md](docs/analyse-critique-brief.md) | Analyse du brief initial : corrections factuelles, recherche SERP/concurrence/affiliation, désaccords, objectifs |
 | [docs/roadmap.md](docs/roadmap.md) | Phasage opérationnel et décisions actées (2026-07-24) |
 | [docs/arborescence.md](docs/arborescence.md) | Arborescence cible et plan de nommage d'URL |
