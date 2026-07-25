@@ -1,0 +1,241 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>infoweb-manutention — direction « La ligne »</title>
+<style>
+:root{
+  --pap:#f7f4ec; --ink:#15171a; --mut:#6d7078; --rul:#e0dbcf; --card:#fffdf8;
+  /* une couleur par rubrique — les « postes » de la ligne */
+  --c1:#e8a020;  /* Manutention & levage */
+  --c2:#3d6ea8;  /* Réglementation */
+  --c3:#3f8f5f;  /* Coûts */
+  --c4:#c85a2c;  /* Exploitation */
+  --c5:#6b5bab;  /* Marché */
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--pap);color:var(--ink);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.w{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+a{color:inherit}
+h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.04;font-weight:800}
+
+/* ---------- LE TAPIS : fil rouge, CSS pur, avance au scroll ---------- */
+.belt{position:relative;height:26px;background:var(--ink);overflow:hidden}
+.belt::before{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,#3a3f45 0 10px,transparent 10px 30px);
+  animation:run linear both; animation-timeline:scroll(root block);}
+.belt::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:linear-gradient(90deg,var(--c1),var(--c2),var(--c3),var(--c4),var(--c5))}
+@keyframes run{to{transform:translateX(-240px)}}
+@media (prefers-reduced-motion:reduce){.belt::before{animation:none}}
+
+/* ---------- EN-TÊTE : compact, menu intégré, discret ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(247,244,236,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--rul)}
+.bar{display:flex;align-items:center;gap:18px;height:58px}
+.logo{font-weight:800;font-size:17px;letter-spacing:-.045em;white-space:nowrap}
+.logo i{font-style:normal;color:var(--c1)}
+/* menu inline dans une capsule — Skylights, en plus discret */
+.menu{display:flex;align-items:center;gap:2px;margin-left:auto;
+  background:var(--card);border:1px solid var(--rul);border-radius:999px;padding:3px}
+.menu a{padding:6px 13px;border-radius:999px;font-size:13px;font-weight:600;
+  text-decoration:none;color:var(--mut);white-space:nowrap}
+.menu a:hover{background:var(--pap);color:var(--ink)}
+.menu a.on{background:var(--ink);color:var(--pap)}
+.hcta{display:inline-flex;align-items:center;gap:7px;background:var(--c1);color:var(--ink);
+  border-radius:999px;padding:9px 15px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap}
+.hcta::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink)}
+
+/* ---------- HERO : contenu, aéré, façon Kohen ---------- */
+.hero{padding:40px 0 26px}
+.slab{background:var(--card);border:1px solid var(--rul);border-radius:22px;
+  padding:44px 44px 0;overflow:hidden;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--mut)}
+.eyebrow b{background:var(--c3);color:#fff;padding:3px 9px;border-radius:4px;letter-spacing:.09em}
+.hero h1{font-size:clamp(34px,5.4vw,62px);margin:18px 0 16px;max-width:16ch}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--c1)}
+.hero p{font-size:17.5px;color:#3c4046;max-width:56ch}
+.herog{display:grid;grid-template-columns:1fr 300px;gap:34px;align-items:end}
+.by{font-size:12.5px;color:var(--mut);margin-top:22px;padding-bottom:34px}
+.by b{color:var(--ink);font-weight:700}
+/* chiffres du baromètre, façon plaque de charge */
+.plate{border:2px solid var(--ink);border-radius:14px;overflow:hidden;margin-bottom:34px}
+.plate .ph{background:var(--ink);color:var(--pap);padding:7px 13px;font-size:10.5px;
+  font-weight:700;letter-spacing:.13em;text-transform:uppercase;display:flex;justify-content:space-between}
+.plate .pr{display:flex;justify-content:space-between;align-items:baseline;
+  padding:11px 13px;border-bottom:1px solid var(--rul);font-size:13px}
+.plate .pr:last-child{border-bottom:0}
+.plate .v{font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.plate small{display:block;color:var(--mut);font-size:10.5px}
+
+/* ---------- POSTES DE LA LIGNE (rubriques) ---------- */
+.line{padding:34px 0 10px}
+.lhead{display:flex;align-items:baseline;gap:14px;margin-bottom:20px}
+.lhead h2{font-size:22px}
+.lhead span{font-size:12.5px;color:var(--mut)}
+.stations{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.st{background:var(--card);border:1px solid var(--rul);border-radius:16px;overflow:hidden;
+  display:flex;flex-direction:column}
+.st .cap{height:5px}
+.st .in{padding:15px 15px 17px;display:flex;flex-direction:column;gap:11px;flex:1}
+.st .no{font-size:10.5px;font-weight:700;letter-spacing:.14em;color:var(--mut)}
+.st h3{font-size:16.5px}
+.st ul{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:auto}
+.st li a{display:block;padding:8px 0;border-top:1px solid var(--rul);font-size:12.5px;
+  font-weight:600;text-decoration:none;line-height:1.3}
+.st li a:hover{color:var(--c1)}
+.ico{width:44px;height:44px}
+
+/* ---------- DERNIÈRES PUBLICATIONS ---------- */
+.feed{padding:34px 0}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:16px}
+.art{background:var(--card);border:1px solid var(--rul);border-radius:16px;padding:18px;
+  display:flex;flex-direction:column;gap:9px;text-decoration:none}
+.art .rub{font-size:10.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+.art h3{font-size:17px;line-height:1.22}
+.art .lead{font-size:13.5px;color:#4a4e55}
+.art .m{font-size:11.5px;color:var(--mut);margin-top:auto;padding-top:11px;border-top:1px solid var(--rul)}
+.fig{height:132px;border-radius:11px;background:
+  linear-gradient(135deg,#f2ead8,#e9e2d0);display:flex;align-items:center;justify-content:center}
+
+/* ---------- RÉDACTION ---------- */
+.desk{margin:14px 0 40px;background:var(--ink);color:var(--pap);border-radius:22px;
+  padding:30px 34px;display:grid;grid-template-columns:1fr 300px;gap:30px;align-items:center}
+.desk h2{font-size:25px;margin-bottom:11px}
+.desk p{color:#adb2ba;font-size:14.5px;max-width:56ch}
+.desk .who{display:flex;gap:13px;align-items:center;background:#1f2227;border-radius:14px;padding:14px}
+.desk .av{width:46px;height:46px;border-radius:50%;background:var(--c1);flex:none}
+.desk .who b{display:block;font-size:14px}
+.desk .who span{font-size:12px;color:#adb2ba}
+
+footer{border-top:1px solid var(--rul);padding:22px 0;font-size:12.5px;color:var(--mut);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media(max-width:960px){
+  .herog,.desk{grid-template-columns:1fr}
+  .stations{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:1fr}
+  .menu{display:none}
+  .slab{padding:28px 22px 0;border-radius:16px}
+}
+</style>
+
+<header>
+  <div class="w bar">
+    <span class="logo">infoweb<i>·</i>manutention</span>
+    <nav class="menu">
+      <a class="on">Équipements</a><a>Réglementation</a><a>Coûts</a><a>Exploitation</a><a>Marché</a>
+    </nav>
+    <a class="hcta">Annuaire</a>
+  </div>
+</header>
+
+<div class="belt"></div>
+
+<section class="hero"><div class="w">
+  <div class="slab">
+    <div class="herog">
+      <div>
+        <span class="eyebrow"><b>Dossier</b> Baromètre 2026</span>
+        <h1>Ce que coûte vraiment un <em>parc de manutention</em></h1>
+        <p>214 relevés agrégés sur douze familles de matériel. Achat, location longue durée, maintenance, VGP, formation — et jusqu'à 22 % d'écart entre régions.</p>
+        <div class="by">Par <b>Denis Verhaeghe</b> · Publié le 25 juillet 2026 · Vérifié le 25 juillet 2026 · 14 min</div>
+      </div>
+      <div class="plate">
+        <div class="ph"><span>Repères de prix</span><span>07 · 2026</span></div>
+        <div class="pr"><span>Chariot élec. 2 t<small>neuf, hors options</small></span><span class="v">14 900 €</span></div>
+        <div class="pr"><span>Nacelle ciseaux<small>location, jour</small></span><span class="v">46 €</span></div>
+        <div class="pr"><span>VGP<small>par appareil</small></span><span class="v">70 €</span></div>
+        <div class="pr"><span>CACES R489<small>formation initiale</small></span><span class="v">690 €</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div class="belt"></div>
+
+<section class="line"><div class="w">
+  <div class="lhead"><h2>Les cinq postes</h2><span>Chaque rubrique est une station de la ligne.</span></div>
+  <div class="stations">
+
+    <article class="st"><div class="cap" style="background:var(--c1)"></div><div class="in">
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="var(--c1)" stroke-width="2">
+        <path d="M6 34h26M10 34v-8h10v8M20 26l6-10h6v18" stroke-linejoin="round"/>
+        <circle cx="13" cy="38" r="3.4"/><circle cx="29" cy="38" r="3.4"/>
+        <path d="M36 16v22M36 38h6"/></svg>
+      <div class="no">01</div><h3>Équipements</h3>
+      <ul><li><a>Chariots élévateurs</a></li><li><a>Gerbeurs</a></li><li><a>Palans et treuils</a></li></ul>
+    </div></article>
+
+    <article class="st"><div class="cap" style="background:var(--c2)"></div><div class="in">
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="var(--c2)" stroke-width="2">
+        <path d="M24 6l14 5v11c0 9-6 15.5-14 18-8-2.5-14-9-14-18V11z" stroke-linejoin="round"/>
+        <path d="M17.5 24.5l4.5 4.5 9-9" stroke-linecap="round"/></svg>
+      <div class="no">02</div><h3>Réglementation</h3>
+      <ul><li><a>Le CACES est-il obligatoire ?</a></li><li><a>R389 → R489</a></li><li><a>VGP : périodicités</a></li></ul>
+    </div></article>
+
+    <article class="st"><div class="cap" style="background:var(--c3)"></div><div class="in">
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="var(--c3)" stroke-width="2">
+        <path d="M8 38h32M12 38V24M21 38V15M30 38V28M39 38V10" stroke-linecap="round"/></svg>
+      <div class="no">03</div><h3>Coûts</h3>
+      <ul><li><a>Acheter ou louer</a></li><li><a>TCO sur 5 ans</a></li><li><a>Crédit-bail et LLD</a></li></ul>
+    </div></article>
+
+    <article class="st"><div class="cap" style="background:var(--c4)"></div><div class="in">
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="var(--c4)" stroke-width="2">
+        <rect x="9" y="9" width="30" height="30" rx="3"/><path d="M9 19h30M19 19v20M19 29h20" stroke-linecap="round"/></svg>
+      <div class="no">04</div><h3>Exploitation</h3>
+      <ul><li><a>Largeurs d'allée</a></li><li><a>Gestion de parc</a></li><li><a>Maintenance</a></li></ul>
+    </div></article>
+
+    <article class="st"><div class="cap" style="background:var(--c5)"></div><div class="in">
+      <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="var(--c5)" stroke-width="2">
+        <path d="M24 8l14 8v16l-14 8-14-8V16z" stroke-linejoin="round"/><path d="M10 16l14 8 14-8M24 24v16"/></svg>
+      <div class="no">05</div><h3>Marché</h3>
+      <ul><li><a>Classement des marques</a></li><li><a>Concessionnaires</a></li><li><a>Loueurs</a></li></ul>
+    </div></article>
+
+  </div>
+</div></section>
+
+<div class="belt"></div>
+
+<section class="feed"><div class="w">
+  <div class="lhead"><h2>Dernières publications</h2><span>Vérifiées, datées, sourcées.</span></div>
+  <div class="fg">
+    <a class="art">
+      <div class="fig"><svg width="150" height="80" viewBox="0 0 150 80" fill="none" stroke="#c9bfa4" stroke-width="2">
+        <path d="M14 62h58M22 62V44h16v18M38 44l10-16h10v34" stroke-linejoin="round"/>
+        <circle cx="27" cy="68" r="5"/><circle cx="60" cy="68" r="5"/>
+        <path d="M72 30h30M72 40h30M72 50h30" stroke-linecap="round" opacity=".55"/></svg></div>
+      <span class="rub" style="color:var(--c1)">Équipements</span>
+      <h3>Le gerbeur Fenwick : gammes, capacités et CACES applicable</h3>
+      <p class="lead">Il n'existe pas de « CACES Fenwick ». La recommandation dépend de la conduite — accompagnant ou porté — jamais du constructeur.</p>
+      <div class="m">25 juillet 2026 · 7 min · Vérifié le 25.07.2026</div>
+    </a>
+    <a class="art"><span class="rub" style="color:var(--c2)">Réglementation</span>
+      <h3>VGP : ce que l'arrêté impose vraiment à l'employeur</h3>
+      <p class="lead">Périodicités par type d'appareil, registre de sécurité, et ce qui se passe en cas de contrôle.</p>
+      <div class="m">22 juillet 2026 · 11 min</div></a>
+    <a class="art"><span class="rub" style="color:var(--c3)">Coûts</span>
+      <h3>Batteries lithium : à partir de quel usage le surcoût se rembourse</h3>
+      <p class="lead">Le seuil de bascule dépend du nombre d'équipes, pas du prix d'achat.</p>
+      <div class="m">19 juillet 2026 · 8 min</div></a>
+  </div>
+</div></section>
+
+<div class="w"><div class="desk">
+  <div>
+    <h2>Qui écrit ici</h2>
+    <p>Un média indépendant, sans constructeur ni loueur derrière. Chaque chiffre est daté et sourcé, chaque référence réglementaire renvoie au texte officiel. Les liens commerciaux sont signalés.</p>
+  </div>
+  <div class="who"><div class="av"></div><div><b>Denis Verhaeghe</b><span>28 ans en manutention — SAV puis responsable de parc</span></div></div>
+</div></div>
+
+<div class="w"><footer>
+  <span>© 2026 infoweb-manutention · Média indépendant</span>
+  <span>Mentions légales · Confidentialité · Transparence · Contact</span>
+</footer></div>
