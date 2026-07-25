@@ -56,19 +56,19 @@ header{position:sticky;top:0;z-index:60;background:rgba(246,244,239,.94);backdro
 .m{margin-top:auto;padding-top:10px;border-top:1px solid var(--rul);font-size:11.5px;color:var(--mut)}
 
 /* ---------- RUBRIQUES ---------- */
-.rubs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rubs{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
 .rub h3{font-size:17px;padding-bottom:9px;border-bottom:2px solid var(--amb);margin-bottom:4px}
 .rub a.li{display:block;padding:11px 0;border-bottom:1px solid var(--rul);font-size:14px;font-weight:650;line-height:1.32}
 .rub a.li small{display:block;font-weight:400;color:var(--mut);font-size:11.5px;margin-top:3px}
 
 /* ---------- APPLICATIONS ---------- */
-.apps{display:grid;grid-template-columns:repeat(7,1fr);gap:9px}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:9px}
 .app{background:var(--card);border:1px solid var(--rul);border-radius:11px;padding:13px 11px;font-size:12.5px;font-weight:650;line-height:1.28;min-height:74px;display:flex;flex-direction:column;justify-content:space-between}
 .app:hover{border-color:var(--ink)}
 .app u{text-decoration:none;font-size:10px;color:var(--mut);font-weight:600}
 
 /* ---------- COMPARATIFS (affiliation) ---------- */
-.cmp{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.cmp{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:15px}
 .pc{background:var(--card);border:1px solid var(--rul);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
 .pc .im{height:112px;background:#f0ece1;display:flex;align-items:center;justify-content:center}
 .pc .bd{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}
@@ -88,27 +88,71 @@ header{position:sticky;top:0;z-index:60;background:rgba(246,244,239,.94);backdro
 .ev u{text-decoration:none;font-size:11px;font-weight:700;color:var(--blu);white-space:nowrap}
 
 /* ---------- NEWSLETTER ---------- */
-.nl{background:var(--ink);color:#fff;border-radius:20px;padding:38px 44px;display:grid;grid-template-columns:1fr 400px;gap:40px;align-items:center}
+.nl{background:var(--ink);color:#fff;border-radius:20px;padding:38px 44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:40px;align-items:center}
 .nl h2{font-size:27px;margin-bottom:11px}
 .nl p{color:#a9aeb6;font-size:14.5px;max-width:50ch}
-.nl form{display:flex;gap:8px}
-.nl input{flex:1;border:0;border-radius:9px;padding:13px 14px;font:inherit;font-size:14px}
+.nl form{display:flex;gap:8px;flex-wrap:wrap}
+.nl input{flex:1 1 190px;min-width:0;border:0;border-radius:9px;padding:13px 14px;font:inherit;font-size:14px}
 .nl button{border:0;border-radius:9px;padding:13px 20px;background:var(--amb);color:var(--ink);font:inherit;font-weight:800;font-size:14px;cursor:pointer}
 .nl label{display:block;margin-top:11px;font-size:11.5px;color:#8d939c}
 
+/* ---------- FIL DES PUBLICATIONS ---------- */
+.flux{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.fl{background:var(--card);border:1px solid var(--rul);border-radius:14px;padding:17px;display:flex;flex-direction:column;gap:8px}
+.fl h3{font-size:16px;line-height:1.26}
+.fl p{font-size:13.5px;color:var(--sub)}
+.fl:hover{border-color:var(--ink)}
+
 /* ---------- RÉDACTION ---------- */
-.desk{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:var(--card);border:1px solid var(--rul);border-radius:16px;padding:20px 24px}
+.desk{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:18px;align-items:center;background:var(--card);border:1px solid var(--rul);border-radius:16px;padding:20px 24px}
 .av{width:64px;height:64px;border-radius:50%;background:linear-gradient(160deg,var(--amb),#c07d09)}
 .desk b{font-size:15.5px}
 .desk p{font-size:13.5px;color:var(--sub);max-width:70ch}
 
 footer{border-top:1px solid var(--rul);margin-top:36px;padding:24px 0 40px;font-size:12.5px;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
+/* ---------- RESPONSIVE ----------
+   Les grilles ci-dessus sont auto-adaptatives (auto-fit/minmax) : elles se
+   réorganisent seules. Les règles ci-dessous ne traitent que ce qui ne peut
+   pas l'être — mises en page à colonnes fixes et en-tête. */
+
+/* la barre de navigation ne tient plus : on la bascule sous l'en-tête,
+   en bande défilante, plutôt que de la faire disparaître */
+@media(max-width:1080px){
+  .bar{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:0;gap:12px}
+  .nav{order:3;width:100%;margin:0;gap:18px;overflow-x:auto;padding:2px 0 9px;
+       scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{white-space:nowrap}
+  .hact{margin-left:auto}
+}
 @media(max-width:1000px){
-  .hbox{grid-template-columns:1fr;padding:32px 26px}.hfig{display:none}
-  .une,.rubs,.cmp,.ag,.nl{grid-template-columns:1fr}
-  .apps{grid-template-columns:repeat(3,1fr)}
-  .nav{display:none}.card.lead{grid-row:auto}
+  .hbox{grid-template-columns:1fr;padding:34px 28px;gap:26px}
+  .hfig{display:none}
+  .une{grid-template-columns:1fr 1fr}
+  .card.lead{grid-row:auto;grid-column:1/-1}
+  .ag,.nl{grid-template-columns:1fr}
+  .nl{padding:30px 26px}
+}
+@media(max-width:640px){
+  .sec{padding:32px 0}
+  .hbox{padding:26px 20px;border-radius:16px}
+  .une{grid-template-columns:1fr}
+  .card.lead .im{height:180px}
+  /* bloc auteur : la pile verticale, sinon le texte est écrasé
+     entre l'avatar et le bouton */
+  .desk{grid-template-columns:1fr;text-align:left;gap:14px;padding:20px}
+  .desk .btn{justify-self:start}
+  /* en colonne, l'axe principal devient vertical : sans ce reset,
+     flex:1 étire le champ en hauteur */
+  .nl form{flex-direction:column}
+  .nl input{flex:0 0 auto;width:100%}
+  .nl button{width:100%}
+  /* en-tête : le libellé Newsletter passe en icône, seul l'annuaire reste */
+  .hact .btn:not(.fill){display:none}
+}
+@media(max-width:400px){
+  .apps{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
 }
 </style>
 
@@ -241,6 +285,19 @@ footer{border-top:1px solid var(--rul);margin-top:36px;padding:24px 0 40px;font-
     <label>Vos données servent uniquement à l'envoi de cette lettre. Désinscription en un clic.</label>
   </div>
 </div></div></section>
+
+<!-- SUITE DES PUBLICATIONS -->
+<section class="sec"><div class="w">
+  <div class="sh"><h2>Le fil des publications</h2><span>Guides, analyses et retours d'exploitation</span><a>Voir tout →</a></div>
+  <div class="flux">
+    <a class="fl"><span class="tag">Équipements</span><h3>Chariot rétractable ou frontal : le calcul par la largeur d'allée</h3><p>Au-delà de 3,20 m d'allée libre, le frontal reprend l'avantage économique. En dessous, le rétractable se rembourse en surface de stockage.</p><div class="m">14 juillet · 10 min</div></a>
+    <a class="fl"><span class="tag">Réglementation</span><h3>Autorisation de conduite : le document que personne ne rédige</h3><p>Ce que l'employeur doit vérifier avant de la signer, et ce qui se passe quand elle manque lors d'un contrôle.</p><div class="m">12 juillet · 8 min</div></a>
+    <a class="fl"><span class="tag">Exploitation</span><h3>Suivre les heures d'un parc sans logiciel de gestion</h3><p>Un relevé mensuel et trois indicateurs suffisent pour anticiper les renouvellements et négocier la maintenance.</p><div class="m">10 juillet · 7 min</div></a>
+    <a class="fl"><span class="tag">Coûts</span><h3>Location longue durée : les cinq lignes à lire dans le contrat</h3><p>Franchise horaire, restitution, pneumatiques, maintenance incluse ou non, indexation. C'est là que se jouent 15 % du coût réel.</p><div class="m">8 juillet · 11 min</div></a>
+    <a class="fl"><span class="tag">Applications</span><h3>Manutention en agroalimentaire : ce qu'impose vraiment l'inox</h3><p>304 ou 316, lavage haute pression, froid négatif : les surcoûts sont connus, les erreurs de spécification moins.</p><div class="m">5 juillet · 9 min</div></a>
+    <a class="fl"><span class="tag">Marché</span><h3>Réseaux de concessionnaires : ce que vaut vraiment la proximité SAV</h3><p>Le délai d'intervention pèse plus lourd que l'écart de prix à l'achat sur un parc de plus de dix machines.</p><div class="m">3 juillet · 8 min</div></a>
+  </div>
+</div></section>
 
 <!-- RÉDACTION -->
 <section class="sec" style="padding-top:0"><div class="w"><div class="desk">

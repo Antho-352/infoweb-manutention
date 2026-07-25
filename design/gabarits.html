@@ -1,0 +1,284 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>infoweb-manutention — gabarits article et comparatif</title>
+<style>
+:root{--pap:#f6f4ef;--card:#fff;--ink:#14161a;--sub:#3f444b;--mut:#767c85;--rul:#e2ddd2;--amb:#e39a12;--blu:#2f5d94;--grn:#3f8f5f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--pap);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
+.sw{position:sticky;top:0;z-index:99;display:flex;background:var(--ink)}
+.sw button{flex:1;padding:13px;border:0;background:none;color:#8b9199;font:700 12.5px/1 inherit;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;border-bottom:3px solid transparent}
+.sw button[aria-selected=true]{color:#fff;border-bottom-color:var(--amb)}
+.stage{display:none}.stage[data-on]{display:block}
+.w{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* en-tête simplifié */
+.hd{background:rgba(246,244,239,.95);border-bottom:1px solid var(--rul);position:sticky;top:41px;z-index:60}
+.hdi{display:flex;align-items:center;gap:18px;height:56px}
+.lg{font-weight:800;font-size:16.5px;letter-spacing:-.05em}.lg i{font-style:normal;color:var(--amb)}
+.hnav{display:flex;gap:19px;font-size:13px;font-weight:650;color:var(--sub);overflow-x:auto;scrollbar-width:none}
+.hnav::-webkit-scrollbar{display:none}.hnav a{white-space:nowrap}
+.btn{border:1.5px solid var(--ink);border-radius:8px;padding:7px 13px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.btn.fill{background:var(--ink);color:var(--pap)}
+.hact{margin-left:auto}
+
+/* fil d'ariane */
+.bc{font-size:12px;color:var(--mut);padding:18px 0 0}
+.bc a{color:var(--blu)}.bc span{margin:0 6px;color:var(--rul)}
+
+/* ---------- ARTICLE ---------- */
+.artl{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:44px;padding:14px 0 50px;align-items:start}
+.tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blu)}
+.artl h1{font-size:clamp(29px,3.9vw,44px);margin:12px 0 16px}
+.sig{display:flex;flex-wrap:wrap;gap:7px 16px;align-items:center;font-size:12.5px;color:var(--mut);padding-bottom:18px;border-bottom:1px solid var(--rul)}
+.sig b{color:var(--ink)}
+.sig .vf{background:#e7f0e8;color:#2c6b45;padding:3px 9px;border-radius:5px;font-weight:700;font-size:11.5px}
+.chapo{font-size:19px;line-height:1.5;color:var(--ink);font-weight:500;margin:22px 0 26px;padding-left:16px;border-left:3px solid var(--amb)}
+.toc{background:var(--card);border:1px solid var(--rul);border-radius:12px;padding:16px 18px;margin-bottom:30px}
+.toc b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:9px}
+.toc ol{margin-left:17px;font-size:14px}
+.toc li{padding:3px 0}.toc a{color:var(--blu)}
+.bd h2{font-size:25px;margin:34px 0 13px}
+.bd h3{font-size:18.5px;margin:24px 0 9px}
+.bd p{margin-bottom:15px;color:#23272c}
+.bd ul{margin:0 0 15px 20px}.bd li{margin-bottom:6px;color:#23272c}
+/* encadré normatif */
+.norm{background:#eef2f7;border-left:4px solid var(--blu);border-radius:0 10px 10px 0;padding:17px 19px;margin:24px 0}
+.norm b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blu);margin-bottom:7px}
+.norm p{font-size:14.5px;margin-bottom:8px}
+.norm .src{font-size:12px;color:var(--mut);border-top:1px solid #d5dde7;padding-top:8px;margin:0}
+/* bloc prix injecté depuis arw_prix */
+.px{border:2px solid var(--ink);border-radius:12px;overflow:hidden;margin:26px 0}
+.px .h{background:var(--ink);color:#fff;padding:9px 15px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between}
+.px .r{display:flex;justify-content:space-between;align-items:baseline;padding:12px 15px;border-bottom:1px solid var(--rul);font-size:14px;background:var(--card)}
+.px .r:last-of-type{border-bottom:0}
+.px .v{font-weight:800;font-variant-numeric:tabular-nums}
+.px small{display:block;color:var(--mut);font-size:11px}
+.px .ft{background:#efece4;padding:9px 15px;font-size:11.5px;color:var(--mut)}
+/* remontée contextuelle */
+.up{background:var(--card);border:1px dashed var(--rul);border-radius:10px;padding:13px 16px;font-size:14px;margin:24px 0}
+.up a{color:var(--blu);font-weight:700}
+/* CTA unique */
+.cta{background:var(--ink);color:#fff;border-radius:14px;padding:22px 24px;margin:30px 0;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.cta b{font-size:17px;display:block;margin-bottom:4px}
+.cta p{color:#a9aeb6;font-size:13.5px;margin:0}
+.cta a{margin-left:auto;background:var(--amb);color:var(--ink);border-radius:9px;padding:12px 20px;font-weight:800;font-size:14px}
+/* colonne de droite */
+.side{position:sticky;top:110px;display:flex;flex-direction:column;gap:16px}
+.sbox{background:var(--card);border:1px solid var(--rul);border-radius:12px;padding:16px}
+.sbox b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
+.sbox a.li{display:block;padding:9px 0;border-top:1px solid var(--rul);font-size:13.5px;font-weight:650;line-height:1.3}
+.sbox a.li:first-of-type{border-top:0}
+.au{display:flex;gap:12px;align-items:center}
+.avm{width:44px;height:44px;border-radius:50%;background:linear-gradient(160deg,var(--amb),#c07d09);flex:none}
+.au b{margin:0;font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.au span{font-size:11.5px;color:var(--mut)}
+/* même univers */
+.same{border-top:2px solid var(--ink);padding-top:22px;margin-top:34px}
+.same h2{font-size:20px;margin-bottom:16px}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.sc{background:var(--card);border:1px solid var(--rul);border-radius:12px;padding:15px}
+.sc h3{font-size:15px;line-height:1.28;margin:7px 0 8px}
+.sc .m{font-size:11.5px;color:var(--mut)}
+
+/* ---------- COMPARATIF ---------- */
+.verdict{background:linear-gradient(168deg,#fffefb,#f0ece1);border:1px solid var(--rul);border-radius:16px;padding:26px 28px;margin:22px 0 30px}
+.verdict b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
+.vrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.vit strong{display:block;font-size:12px;color:var(--amb);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+.vit h3{font-size:17px;margin-bottom:5px}
+.vit p{font-size:13.5px;color:var(--sub)}
+.tw{overflow-x:auto;border:1px solid var(--rul);border-radius:12px;margin:26px 0;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:13.5px}
+th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--rul);white-space:nowrap}
+th{background:#efece4;font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800}
+td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;background:var(--card)}
+.prod{display:grid;grid-template-columns:132px minmax(0,1fr) auto;gap:20px;align-items:center;background:var(--card);border:1px solid var(--rul);border-radius:14px;padding:18px;margin-bottom:14px}
+.prod .im{height:104px;border-radius:10px;background:#f0ece1;display:flex;align-items:center;justify-content:center}
+.rank{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:800;padding:3px 9px;border-radius:5px;margin-bottom:7px}
+.prod h3{font-size:18px;margin-bottom:7px}
+.prod p{font-size:13.5px;color:var(--sub);margin-bottom:9px}
+.spec{display:flex;flex-wrap:wrap;gap:6px}
+.spec span{background:#f0ece1;border-radius:6px;padding:3px 9px;font-size:11.5px;font-weight:650}
+.buy{text-align:right}
+.buy .p{font-size:20px;font-weight:800;letter-spacing:-.02em}
+.buy .d{font-size:10.5px;color:var(--mut);margin-bottom:9px}
+.buy a{display:block;background:var(--amb);color:var(--ink);border-radius:9px;padding:11px 18px;font-weight:800;font-size:13.5px;white-space:nowrap}
+.disc{background:#efece4;border-radius:10px;padding:14px 17px;font-size:12.5px;color:var(--sub);margin:26px 0}
+.faq{border-top:2px solid var(--ink);padding-top:22px;margin-top:32px}
+.faq h2{font-size:21px;margin-bottom:14px}
+.faq details{background:var(--card);border:1px solid var(--rul);border-radius:10px;padding:14px 17px;margin-bottom:9px}
+.faq summary{font-weight:700;cursor:pointer;font-size:15px}
+.faq p{font-size:14px;color:var(--sub);margin-top:9px}
+
+@media(max-width:980px){
+  .artl{grid-template-columns:1fr;gap:30px}
+  .side{position:static}
+  .prod{grid-template-columns:1fr;gap:14px}
+  .prod .im{height:150px}
+  .buy{text-align:left}.buy a{text-align:center}
+}
+</style>
+
+<div class="sw">
+  <button aria-selected="true" data-t="A">Gabarit article</button>
+  <button aria-selected="false" data-t="B">Gabarit comparatif · affiliation</button>
+</div>
+
+<!-- ============ GABARIT ARTICLE ============ -->
+<section class="stage" data-t="A" data-on>
+<div class="hd"><div class="w hdi"><span class="lg">infoweb<i>·</i>manutention</span>
+  <nav class="hnav"><a>Équipements</a><a>Applications</a><a>Réglementation</a><a>Coûts</a><a>Marché</a></nav>
+  <span class="hact"><a class="btn fill">Annuaire</a></span></div></div>
+
+<div class="w">
+  <div class="bc"><a>Accueil</a><span>›</span><a>Équipements</a><span>›</span><a>Gerbeur</a><span>›</span>Le gerbeur Fenwick</div>
+  <div class="artl">
+    <article>
+      <span class="tag">Équipements · Gerbeur</span>
+      <h1>Le gerbeur Fenwick : gammes, capacités et CACES applicable</h1>
+      <div class="sig">Par <b>Denis Verhaeghe</b> · Publié le 25 juillet 2026 · 7 min de lecture
+        <span class="vf">✓ Vérifié le 25.07.2026</span></div>
+
+      <p class="chapo">Il n'existe pas de « CACES Fenwick ». La recommandation applicable dépend de la façon dont l'opérateur conduit la machine — accompagnant ou porté — jamais du constructeur. Et ce qui est légalement obligatoire, c'est l'autorisation de conduite, pas le certificat.</p>
+
+      <div class="toc"><b>Sommaire</b><ol>
+        <li><a>« CACES Fenwick » : la confusion à lever</a></li>
+        <li><a>Ce qu'est un gerbeur, et où il s'arrête</a></li>
+        <li><a>Les gammes Fenwick-Linde et leurs capacités</a></li>
+        <li><a>Les quatre critères qui tranchent</a></li>
+        <li><a>Vu en exploitation</a></li>
+      </ol></div>
+
+      <div class="bd">
+        <h2>« CACES Fenwick » : la confusion à lever</h2>
+        <p>Deux cas, deux recommandations distinctes. Un gerbeur à conducteur accompagnant relève de la R485. Un gerbeur à conducteur porté relève de la R489, catégorie 1B. Un même modèle décliné dans les deux configurations ne relève donc pas de la même recommandation : c'est la configuration livrée qui tranche, pas la référence commerciale.</p>
+
+        <div class="norm"><b>⚖ Ce que dit le texte</b>
+          <p>L'employeur doit délivrer une <strong>autorisation de conduite</strong> avant de confier un équipement de travail mobile à un opérateur. Le CACES est le moyen le plus courant d'évaluer les connaissances requises, mais il ne s'y substitue pas.</p>
+          <p class="src">Source : article R4323-56 du Code du travail · Vérifié le 25.07.2026 · Information générale, ne constitue pas un conseil juridique.</p></div>
+
+        <h2>Les gammes Fenwick-Linde et leurs capacités</h2>
+        <p>Les capacités annoncées par les constructeurs sont des capacités nominales. La capacité réellement disponible décroît avec la hauteur de levée et le centre de charge : seule la plaque de charge de la machine fait foi.</p>
+        <ul>
+          <li><strong>L10 – L16 B</strong> — accompagnant, 1 à 1,6 t, levée jusqu'à 5,47 m</li>
+          <li><strong>L14 – L16 R</strong> — porté, 1 400 à 1 600 kg, levée jusqu'à 5 316 mm</li>
+          <li><strong>L14 – L16 RW</strong> — porté haute levée, jusqu'à 1 600 kg et 6,2 m</li>
+        </ul>
+
+        <div class="px">
+          <div class="h"><span>Repères de prix — gerbeur électrique</span><span>07 · 2026</span></div>
+          <div class="r"><span>Gerbeur accompagnant 1,2 t<small>neuf, hors options</small></span><span class="v">3 200 – 6 800 €</span></div>
+          <div class="r"><span>Gerbeur porté 1,6 t<small>neuf, hors options</small></span><span class="v">7 400 – 14 500 €</span></div>
+          <div class="ft">Fourchettes indicatives HT constatées en juillet 2026, hors transport et mise en service. Ne constituent pas une offre commerciale.</div>
+        </div>
+
+        <div class="up">Cet article fait partie de notre guide complet sur <a>les gerbeurs</a>, dans l'univers <a>manutention et levage</a>.</div>
+
+        <h2>Vu en exploitation</h2>
+        <p>Le mode de défaillance le plus courant sur un parc de gerbeurs n'est ni le mât ni le moteur : ce sont les roues et les galets de fourche, usés par un sol dégradé que personne ne repère parce qu'il se dégrade lentement.</p>
+      </div>
+
+      <div class="cta">
+        <div><b>Besoin d'un gerbeur pour votre site ?</b><p>Recevez trois devis de fournisseurs de votre département. Gratuit et sans engagement.</p></div>
+        <a>Demander un devis</a>
+      </div>
+
+      <div class="same"><h2>À lire dans le même univers</h2>
+        <div class="sg">
+          <a class="sc"><span class="tag">Gerbeur</span><h3>Gerbeur ou transpalette élévateur : la limite réelle</h3><div class="m">18 juillet · 6 min</div></a>
+          <a class="sc"><span class="tag">Gerbeur</span><h3>Bras encadrants : dans quels cas ils se justifient</h3><div class="m">11 juillet · 5 min</div></a>
+          <a class="sc"><span class="tag">Gerbeur</span><h3>Batterie plomb ou lithium sur un gerbeur</h3><div class="m">4 juillet · 8 min</div></a>
+        </div></div>
+    </article>
+
+    <aside class="side">
+      <div class="sbox"><b>L'auteur</b><div class="au"><div class="avm"></div><div>
+        <b>Denis Verhaeghe</b><span>28 ans en manutention — SAV puis responsable de parc</span></div></div></div>
+      <div class="sbox"><b>Dans la même rubrique</b>
+        <a class="li">Chariots élévateurs : électrique, gaz ou diesel</a>
+        <a class="li">Nacelles : quelle catégorie pour quel chantier</a>
+        <a class="li">Palans et treuils : capacités et vérifications</a></div>
+      <div class="sbox"><b>Le dossier</b>
+        <a class="li">CACES et autorisation de conduite — 6 volets</a></div>
+    </aside>
+  </div>
+</div>
+</section>
+
+<!-- ============ GABARIT COMPARATIF ============ -->
+<section class="stage" data-t="B">
+<div class="hd"><div class="w hdi"><span class="lg">infoweb<i>·</i>manutention</span>
+  <nav class="hnav"><a>Équipements</a><a>Applications</a><a>Réglementation</a><a>Coûts</a><a>Marché</a></nav>
+  <span class="hact"><a class="btn fill">Annuaire</a></span></div></div>
+
+<div class="w">
+  <div class="bc"><a>Accueil</a><span>›</span><a>Équipements</a><span>›</span><a>Transpalette</a><span>›</span>Comparatif</div>
+
+  <span class="tag" style="display:block;margin-top:14px">Comparatif · Transpalette électrique</span>
+  <h1 style="font-size:clamp(28px,3.7vw,42px);margin:12px 0 16px;max-width:22ch">Les 10 meilleurs transpalettes électriques pour PME</h1>
+  <div class="sig">Par <b>Denis Verhaeghe</b> · Mis à jour le 20 juillet 2026 · 14 min
+    <span class="vf">✓ Prix relevés le 20.07.2026</span></div>
+
+  <div class="verdict"><b>Le verdict en trois lignes</b>
+    <div class="vrow">
+      <div class="vit"><strong>Notre choix</strong><h3>Jungheinrich EJE 116</h3><p>Le meilleur compromis autonomie / maniabilité pour un usage quotidien en allée étroite.</p></div>
+      <div class="vit"><strong>Meilleur rapport prix</strong><h3>Pramac QX 18</h3><p>Les mêmes capacités pour 900 € de moins, au prix d'un réseau SAV plus clairsemé.</p></div>
+      <div class="vit"><strong>Usage intensif</strong><h3>Linde MT15</h3><p>Le seul de la sélection réellement dimensionné pour deux équipes par jour.</p></div>
+    </div>
+  </div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Modèle</th><th>Capacité</th><th>Batterie</th><th>Autonomie</th><th>Largeur</th><th>Prix indicatif</th></tr></thead>
+    <tbody>
+      <tr><td>Jungheinrich EJE 116</td><td>1 600 kg</td><td>Li-ion 24 V</td><td>~5 h</td><td>720 mm</td><td>4 200 – 4 900 €</td></tr>
+      <tr><td>Pramac QX 18</td><td>1 800 kg</td><td>Li-ion 24 V</td><td>~4 h</td><td>730 mm</td><td>3 300 – 3 900 €</td></tr>
+      <tr><td>Linde MT15</td><td>1 500 kg</td><td>Li-ion 24 V</td><td>~6 h</td><td>710 mm</td><td>4 800 – 5 400 €</td></tr>
+      <tr><td>Still EXU 18</td><td>1 800 kg</td><td>Plomb 24 V</td><td>~4 h</td><td>740 mm</td><td>3 900 – 4 400 €</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="prod">
+    <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
+      <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
+    <div><span class="rank">N° 1</span><h3>Jungheinrich EJE 116</h3>
+      <p>Autonomie réelle tenue sur une journée complète, timon court qui pardonne les allées de moins de 2,20 m. Réseau SAV le plus dense de la sélection — c'est ce qui fait la différence sur un parc.</p>
+      <div class="spec"><span>1 600 kg</span><span>Li-ion 24 V</span><span>720 mm</span><span>~5 h</span></div></div>
+    <div class="buy"><div class="p">4 200 €</div><div class="d">à partir de, HT · 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
+  </div>
+
+  <div class="prod">
+    <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
+      <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
+    <div><span class="rank">N° 2</span><h3>Pramac QX 18</h3>
+      <p>Capacité supérieure et prix nettement inférieur. La contrepartie est un maillage SAV plus lâche : à réserver aux sites qui acceptent un délai d'intervention de 48 h.</p>
+      <div class="spec"><span>1 800 kg</span><span>Li-ion 24 V</span><span>730 mm</span><span>~4 h</span></div></div>
+    <div class="buy"><div class="p">3 300 €</div><div class="d">à partir de, HT · 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
+  </div>
+
+  <p class="disc"><strong>Transparence.</strong> Les liens « Voir l'offre » sont des liens commerciaux : si vous achetez, nous percevons une commission, sans surcoût pour vous. Le classement ne s'achète pas — les critères de sélection sont détaillés ci-dessous et les prix sont relevés à date fixe chez plusieurs marchands.</p>
+
+  <div class="bd" style="max-width:70ch">
+    <h2>Comment nous avons classé</h2>
+    <p>Quatre critères, pondérés selon l'usage d'une PME : autonomie réelle mesurée sur un cycle complet, largeur hors-tout rapportée à l'allée type, densité du réseau de service après-vente, et disponibilité des pièces d'usure sous 48 h.</p>
+    <p>Nous n'avons pas retenu la vitesse de translation, qui ne discrimine pas sur ces distances, ni le niveau sonore, homogène sur toute la sélection.</p>
+  </div>
+
+  <div class="faq"><h2>Questions fréquentes</h2>
+    <details open><summary>Faut-il un CACES pour un transpalette électrique ?</summary>
+      <p>Un transpalette à conducteur accompagnant ne relève pas du CACES. Un transpalette à conducteur porté relève de la R489 catégorie 1A. Dans tous les cas, l'autorisation de conduite délivrée par l'employeur reste obligatoire (article R4323-56 du Code du travail).</p></details>
+    <details><summary>Lithium ou plomb pour un usage quotidien ?</summary>
+      <p>Le lithium se rembourse à partir de deux équipes par jour, grâce à la charge d'opportunité qui supprime la batterie de rechange et le local de charge. En dessous, le plomb reste plus économique.</p></details>
+  </div>
+  <div style="height:50px"></div>
+</div>
+</section>
+
+<script>
+document.querySelectorAll('.sw button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.sw button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('.stage').forEach(s=>s.toggleAttribute('data-on',s.dataset.t===b.dataset.t));
+  scrollTo(0,0);
+});
+</script>
