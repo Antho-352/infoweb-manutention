@@ -21,6 +21,7 @@ h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
 .hnav::-webkit-scrollbar{display:none}.hnav a{white-space:nowrap}
 .btn{border:1.5px solid var(--ink);border-radius:8px;padding:7px 13px;font-size:12.5px;font-weight:700;white-space:nowrap}
 .btn.fill{background:var(--ink);color:var(--pap)}
+.btn.fill .mob{display:none}
 .hact{margin-left:auto}
 
 /* fil d'ariane */
@@ -35,6 +36,27 @@ h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
 .sig b{color:var(--ink)}
 .sig .vf{background:#e7f0e8;color:#2c6b45;padding:3px 9px;border-radius:5px;font-weight:700;font-size:11.5px}
 .chapo{font-size:19px;line-height:1.5;color:var(--ink);font-weight:500;margin:22px 0 26px;padding-left:16px;border-left:3px solid var(--amb)}
+/* L'ESSENTIEL — lecture rapide + bloc structuré pour extraction par les LLM */
+.ess{background:var(--card);border:1px solid #cfd9e6;border-radius:14px;padding:20px 22px;margin:24px 0 28px}
+.essh{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:15px}
+.essh b{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blu);display:block}
+.essh h2{font-size:20px;margin:3px 0 0}
+.essh .vb{margin-left:auto;display:inline-flex;align-items:center;gap:6px;background:#eef4fb;color:var(--blu);border:1px solid #d3e0f0;border-radius:999px;padding:5px 12px;font-size:11.5px;font-weight:700}
+.ess ul{list-style:none;margin:0}
+.ess li{display:grid;grid-template-columns:22px 1fr;gap:11px;align-items:start;padding:11px 0;border-top:1px solid #eceff3;font-size:14.5px;line-height:1.5}
+.ess li:first-child{border-top:0;padding-top:0}
+.ess li::before{content:"✓";display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--blu);color:#fff;font-size:12px;font-weight:800;margin-top:1px}
+.essf{display:flex;flex-wrap:wrap;gap:8px 18px;border-top:1px solid #eceff3;margin-top:14px;padding-top:12px;font-size:11.5px;color:var(--mut)}
+/* SOURCES — fin d'article */
+.src2{border-top:2px solid var(--ink);margin-top:36px;padding-top:22px}
+.src2 h2{font-size:20px;margin-bottom:6px}
+.src2 .lead{font-size:13.5px;color:var(--mut);margin-bottom:15px}
+.src2 ol{list-style:none;counter-reset:s}
+.src2 li{counter-increment:s;display:grid;grid-template-columns:26px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--rul);font-size:14px;align-items:start}
+.src2 li::before{content:counter(s);display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:6px;background:#efece4;font-size:12px;font-weight:800;color:var(--sub)}
+.src2 .ty{display:inline-block;background:#eef4fb;color:var(--blu);border-radius:5px;padding:2px 8px;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-right:8px}
+.src2 a{color:var(--blu);font-weight:650}
+.src2 small{display:block;color:var(--mut);font-size:11.5px;margin-top:3px}
 .toc{background:var(--card);border:1px solid var(--rul);border-radius:12px;padding:16px 18px;margin-bottom:30px}
 .toc b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:9px}
 .toc ol{margin-left:17px;font-size:14px}
@@ -101,6 +123,35 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 .prod p{font-size:13.5px;color:var(--sub);margin-bottom:9px}
 .spec{display:flex;flex-wrap:wrap;gap:6px}
 .spec span{background:#f0ece1;border-radius:6px;padding:3px 9px;font-size:11.5px;font-weight:650}
+/* sommaire des produits, ancres internes */
+.jump{background:var(--card);border:1px solid var(--rul);border-radius:12px;padding:16px 18px;margin:26px 0}
+.jump b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
+.jump ol{list-style:none;counter-reset:j;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:2px 16px}
+.jump li{counter-increment:j}
+.jump a{display:flex;gap:9px;align-items:baseline;padding:7px 0;border-top:1px solid var(--rul);font-size:13.5px;font-weight:650}
+.jump a::before{content:counter(j);color:var(--amb);font-weight:800;font-size:12px;min-width:15px}
+.jump a:hover{color:var(--blu)}
+.jump .pz{margin-left:auto;color:var(--mut);font-weight:600;font-size:12px}
+/* fiche produit détaillée */
+.pdet{background:var(--card);border:1px solid var(--rul);border-radius:14px;padding:20px;margin-bottom:20px;scroll-margin-top:120px}
+.phead{display:grid;grid-template-columns:132px minmax(0,1fr) auto;gap:20px;align-items:center}
+.pmz{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.pm{border-radius:11px;padding:14px 16px}
+.pm.up{background:#eef7f1;border:1px solid #cfe6d9}
+.pm.dn{background:#fdf0ef;border:1px solid #f2d5d2}
+.pm b{display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:10px}
+.pm.up b{color:#25714a}.pm.dn b{color:#b1382f}
+.pm ul{list-style:none;margin:0}
+.pm li{display:grid;grid-template-columns:17px 1fr;gap:9px;padding:7px 0;border-top:1px solid rgba(0,0,0,.06);font-size:13.5px;line-height:1.4;align-items:start}
+.pm li:first-child{border-top:0;padding-top:0}
+.pm li::before{font-size:11px;font-weight:800;width:17px;height:17px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;margin-top:2px}
+.pm.up li::before{content:"✓";background:#2fa06a}
+.pm.dn li::before{content:"✕";background:#dc5b50}
+/* notre avis en 30 secondes */
+.avis{border-left:4px solid #1f5c43;background:#f4f8f6;border-radius:0 11px 11px 0;padding:17px 19px;margin-top:18px}
+.avis b{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:9px}
+.avis p{font-size:14.5px;line-height:1.6;color:#20262b;margin:0}
+.avis strong{font-weight:800}
 .buy{text-align:right}
 .buy .p{font-size:20px;font-weight:800;letter-spacing:-.02em}
 .buy .d{font-size:10.5px;color:var(--mut);margin-bottom:9px}
@@ -112,12 +163,25 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 .faq summary{font-weight:700;cursor:pointer;font-size:15px}
 .faq p{font-size:14px;color:var(--sub);margin-top:9px}
 
+/* la nav ne tient plus sur la ligne du logo : elle passe en bande
+   défilante pleine largeur, sinon elle est rognée par le bouton */
+@media(max-width:1080px){
+  .hdi{flex-wrap:wrap;height:auto;padding-top:10px;gap:12px}
+  .hnav{order:3;width:100%;margin:0;padding:2px 0 9px}
+  .hact{margin-left:auto}
+  .hd{top:41px}
+}
 @media(max-width:980px){
   .artl{grid-template-columns:1fr;gap:30px}
   .side{position:static}
   .prod{grid-template-columns:1fr;gap:14px}
   .prod .im{height:150px}
   .buy{text-align:left}.buy a{text-align:center}
+  .pmz{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .btn.fill .dsk{display:none}
+  .btn.fill .mob{display:inline}
 }
 </style>
 
@@ -130,7 +194,7 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 <section class="stage" data-t="A" data-on>
 <div class="hd"><div class="w hdi"><span class="lg">infoweb<i>·</i>manutention</span>
   <nav class="hnav"><a>Équipements</a><a>Applications</a><a>Réglementation</a><a>Coûts</a><a>Marché</a></nav>
-  <span class="hact"><a class="btn fill">Annuaire</a></span></div></div>
+  <span class="hact"><a class="btn fill"><span class="dsk">Trouver un prestataire</span><span class="mob">Prestataires</span></a></span></div></div>
 
 <div class="w">
   <div class="bc"><a>Accueil</a><span>›</span><a>Équipements</a><span>›</span><a>Gerbeur</a><span>›</span>Le gerbeur Fenwick</div>
@@ -142,6 +206,21 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
         <span class="vf">✓ Vérifié le 25.07.2026</span></div>
 
       <p class="chapo">Il n'existe pas de « CACES Fenwick ». La recommandation applicable dépend de la façon dont l'opérateur conduit la machine — accompagnant ou porté — jamais du constructeur. Et ce qui est légalement obligatoire, c'est l'autorisation de conduite, pas le certificat.</p>
+
+      <section class="ess">
+        <div class="essh">
+          <div><b>L'essentiel</b><h2>Ce qu'il faut retenir</h2></div>
+          <span class="vb">⛉ Faits vérifiés</span>
+        </div>
+        <ul>
+          <li>« Fenwick » est une marque commerciale, pas une catégorie d'engin : il n'existe aucun CACES propre au constructeur</li>
+          <li>Un gerbeur à conducteur accompagnant relève de la recommandation R485, un gerbeur à conducteur porté de la R489 catégorie 1B</li>
+          <li>Le CACES n'est pas une obligation légale : c'est l'autorisation de conduite délivrée par l'employeur qui l'est, au titre de l'article R4323-56 du Code du travail</li>
+          <li>Les gammes accompagnantes L10 – L16 B portent de 1 à 1,6 tonne jusqu'à 5,47 m ; les versions portées L14 – L16 RW montent à 6,2 m</li>
+          <li>La capacité annoncée est nominale : la capacité réellement disponible décroît avec la hauteur, seule la plaque de charge fait foi</li>
+        </ul>
+        <div class="essf"><span>✓ 5 faits vérifiés</span><span>⛁ 3 sources</span><span>⏱ Mis à jour le 25 juillet 2026</span></div>
+      </section>
 
       <div class="toc"><b>Sommaire</b><ol>
         <li><a>« CACES Fenwick » : la confusion à lever</a></li>
@@ -185,6 +264,21 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
         <a>Demander un devis</a>
       </div>
 
+      <section class="src2">
+        <h2>Sources</h2>
+        <p class="lead">Toute affirmation réglementaire de cet article renvoie à un texte officiel. Les caractéristiques produit proviennent de la documentation constructeur, relevée à la date indiquée.</p>
+        <ol>
+          <li><div><span class="ty">Réglementation</span><a>Article R4323-56 du Code du travail — autorisation de conduite</a>
+            <small>Légifrance · consulté le 25 juillet 2026</small></div></li>
+          <li><div><span class="ty">Recommandation</span><a>R485 — gerbeurs automoteurs à conducteur accompagnant</a>
+            <small>Assurance Maladie – Risques professionnels · consulté le 25 juillet 2026</small></div></li>
+          <li><div><span class="ty">Recommandation</span><a>R489 — chariots de manutention automoteurs à conducteur porté, catégorie 1B</a>
+            <small>Assurance Maladie – Risques professionnels · consulté le 25 juillet 2026</small></div></li>
+          <li><div><span class="ty">Constructeur</span><a>Documentation produit gerbeurs Fenwick-Linde</a>
+            <small>fenwick-linde.fr · relevé le 25 juillet 2026</small></div></li>
+        </ol>
+      </section>
+
       <div class="same"><h2>À lire dans le même univers</h2>
         <div class="sg">
           <a class="sc"><span class="tag">Gerbeur</span><h3>Gerbeur ou transpalette élévateur : la limite réelle</h3><div class="m">18 juillet · 6 min</div></a>
@@ -211,7 +305,7 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 <section class="stage" data-t="B">
 <div class="hd"><div class="w hdi"><span class="lg">infoweb<i>·</i>manutention</span>
   <nav class="hnav"><a>Équipements</a><a>Applications</a><a>Réglementation</a><a>Coûts</a><a>Marché</a></nav>
-  <span class="hact"><a class="btn fill">Annuaire</a></span></div></div>
+  <span class="hact"><a class="btn fill"><span class="dsk">Trouver un prestataire</span><span class="mob">Prestataires</span></a></span></div></div>
 
 <div class="w">
   <div class="bc"><a>Accueil</a><span>›</span><a>Équipements</a><span>›</span><a>Transpalette</a><span>›</span>Comparatif</div>
@@ -239,23 +333,67 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
     </tbody>
   </table></div>
 
-  <div class="prod">
-    <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
-      <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
-    <div><span class="rank">N° 1</span><h3>Jungheinrich EJE 116</h3>
-      <p>Autonomie réelle tenue sur une journée complète, timon court qui pardonne les allées de moins de 2,20 m. Réseau SAV le plus dense de la sélection — c'est ce qui fait la différence sur un parc.</p>
-      <div class="spec"><span>1 600 kg</span><span>Li-ion 24 V</span><span>720 mm</span><span>~5 h</span></div></div>
-    <div class="buy"><div class="p">4 200 €</div><div class="d">à partir de, HT · 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
-  </div>
+  <nav class="jump"><b>Aller directement à un modèle</b><ol>
+    <li><a href="#p1">Jungheinrich EJE 116 <span class="pz">4 200 €</span></a></li>
+    <li><a href="#p2">Pramac QX 18 <span class="pz">3 300 €</span></a></li>
+    <li><a href="#p3">Linde MT15 <span class="pz">4 800 €</span></a></li>
+    <li><a href="#p4">Still EXU 18 <span class="pz">3 900 €</span></a></li>
+  </ol></nav>
 
-  <div class="prod">
-    <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
-      <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
-    <div><span class="rank">N° 2</span><h3>Pramac QX 18</h3>
-      <p>Capacité supérieure et prix nettement inférieur. La contrepartie est un maillage SAV plus lâche : à réserver aux sites qui acceptent un délai d'intervention de 48 h.</p>
-      <div class="spec"><span>1 800 kg</span><span>Li-ion 24 V</span><span>730 mm</span><span>~4 h</span></div></div>
-    <div class="buy"><div class="p">3 300 €</div><div class="d">à partir de, HT · 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
-  </div>
+  <article class="pdet" id="p1">
+    <div class="phead">
+      <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
+        <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
+      <div><span class="rank">N° 1 · Notre choix</span><h3>Jungheinrich EJE 116</h3>
+        <p>Autonomie réelle tenue sur une journée complète, timon court qui pardonne les allées de moins de 2,20 m. Réseau SAV le plus dense de la sélection — c'est ce qui fait la différence sur un parc.</p>
+        <div class="spec"><span>1 600 kg</span><span>Li-ion 24 V</span><span>720 mm hors-tout</span><span>~5 h d'autonomie</span><span>Charge 2 h</span><span>Garantie 2 ans</span></div></div>
+      <div class="buy"><div class="p">4 200 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
+    </div>
+
+    <div class="pmz">
+      <div class="pm up"><b>Points forts</b><ul>
+        <li>Autonomie tenue sur une journée complète sans charge intermédiaire</li>
+        <li>Réseau de service après-vente le plus dense de la sélection</li>
+        <li>Timon court : manœuvre en allée de 2,20 m</li>
+        <li>Pièces d'usure disponibles sous 48 h</li>
+      </ul></div>
+      <div class="pm dn"><b>Points faibles</b><ul>
+        <li>Le plus cher de la sélection à capacité égale</li>
+        <li>Chargeur externe non fourni en série</li>
+        <li>Roues de charge à changer tôt sur sol dégradé</li>
+      </ul></div>
+    </div>
+
+    <div class="avis"><b>❝ Notre avis en 30 secondes</b>
+      <p><strong>L'EJE 116 est le choix par défaut d'une PME qui tourne une équipe par jour.</strong> Son autonomie réelle évite la batterie de rechange et le local de charge, deux postes de coût que les comparatifs oublient. Le surcoût à l'achat se rattrape sur la disponibilité des pièces et le délai d'intervention. <strong>À écarter si</strong> votre sol est dégradé et votre budget serré : les roues de charge deviennent un consommable.</p></div>
+  </article>
+
+  <article class="pdet" id="p2">
+    <div class="phead">
+      <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
+        <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
+      <div><span class="rank">N° 2 · Meilleur rapport prix</span><h3>Pramac QX 18</h3>
+        <p>Capacité supérieure et prix nettement inférieur. La contrepartie est un maillage SAV plus lâche : à réserver aux sites qui acceptent un délai d'intervention de 48 h.</p>
+        <div class="spec"><span>1 800 kg</span><span>Li-ion 24 V</span><span>730 mm hors-tout</span><span>~4 h d'autonomie</span><span>Charge 3 h</span><span>Garantie 2 ans</span></div></div>
+      <div class="buy"><div class="p">3 300 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
+    </div>
+
+    <div class="pmz">
+      <div class="pm up"><b>Points forts</b><ul>
+        <li>900 € de moins que le premier de la sélection, à capacité supérieure</li>
+        <li>1 800 kg : la plus forte capacité du comparatif</li>
+        <li>Chargeur intégré, pas de station séparée</li>
+      </ul></div>
+      <div class="pm dn"><b>Points faibles</b><ul>
+        <li>Réseau après-vente clairsemé selon les régions</li>
+        <li>Autonomie plus courte : juste pour une journée chargée</li>
+        <li>Largeur hors-tout de 730 mm, limite en allée étroite</li>
+      </ul></div>
+    </div>
+
+    <div class="avis"><b>❝ Notre avis en 30 secondes</b>
+      <p><strong>Le bon calcul quand le site accepte 48 h d'immobilisation.</strong> À capacité supérieure et 900 € de moins, l'écart de prix couvre plusieurs années de contrat de maintenance. <strong>Idéal si</strong> vous avez une deuxième machine en secours ou un flux qui tolère un arrêt ; <strong>à éviter</strong> en mono-machine sur un flux tendu, où le délai d'intervention coûte plus cher que l'économie à l'achat.</p></div>
+  </article>
 
   <p class="disc"><strong>Transparence.</strong> Les liens « Voir l'offre » sont des liens commerciaux : si vous achetez, nous percevons une commission, sans surcoût pour vous. Le classement ne s'achète pas — les critères de sélection sont détaillés ci-dessous et les prix sont relevés à date fixe chez plusieurs marchands.</p>
 
