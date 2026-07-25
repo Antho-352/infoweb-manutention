@@ -1,0 +1,256 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>infoweb-manutention — page d'accueil</title>
+<style>
+:root{
+  --pap:#f6f4ef; --card:#fff; --ink:#14161a; --sub:#3f444b; --mut:#767c85;
+  --rul:#e2ddd2; --amb:#e39a12; --blu:#2f5d94; --wrap:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--pap);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.w{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{letter-spacing:-.032em;line-height:1.06;font-weight:800}
+.sec{padding:44px 0}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:20px;padding-bottom:11px;border-bottom:2px solid var(--ink)}
+.sh h2{font-size:21px}
+.sh span{font-size:12.5px;color:var(--mut)}
+.sh a{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--blu)}
+
+/* ---------- EN-TÊTE ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(246,244,239,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--rul)}
+.bar{display:flex;align-items:center;gap:20px;height:60px}
+.logo{font-weight:800;font-size:17.5px;letter-spacing:-.05em}
+.logo i{font-style:normal;color:var(--amb)}
+.nav{display:flex;gap:22px;margin-left:14px;font-size:13.5px;font-weight:650}
+.nav a{color:var(--sub);padding:4px 0;border-bottom:2px solid transparent}
+.nav a:hover,.nav a.on{color:var(--ink);border-bottom-color:var(--amb)}
+.nav a::after{content:"";display:inline-block;margin-left:5px;border:3.5px solid transparent;border-top-color:currentColor;transform:translateY(2px);opacity:0}
+.nav a.dd::after{opacity:.5}
+.hact{margin-left:auto;display:flex;gap:9px;align-items:center}
+.btn{border:1.5px solid var(--ink);border-radius:8px;padding:7px 13px;font-size:13px;font-weight:700}
+.btn.fill{background:var(--ink);color:var(--pap)}
+
+/* ---------- HERO ---------- */
+.hero{padding:38px 0 8px}
+.hbox{background:linear-gradient(168deg,#fffefb 0%,#f0ece1 100%);border:1px solid var(--rul);border-radius:20px;padding:52px 54px;display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:center}
+.kick{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.kick b{background:var(--ink);color:#fff;padding:3px 9px;border-radius:4px;letter-spacing:.1em}
+.hbox h1{font-size:clamp(36px,4.9vw,58px);margin:20px 0 18px}
+.hbox h1 span{color:var(--amb)}
+.hbox p{font-size:17.5px;color:var(--sub);max-width:54ch}
+.hmeta{margin-top:24px;font-size:12.5px;color:var(--mut)}
+.hmeta b{color:var(--ink)}
+.hfig{aspect-ratio:1/1;border-radius:16px;background:#eae5d8;display:flex;align-items:center;justify-content:center}
+
+/* ---------- À LA UNE ---------- */
+.une{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:16px}
+.card{background:var(--card);border:1px solid var(--rul);border-radius:14px;padding:17px;display:flex;flex-direction:column;gap:9px}
+.card.lead{grid-row:span 2;padding:0;overflow:hidden}
+.card.lead .im{height:210px;background:#eae5d8}
+.card.lead .bd{padding:18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.tag{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blu)}
+.card h3{font-size:16.5px;line-height:1.24}
+.card.lead h3{font-size:24px}
+.card p{font-size:13.5px;color:var(--sub)}
+.m{margin-top:auto;padding-top:10px;border-top:1px solid var(--rul);font-size:11.5px;color:var(--mut)}
+
+/* ---------- RUBRIQUES ---------- */
+.rubs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rub h3{font-size:17px;padding-bottom:9px;border-bottom:2px solid var(--amb);margin-bottom:4px}
+.rub a.li{display:block;padding:11px 0;border-bottom:1px solid var(--rul);font-size:14px;font-weight:650;line-height:1.32}
+.rub a.li small{display:block;font-weight:400;color:var(--mut);font-size:11.5px;margin-top:3px}
+
+/* ---------- APPLICATIONS ---------- */
+.apps{display:grid;grid-template-columns:repeat(7,1fr);gap:9px}
+.app{background:var(--card);border:1px solid var(--rul);border-radius:11px;padding:13px 11px;font-size:12.5px;font-weight:650;line-height:1.28;min-height:74px;display:flex;flex-direction:column;justify-content:space-between}
+.app:hover{border-color:var(--ink)}
+.app u{text-decoration:none;font-size:10px;color:var(--mut);font-weight:600}
+
+/* ---------- COMPARATIFS (affiliation) ---------- */
+.cmp{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.pc{background:var(--card);border:1px solid var(--rul);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.pc .im{height:112px;background:#f0ece1;display:flex;align-items:center;justify-content:center}
+.pc .bd{padding:14px;display:flex;flex-direction:column;gap:7px;flex:1}
+.pc h3{font-size:14.5px;line-height:1.28}
+.pc .rg{font-size:13px;font-weight:800;color:var(--amb)}
+.pc .m{font-size:11px}
+.aff{font-size:11.5px;color:var(--mut);margin-top:13px;padding:9px 12px;background:#efece4;border-radius:8px}
+
+/* ---------- AGENDA ---------- */
+.ag{display:grid;grid-template-columns:repeat(2,1fr);gap:0 30px}
+.ev{display:grid;grid-template-columns:62px 1fr auto;gap:15px;align-items:center;padding:14px 0;border-bottom:1px solid var(--rul)}
+.dt{background:var(--ink);color:#fff;border-radius:9px;text-align:center;padding:7px 4px}
+.dt b{display:block;font-size:18px;font-weight:800;line-height:1}
+.dt span{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase}
+.ev h4{font-size:14.5px}
+.ev small{color:var(--mut);font-size:12px}
+.ev u{text-decoration:none;font-size:11px;font-weight:700;color:var(--blu);white-space:nowrap}
+
+/* ---------- NEWSLETTER ---------- */
+.nl{background:var(--ink);color:#fff;border-radius:20px;padding:38px 44px;display:grid;grid-template-columns:1fr 400px;gap:40px;align-items:center}
+.nl h2{font-size:27px;margin-bottom:11px}
+.nl p{color:#a9aeb6;font-size:14.5px;max-width:50ch}
+.nl form{display:flex;gap:8px}
+.nl input{flex:1;border:0;border-radius:9px;padding:13px 14px;font:inherit;font-size:14px}
+.nl button{border:0;border-radius:9px;padding:13px 20px;background:var(--amb);color:var(--ink);font:inherit;font-weight:800;font-size:14px;cursor:pointer}
+.nl label{display:block;margin-top:11px;font-size:11.5px;color:#8d939c}
+
+/* ---------- RÉDACTION ---------- */
+.desk{display:grid;grid-template-columns:64px 1fr auto;gap:18px;align-items:center;background:var(--card);border:1px solid var(--rul);border-radius:16px;padding:20px 24px}
+.av{width:64px;height:64px;border-radius:50%;background:linear-gradient(160deg,var(--amb),#c07d09)}
+.desk b{font-size:15.5px}
+.desk p{font-size:13.5px;color:var(--sub);max-width:70ch}
+
+footer{border-top:1px solid var(--rul);margin-top:36px;padding:24px 0 40px;font-size:12.5px;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media(max-width:1000px){
+  .hbox{grid-template-columns:1fr;padding:32px 26px}.hfig{display:none}
+  .une,.rubs,.cmp,.ag,.nl{grid-template-columns:1fr}
+  .apps{grid-template-columns:repeat(3,1fr)}
+  .nav{display:none}.card.lead{grid-row:auto}
+}
+</style>
+
+<header><div class="w bar">
+  <span class="logo">infoweb<i>·</i>manutention</span>
+  <nav class="nav">
+    <a class="dd on">Équipements</a><a class="dd">Applications</a><a>Réglementation</a><a>Coûts</a><a>Marché</a>
+  </nav>
+  <div class="hact"><a class="btn">Newsletter</a><a class="btn fill">Annuaire</a></div>
+</div></header>
+
+<!-- HERO -->
+<section class="hero"><div class="w"><div class="hbox">
+  <div>
+    <span class="kick"><b>Dossier</b> Baromètre des prix 2026</span>
+    <h1>Ce que coûte vraiment un <span>parc de manutention</span></h1>
+    <p>214 relevés agrégés sur douze familles de matériel : achat, location longue durée, maintenance, VGP et formation. Jusqu'à 22 % d'écart entre régions.</p>
+    <div class="hmeta">Par <b>Denis Verhaeghe</b> · 25 juillet 2026 · Vérifié le 25.07.2026 · 14 min de lecture</div>
+  </div>
+  <div class="hfig"><svg width="190" height="190" viewBox="0 0 120 120" fill="none" stroke="#b9ae95" stroke-width="2.4">
+    <path d="M18 86h56M30 86V62h20v24M50 62l14-22h12v46" stroke-linejoin="round"/>
+    <circle cx="36" cy="94" r="7"/><circle cx="64" cy="94" r="7"/>
+    <path d="M84 34h20M84 44h20M84 54h14" stroke-linecap="round" opacity=".5"/></svg></div>
+</div></div></section>
+
+<!-- À LA UNE -->
+<section class="sec"><div class="w">
+  <div class="sh"><h2>À la une</h2><span>Vérifié, daté, sourcé</span><a>Toutes les publications →</a></div>
+  <div class="une">
+    <a class="card lead"><div class="im"></div><div class="bd">
+      <span class="tag">Équipements</span>
+      <h3>Le gerbeur Fenwick : gammes, capacités et CACES applicable</h3>
+      <p>Il n'existe pas de « CACES Fenwick ». La recommandation dépend de la conduite — accompagnant ou porté — jamais du constructeur.</p>
+      <div class="m">25 juillet 2026 · 7 min</div></div></a>
+
+    <a class="card"><span class="tag">Réglementation</span><h3>VGP : ce que l'arrêté impose vraiment à l'employeur</h3><div class="m">22 juillet · 11 min</div></a>
+    <a class="card"><span class="tag">Coûts</span><h3>Batteries lithium : à partir de quel usage le surcoût se rembourse</h3><div class="m">19 juillet · 8 min</div></a>
+    <a class="card"><span class="tag">Exploitation</span><h3>Largeurs d'allée : le calcul que personne ne refait après travaux</h3><div class="m">17 juillet · 9 min</div></a>
+    <a class="card"><span class="tag">Marché</span><h3>Classement 2026 des marques de chariots élévateurs</h3><div class="m">15 juillet · 12 min</div></a>
+  </div>
+</div></section>
+
+<!-- RUBRIQUES -->
+<section class="sec"><div class="w">
+  <div class="sh"><h2>Les rubriques</h2><span>Trois univers, une même exigence</span></div>
+  <div class="rubs">
+    <div class="rub"><h3>Manutention &amp; levage</h3>
+      <a class="li">Chariots élévateurs : électrique, gaz ou diesel <small>Le tableau de décision par usage</small></a>
+      <a class="li">Gerbeurs : accompagnant ou porté <small>Le seuil des 30 mètres par cycle</small></a>
+      <a class="li">Palans et treuils : capacités et vérifications <small>Ce que la plaque doit indiquer</small></a>
+      <a class="li">Nacelles : quelle catégorie pour quel chantier <small>Ciseaux, articulée, télescopique</small></a>
+    </div>
+    <div class="rub"><h3>Logistique &amp; entrepôt</h3>
+      <a class="li">Rayonnage : charges admissibles et protection <small>Le contrôle annuel oublié</small></a>
+      <a class="li">Organiser les flux de préparation <small>Zonage et distances parcourues</small></a>
+      <a class="li">Quais et niveleurs : dimensionner juste <small>Hauteurs et pentes</small></a>
+      <a class="li">Roll-conteneurs : quand ils battent la palette <small>Coût au mètre linéaire</small></a>
+    </div>
+    <div class="rub"><h3>Automatisation &amp; robotique</h3>
+      <a class="li">AGV ou AMR : la différence qui compte <small>Guidage fixe contre navigation libre</small></a>
+      <a class="li">Faut-il un WMS avant d'automatiser <small>L'erreur de séquencement classique</small></a>
+      <a class="li">Convoyeurs : les vrais coûts d'exploitation <small>Maintenance et pièces d'usure</small></a>
+      <a class="li">Retour sur investissement d'un transstockeur <small>Les seuils de volume</small></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- APPLICATIONS -->
+<section class="sec"><div class="w">
+  <div class="sh"><h2>Par application</h2><span>Les contraintes de manutention, secteur par secteur</span><a>Tous les secteurs →</a></div>
+  <div class="apps">
+    <a class="app">Agroalimentaire<u>Inox · froid · HACCP</u></a>
+    <a class="app">Santé &amp; pharma<u>Salle propre · traçabilité</u></a>
+    <a class="app">Chimie<u>ATEX · rétention</u></a>
+    <a class="app">Métallurgie &amp; sidérurgie<u>Charges lourdes · chaleur</u></a>
+    <a class="app">Automobile<u>Cadence · ergonomie</u></a>
+    <a class="app">Aéronautique &amp; spatial<u>Charges longues · précision</u></a>
+    <a class="app">BTP &amp; construction<u>Tout-terrain · chantier</u></a>
+    <a class="app">Énergie<u>Nucléaire · éolien</u></a>
+    <a class="app">Défense<u>Sûreté · gabarits</u></a>
+    <a class="app">Transports &amp; logistique<u>Quais · massification</u></a>
+    <a class="app">Électronique &amp; informatique<u>ESD · petits contenants</u></a>
+    <a class="app">Matières premières<u>Vrac · bennes</u></a>
+    <a class="app">Télécoms<u>Travail en hauteur</u></a>
+    <a class="app">Environnement<u>Déchets · tri</u></a>
+  </div>
+</div></section>
+
+<!-- COMPARATIFS / AFFILIATION -->
+<section class="sec"><div class="w">
+  <div class="sh"><h2>Comparatifs et guides d'achat</h2><span>Testés sur critères, prix relevés et datés</span><a>Tous les comparatifs →</a></div>
+  <div class="cmp">
+    <a class="pc"><div class="im"><svg width="76" height="60" viewBox="0 0 76 60" fill="none" stroke="#b9ae95" stroke-width="2.4"><path d="M8 44h44M18 44V28h14v16M32 28l10-14h10v30" stroke-linejoin="round"/><circle cx="22" cy="50" r="5"/><circle cx="45" cy="50" r="5"/></svg></div>
+      <div class="bd"><span class="tag">Comparatif</span><h3>Les 10 meilleurs transpalettes électriques pour PME</h3><span class="rg">de 1 800 à 5 400 €</span><div class="m">Mis à jour le 20.07.2026</div></div></a>
+    <a class="pc"><div class="im"><svg width="76" height="60" viewBox="0 0 76 60" fill="none" stroke="#b9ae95" stroke-width="2.4"><path d="M20 50V14h10v36M30 20h20v30M14 50h48" stroke-linejoin="round"/></svg></div>
+      <div class="bd"><span class="tag">Comparatif</span><h3>Meilleurs gerbeurs électriques : 8 modèles départagés</h3><span class="rg">de 3 200 à 9 700 €</span><div class="m">Mis à jour le 18.07.2026</div></div></a>
+    <a class="pc"><div class="im"><svg width="76" height="60" viewBox="0 0 76 60" fill="none" stroke="#b9ae95" stroke-width="2.4"><path d="M38 10v10M26 20h24v8H26zM38 28v14M32 42h12v8H32z" stroke-linejoin="round"/></svg></div>
+      <div class="bd"><span class="tag">Guide d'achat</span><h3>Palans à chaîne : quelle capacité pour quel atelier</h3><span class="rg">de 260 à 2 900 €</span><div class="m">Mis à jour le 14.07.2026</div></div></a>
+    <a class="pc"><div class="im"><svg width="76" height="60" viewBox="0 0 76 60" fill="none" stroke="#b9ae95" stroke-width="2.4"><rect x="16" y="16" width="44" height="12" rx="2"/><rect x="16" y="34" width="44" height="12" rx="2"/><path d="M24 16v30M52 16v30"/></svg></div>
+      <div class="bd"><span class="tag">Comparatif</span><h3>Rayonnages mi-lourds : 6 gammes au banc d'essai</h3><span class="rg">de 90 à 340 € /travée</span><div class="m">Mis à jour le 11.07.2026</div></div></a>
+  </div>
+  <p class="aff">Certains liens de cette rubrique sont des liens commerciaux : si vous achetez, nous percevons une commission sans surcoût pour vous. Le classement ne s'achète pas — les critères de sélection sont publiés sur chaque comparatif.</p>
+</div></section>
+
+<!-- AGENDA -->
+<section class="sec"><div class="w">
+  <div class="sh"><h2>Agenda professionnel</h2><span>Salons manutention, intralogistique et industrie</span><a>Tout l'agenda →</a></div>
+  <div class="ag">
+    <div>
+      <div class="ev"><div class="dt"><b>30</b><span>Mars</span></div><div><h4>Global Industrie</h4><small>Paris Nord Villepinte · 30 mars – 2 avril 2026</small></div><u>Détails</u></div>
+      <div class="ev"><div class="dt"><b>31</b><span>Mars</span></div><div><h4>SITL</h4><small>Paris · 31 mars – 2 avril 2026 · Transport et supply chain</small></div><u>Détails</u></div>
+      <div class="ev"><div class="dt"><b>09</b><span>Juin</span></div><div><h4>Euro Supply Chain</h4><small>Mulhouse · 9 juin 2026 · Intralogistique</small></div><u>Détails</u></div>
+    </div>
+    <div>
+      <div class="ev"><div class="dt"><b>01</b><span>Déc</span></div><div><h4>Supply Chain Event</h4><small>Paris Porte de Versailles · 1–2 décembre 2026</small></div><u>Détails</u></div>
+      <div class="ev"><div class="dt"><b>17</b><span>Nov</span></div><div><h4>All4Pack</h4><small>Paris · Emballage et logistique industrielle</small></div><u>Détails</u></div>
+      <div class="ev"><div class="dt"><b>06</b><span>Oct</span></div><div><h4>Préventica</h4><small>Lyon · Santé et sécurité au travail</small></div><u>Détails</u></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- NEWSLETTER -->
+<section class="sec"><div class="w"><div class="nl">
+  <div>
+    <h2>La lettre de la manutention</h2>
+    <p>Une fois par mois : les évolutions réglementaires qui vous concernent, les relevés de prix mis à jour et les comparatifs publiés. Rien d'autre.</p>
+  </div>
+  <div>
+    <form onsubmit="return false"><input type="email" placeholder="Votre e-mail professionnel"><button>S'abonner</button></form>
+    <label>Vos données servent uniquement à l'envoi de cette lettre. Désinscription en un clic.</label>
+  </div>
+</div></div></section>
+
+<!-- RÉDACTION -->
+<section class="sec" style="padding-top:0"><div class="w"><div class="desk">
+  <div class="av"></div>
+  <div><b>Denis Verhaeghe — rédacteur en chef</b>
+    <p>28 ans en manutention, d'abord technicien SAV itinérant puis responsable d'un parc de 130 machines. Média indépendant : aucun constructeur ni loueur au capital. Chaque chiffre est daté et sourcé, chaque référence réglementaire renvoie au texte officiel.</p></div>
+  <a class="btn">La rédaction</a>
+</div></div></section>
+
+<div class="w"><footer>
+  <span>© 2026 infoweb-manutention — média indépendant de la manutention et du levage</span>
+  <span>Mentions légales · Confidentialité · Transparence · Annoncer · Contact</span>
+</footer></div>
