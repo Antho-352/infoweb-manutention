@@ -71,75 +71,75 @@ url_source,action,url_cible,motif,trafic_actuel,volume_cumule,top_mot_cle
 /outillage/parksidelidl-bricolage/,410,,hors sujet — outillage grand public,1,53783,parkside lidl
 /accessoire/les-remorques-pour-voitures-lesquelles-choisir/,410,,hors sujet — remorques auto,1,36801,remorque voiture
 /nacelles-elevatrices/,301,/nacelle/,fusion univers nacelle,1,29012,nacelle
-/categorie/palan-treuils/,301,/levage/palan/,catégorie → famille,1,13825,palan
-/levage/levage-ponts-roulants-potences/,301,/levage/pont-roulant/,hub hérité → famille,1,9339,ponts roulant
+/categorie/palan-treuils/,301,/treuil-palonnier/,catégorie → famille,1,13825,palan
+/levage/levage-ponts-roulants-potences/,301,/pont-roulant/,hub hérité → famille,1,9339,ponts roulant
 /categorie/chariot-elevateur-electrique/,301,/chariot-elevateur/electrique/,catégorie → famille,1,4278,chariot electrique
 /table-elevatrice/itm-logistique-alimentaire-international/,301,/entreprise/itm-logistique-alimentaire-international/,doublon fiche ITM,1,3160,itm
 /btp/le-prix-de-la-renovation-de-locaux-et-entrepots-industriels/,410,,hors sujet — BTP réno,1,2567,prix m2 batiment industriel
-/produit/aimant-de-levage-magnetique-1000-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,1,2130,aimant magnétisme
+/produit/aimant-de-levage-magnetique-1000-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,1,2130,aimant magnétisme
 /categorie/chariot-elevateur-gaz/,301,/chariot-elevateur/gaz/,catégorie → famille,1,1770,chariot élévateur à gaz
 /produit/mat-retractable-2-000-kg-a-2500-kg/,301,/chariot-elevateur/retractable/,fiche produit absorbée par famille,1,1090,chariot à mât rétractable
 /produit/chariot-elevateur-a-gaz-5t/,301,/chariot-elevateur/gaz/,fiche produit absorbée par famille,1,870,chariot élévateur 5
-/produit/treuil-a-cable-electrique-150kg-300kg-telecommande-sans-fill/,301,/levage/treuil/,fiche produit absorbée par famille,1,860,treuil à câble
+/produit/treuil-a-cable-electrique-150kg-300kg-telecommande-sans-fill/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,860,treuil à câble
 /fabricants-chariots-elevateurs/,301,/entreprise/le-classement-marques-chariot-elevateur-avis-et-comparatifs/,cannibalisation marques,1,652,marque chariot élévateur
-/produit/treuil-manuel-3-2-t-treuil-de-main-corde-20-m/,301,/levage/treuil/,fiche produit absorbée par famille,1,580,treuil manuel 2 tonnes
-/chariot-elevateur/quel-prix-pour-un-prix-chariot-elevateur-neuf-noatre-avis/,301,/prix/chariot-elevateur/,"slug défectueux, intention prix",1,570,chariot elevateur prix
+/produit/treuil-manuel-3-2-t-treuil-de-main-corde-20-m/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,580,treuil manuel 2 tonnes
+/chariot-elevateur/quel-prix-pour-un-prix-chariot-elevateur-neuf-noatre-avis/,301,/chariot-elevateur/prix/,"slug défectueux, intention prix",1,570,chariot elevateur prix
 /chariot-elevateur/caces-chariot-elevateur-que-dois-je-savoir/,301,/caces-chariot-elevateur-guide-complet/,cannibalisation CACES,1,570,prise de poste caces 3
-/transpalette/prix-des-transpalettes-guide-des-tarifs-complet/,301,/prix/transpalette/,intention prix,1,554,transpalette pas cher
-/produit/palan-a-chaine-3-tonnes/,301,/levage/palan/,fiche produit absorbée par famille,1,480,palan 3 tonnes
-/produit/treuil-palan-electrique-treuil100-200kg/,301,/levage/palan/,fiche produit absorbée par famille,1,391,palan electrique 100 kg
-/produit/treuil-electrique-palan-220-v-avec-un-cable-de-15-m/,301,/levage/palan/,fiche produit absorbée par famille,1,389,palans électriques 220v
+/transpalette/prix-des-transpalettes-guide-des-tarifs-complet/,301,/transpalette/prix/,intention prix,1,554,transpalette pas cher
+/produit/palan-a-chaine-3-tonnes/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,480,palan 3 tonnes
+/produit/treuil-palan-electrique-treuil100-200kg/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,391,palan electrique 100 kg
+/produit/treuil-electrique-palan-220-v-avec-un-cable-de-15-m/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,389,palans électriques 220v
 /chariot-elevateur/classement-des-marques-chariot-elevateur/,301,/entreprise/le-classement-marques-chariot-elevateur-avis-et-comparatifs/,cannibalisation marques,1,380,marque de chariot elevateur
-/produit/treuil-a-cable-electrique-400-800-kg-palan-electrique/,301,/levage/palan/,fiche produit absorbée par famille,1,366,treuil palan electrique
-/categorie/aimant-de-levage/,301,/levage/aimant-de-levage/,catégorie → famille,1,360,aimant de levage
+/produit/treuil-a-cable-electrique-400-800-kg-palan-electrique/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,366,treuil palan electrique
+/categorie/aimant-de-levage/,301,/aimant-de-levage/,catégorie → famille,1,360,aimant de levage
 /produit/chariot-elevateur-a-gaz-2t/,301,/chariot-elevateur/gaz/,fiche produit absorbée par famille,1,328,chariot elevateur au gaz
-/table-elevatrice/levage-ponts-roulants-potences/pont-roulant-a-commande-manuelle/,301,/levage/pont-roulant/,article catalogue absorbé par famille,1,250,télécommande pont roulant
-/produit/treuil-electrique-pa1200-palan-220-v-telecommande-avec-un-cable-de-15-m/,301,/levage/palan/,fiche produit absorbée par famille,1,210,palan électrique 220v
-/levage-nacelles-tables-elevatrices/levage/elevateur-monte-charge/,301,/levage/monte-charge/,hub hérité → famille,1,198,elevateur de charge
-/produit/treuil-a-cable-electrique-250-500-kg/,301,/levage/treuil/,fiche produit absorbée par famille,1,141,treuil electrique 500 kg
-/treuil-palonnier/levolution-des-ponts-roulants-industriels-innovations-technologiques-et-performance/,301,/levage/pont-roulant/,article catalogue absorbé par famille,1,105,evolution des ponts
-/produit/aimant-de-levage-magnetique-capacite-de-levage-de-1500-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,1,104,aimant 500 kg
-/manutention/chariots-manuels-diables/les-diables-pour-votre-entrepot/,301,/manutention/chariot-diable/,cannibalisation diables,1,90,diable entrepot du bricolage
-/produit/elevateur-magnetique-a-aimant-en-acier-capacite-poids-300-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,1,75,aimant 300 kg
-/produit/aimant-de-levage-magnetique-400kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,1,71,aimant 400 kg
+/table-elevatrice/levage-ponts-roulants-potences/pont-roulant-a-commande-manuelle/,301,/pont-roulant/,article catalogue absorbé par famille,1,250,télécommande pont roulant
+/produit/treuil-electrique-pa1200-palan-220-v-telecommande-avec-un-cable-de-15-m/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,210,palan électrique 220v
+/levage-nacelles-tables-elevatrices/levage/elevateur-monte-charge/,301,/monte-charge/,hub hérité → famille,1,198,elevateur de charge
+/produit/treuil-a-cable-electrique-250-500-kg/,301,/treuil-palonnier/,fiche produit absorbée par famille,1,141,treuil electrique 500 kg
+/treuil-palonnier/levolution-des-ponts-roulants-industriels-innovations-technologiques-et-performance/,301,/pont-roulant/,article catalogue absorbé par famille,1,105,evolution des ponts
+/produit/aimant-de-levage-magnetique-capacite-de-levage-de-1500-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,1,104,aimant 500 kg
+/manutention/chariots-manuels-diables/les-diables-pour-votre-entrepot/,301,/diable-chariot/,cannibalisation diables,1,90,diable entrepot du bricolage
+/produit/elevateur-magnetique-a-aimant-en-acier-capacite-poids-300-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,1,75,aimant 300 kg
+/produit/aimant-de-levage-magnetique-400kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,1,71,aimant 400 kg
 /produit/chariot-elevateur-a-gaz-7t/,301,/chariot-elevateur/gaz/,fiche produit absorbée par famille,1,70,chariot élévateur 7 tonnes
-/produit/levage-magnetique-aimants-de-levage-100-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,1,70,aimant 100 kg
-/produit/levage-magnetique-grue-600-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,1,50,aimant 600 kg
-/produit/levage-magnetique-300-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,1,45,aimant de levage 300 kg
-/produit/aimant-de-levage-400-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,1,40,aimant double face 400kg
-/table-elevatrice/pont-roulant-a-double-poutre-la-solution-robuste-pour-les-charges-lourdes/,301,/levage/pont-roulant/,article catalogue absorbé par famille,1,40,chariot poutre roulante
-/table-elevatrice/pont-roulant-a-commande-electrique-la-solution-efficace-et-precise-pour-les-operations-de-levage-regulieres/,301,/levage/pont-roulant/,article catalogue absorbé par famille,1,30,pont roulant pas cher
-/produit/1t-chariot-a-engrenage-avec-chaine-factories-curve-geared-trolley/,301,/manutention/chariot/,fiche produit absorbée par famille,1,30,porter des charges lourdes avec des sangles
-/transpalette/5-astuces-pour-trouver-un-transpalette-pas-cher/,301,/prix/transpalette/,"intention prix, cannibalisation",1,20,transpalette prix pas cher
+/produit/levage-magnetique-aimants-de-levage-100-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,1,70,aimant 100 kg
+/produit/levage-magnetique-grue-600-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,1,50,aimant 600 kg
+/produit/levage-magnetique-300-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,1,45,aimant de levage 300 kg
+/produit/aimant-de-levage-400-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,1,40,aimant double face 400kg
+/table-elevatrice/pont-roulant-a-double-poutre-la-solution-robuste-pour-les-charges-lourdes/,301,/pont-roulant/,article catalogue absorbé par famille,1,40,chariot poutre roulante
+/table-elevatrice/pont-roulant-a-commande-electrique-la-solution-efficace-et-precise-pour-les-operations-de-levage-regulieres/,301,/pont-roulant/,article catalogue absorbé par famille,1,30,pont roulant pas cher
+/produit/1t-chariot-a-engrenage-avec-chaine-factories-curve-geared-trolley/,301,/transpalette/,fiche produit absorbée par famille,1,30,porter des charges lourdes avec des sangles
+/transpalette/5-astuces-pour-trouver-un-transpalette-pas-cher/,301,/transpalette/prix/,"intention prix, cannibalisation",1,20,transpalette prix pas cher
 /produit/chariot-elevateur-a-gaz-25t/,301,/chariot-elevateur/gaz/,fiche produit absorbée par famille,1,10,kit gaz chariot élévateur
 /produit/chariot-elevateur-electrique-5t/,301,/chariot-elevateur/electrique/,fiche produit absorbée par famille,1,0,chariot élévateur électrique 5t
 /chariot-elevateur/cest-quoi-le-caces-1/,301,/caces-chariot-elevateur-guide-complet/,cannibalisation CACES,0,6200,caces 1
-/levage-nacelles-tables-elevatrices/tables-elevatrices-moto/,301,/levage/table-elevatrice/,page morte → famille,0,3587,table elevatrice moto
-/produit/palan-electrique-500-1000-kg-treuil-palan-a-chaine-a-levier-1800-w/,301,/levage/palan/,fiche produit absorbée par famille,0,772,palan électrique a chaine
-/produit/elevateur-magnetique-a-aimant-en-acier-capacite-poids-1000-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,0,552,acier magnétique
-/produit/palan-chaine-3-m-2-crochets-de-2-tonnes/,301,/levage/palan/,fiche produit absorbée par famille,0,291,palan electrique 2 tonnes
+/levage-nacelles-tables-elevatrices/tables-elevatrices-moto/,301,/table-elevatrice/,page morte → famille,0,3587,table elevatrice moto
+/produit/palan-electrique-500-1000-kg-treuil-palan-a-chaine-a-levier-1800-w/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,772,palan électrique a chaine
+/produit/elevateur-magnetique-a-aimant-en-acier-capacite-poids-1000-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,0,552,acier magnétique
+/produit/palan-chaine-3-m-2-crochets-de-2-tonnes/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,291,palan electrique 2 tonnes
 /project/fenwick/,301,/gerbeur/le-gerbeur-fenwick-tout-savoir-sur-cet-appareil/,page projet morte → article Fenwick,0,210,ce fenwick
 /accueil/vehicule-remorques/,410,,hors sujet,0,150,petite remorque fermée pour voiture
 /produit/chariot-elevateur-diesel-4x4-2t/,301,/chariot-elevateur/diesel/,fiche produit absorbée par famille,0,120,chariot elevateur 4x4
-/produit/palan-a-chaine-05-tonne-de-6-m/,301,/levage/palan/,fiche produit absorbée par famille,0,100,palan a chaine 5 tonnes
+/produit/palan-a-chaine-05-tonne-de-6-m/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,100,palan a chaine 5 tonnes
 /produit/grue-de-levage-2t/,301,/levage/,fiche produit absorbée par famille,0,70,poutre de levage
-/produit/treuil-de-levage-chaine-3t/,301,/levage/treuil/,fiche produit absorbée par famille,0,70,treuil 3t
-/produit/chariot-de-transport-pliable-350-kg/,301,/manutention/chariot/,fiche produit absorbée par famille,0,50,chariot manuel 3-en-1 350kg
-/levage-palonniers-palans-treuils-accessoire/,301,/levage/palan/,hub hérité → famille,0,40,panier de levage pour palan
+/produit/treuil-de-levage-chaine-3t/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,70,treuil 3t
+/produit/chariot-de-transport-pliable-350-kg/,301,/transpalette/,fiche produit absorbée par famille,0,50,chariot manuel 3-en-1 350kg
+/levage-palonniers-palans-treuils-accessoire/,301,/treuil-palonnier/,hub hérité → famille,0,40,panier de levage pour palan
 /produit/griffe-poutrelle-pince-a-poutre-5tonnes/,301,/levage/,fiche produit absorbée par famille,0,40,pince poutre
-/produit/porte-palan-05-tonne/,301,/levage/palan/,fiche produit absorbée par famille,0,30,poutre palan
+/produit/porte-palan-05-tonne/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,30,poutre palan
 /btp/8-conseils-choisir-bacs-de-retention/,301,/stockage/,connexe stockage,0,20,bac de rétention légifrance
-/produit/levage-magnetique-aimants-de-levage-200-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,0,20,aimant 150 kg
+/produit/levage-magnetique-aimants-de-levage-200-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,0,20,aimant 150 kg
 /produit/chariot-elevateur-electrique-3t/,301,/chariot-elevateur/electrique/,fiche produit absorbée par famille,0,10,chariot élévateur 3t
 /produit/chariot-elevateur-electrique-2t/,301,/chariot-elevateur/electrique/,fiche produit absorbée par famille,0,5,chariot élévateur 2 tonnes
-/produit/elevateur-magnetique-a-aimant-en-acier-capacite-de-100-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,0,0,
+/produit/elevateur-magnetique-a-aimant-en-acier-capacite-de-100-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,0,0,
 /produit/chariot-elevateur-diesel-4x4-25t/,301,/chariot-elevateur/diesel/,fiche produit absorbée par famille,0,0,
 /produit/chariot-elevateur-a-gaz-15t/,301,/chariot-elevateur/gaz/,fiche produit absorbée par famille,0,0,
-/produit/treuil-electrique-telecommande/,301,/levage/treuil/,fiche produit absorbée par famille,0,0,
+/produit/treuil-electrique-telecommande/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,0,
 /produit/chariot-elevateur-electrique-25t/,301,/chariot-elevateur/electrique/,fiche produit absorbée par famille,0,0,
-/produit/treuil-palan-a-cable-electrique-900w-250-500kg/,301,/levage/palan/,fiche produit absorbée par famille,0,0,
-/produit/palan-a-chaine-manuel-1-5t/,301,/levage/palan/,fiche produit absorbée par famille,0,0,
-/produit/elevateur-magnetique-a-aimant-en-acier-capacite-poids-1500-kg/,301,/levage/aimant-de-levage/,fiche produit absorbée par famille,0,0,
+/produit/treuil-palan-a-cable-electrique-900w-250-500kg/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,0,
+/produit/palan-a-chaine-manuel-1-5t/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,0,
+/produit/elevateur-magnetique-a-aimant-en-acier-capacite-poids-1500-kg/,301,/aimant-de-levage/,fiche produit absorbée par famille,0,0,
 /produit/chariot-elevateur-a-gaz-35t/,301,/chariot-elevateur/gaz/,fiche produit absorbée par famille,0,0,
-/produit/treuil-a-cable-electrique-125-250kg-600w/,301,/levage/treuil/,fiche produit absorbée par famille,0,0,
+/produit/treuil-a-cable-electrique-125-250kg-600w/,301,/treuil-palonnier/,fiche produit absorbée par famille,0,0,
 /blog/,301,/,hub vide,0,0,

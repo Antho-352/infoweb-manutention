@@ -14,6 +14,23 @@ OUT_CSV = os.path.join(BASE, 'data', 'redirections-exactes.csv')
 OUT_PHP = os.path.join(BASE, 'wp', 'mu-plugins', 'arw-legacy-redirects.php')
 os.makedirs(os.path.dirname(OUT_PHP), exist_ok=True)
 
+# =====================================================================
+# SCHÉMA D'URL FINAL (docs/strategie-media-industrie.md §3.2)
+# Piliers et familles vivent tous à la racine : les familles réutilisent les
+# préfixes hérités sous lesquels les articles sont déjà nestés. La hiérarchie
+# pilier → famille est portée par le maillage et le fil d'Ariane, pas par l'URL.
+#
+#   /manutention/   PILIER   → familles /chariot-elevateur/ /gerbeur/
+#                              /transpalette/ /diable-chariot/ /nacelle/
+#   /levage/        PILIER   → familles /palan-treuil/ /aimant-de-levage/
+#                              /pont-roulant/ /table-elevatrice/ /monte-charge/
+#   /stockage/      PILIER   → famille  /rayonnage/            (phase 2)
+#
+#   Niveau 3 : variantes et prix, nestés sous leur famille
+#   /chariot-elevateur/{electrique,gaz,diesel,retractable,prix}/
+#   /transpalette/prix/
+# =====================================================================
+
 # --- Overrides explicites : consolidations de cannibalisation + hors-sujet ---
 OVERRIDES = {
     # Cluster "marques chariot élévateur" : 3 pages sur la même intention → 1 canonique.
@@ -34,44 +51,44 @@ OVERRIDES = {
         ('301', '/entreprise/itm-logistique-alimentaire-international/', 'doublon fiche ITM'),
     # Diables : 2 articles concurrents → 1
     '/manutention/chariots-manuels-diables/les-diables-pour-votre-entrepot/':
-        ('301', '/manutention/chariot-diable/', 'cannibalisation diables'),
+        ('301', '/diable-chariot/', 'cannibalisation diables'),
     # Prix chariot : slug défectueux → page prix canonique
     '/chariot-elevateur/quel-prix-pour-un-prix-chariot-elevateur-neuf-noatre-avis/':
-        ('301', '/prix/chariot-elevateur/', 'slug défectueux, intention prix'),
+        ('301', '/chariot-elevateur/prix/', 'slug défectueux, intention prix'),
     # Nacelles : 2 hubs hérités → 1 univers
     '/nacelles-elevatrices/': ('301', '/nacelle/', 'fusion univers nacelle'),
     '/acheter-ou-louer-une-nacelle-elevatrice/':
         ('RECREATE', '', 'satellite décision achat/location, maille vers /nacelle/ et /outils/tco/'),
     # Ponts roulants : articles éparpillés sous /table-elevatrice/ → recréés, mais les doublons vont à la famille
     '/table-elevatrice/levage-ponts-roulants-potences/pont-roulant-a-commande-manuelle/':
-        ('301', '/levage/pont-roulant/', 'article catalogue absorbé par famille'),
+        ('301', '/pont-roulant/', 'article catalogue absorbé par famille'),
     '/table-elevatrice/pont-roulant-a-commande-electrique-la-solution-efficace-et-precise-pour-les-operations-de-levage-regulieres/':
-        ('301', '/levage/pont-roulant/', 'article catalogue absorbé par famille'),
+        ('301', '/pont-roulant/', 'article catalogue absorbé par famille'),
     '/table-elevatrice/pont-roulant-a-double-poutre-la-solution-robuste-pour-les-charges-lourdes/':
-        ('301', '/levage/pont-roulant/', 'article catalogue absorbé par famille'),
+        ('301', '/pont-roulant/', 'article catalogue absorbé par famille'),
     '/treuil-palonnier/levolution-des-ponts-roulants-industriels-innovations-technologiques-et-performance/':
-        ('301', '/levage/pont-roulant/', 'article catalogue absorbé par famille'),
-    '/levage/levage-ponts-roulants-potences/': ('301', '/levage/pont-roulant/', 'hub hérité → famille'),
+        ('301', '/pont-roulant/', 'article catalogue absorbé par famille'),
+    '/levage/levage-ponts-roulants-potences/': ('301', '/pont-roulant/', 'hub hérité → famille'),
     '/levage-nacelles-tables-elevatrices/levage/elevateur-monte-charge/':
-        ('301', '/levage/monte-charge/', 'hub hérité → famille'),
+        ('301', '/monte-charge/', 'hub hérité → famille'),
     '/levage-nacelles-tables-elevatrices/tables-elevatrices-moto/':
-        ('301', '/levage/table-elevatrice/', 'page morte → famille'),
-    '/levage-palonniers-palans-treuils-accessoire/': ('301', '/levage/palan/', 'hub hérité → famille'),
+        ('301', '/table-elevatrice/', 'page morte → famille'),
+    '/levage-palonniers-palans-treuils-accessoire/': ('301', '/treuil-palonnier/', 'hub hérité → famille'),
     '/treuil-palonnier/palan-a-chaine-guide-conseils-dachat/':
         ('RECREATE', '', 'guide palan à chaîne — ranke, conservé'),
     # Catégories e-commerce héritées → familles
     '/categorie/chariot-elevateur-gaz/': ('301', '/chariot-elevateur/gaz/', 'catégorie → famille'),
     '/categorie/chariot-elevateur-electrique/': ('301', '/chariot-elevateur/electrique/', 'catégorie → famille'),
-    '/categorie/aimant-de-levage/': ('301', '/levage/aimant-de-levage/', 'catégorie → famille'),
-    '/categorie/palan-treuils/': ('301', '/levage/palan/', 'catégorie → famille'),
+    '/categorie/aimant-de-levage/': ('301', '/aimant-de-levage/', 'catégorie → famille'),
+    '/categorie/palan-treuils/': ('301', '/treuil-palonnier/', 'catégorie → famille'),
     '/equipements-dentrepot/': ('301', '/stockage/', 'hub hérité → univers'),
     '/accueil/': ('301', '/', 'doublon home'),
     '/blog/': ('301', '/', 'hub vide'),
     # Transpalettes : prix → silo prix ; le reste recréé
     '/transpalette/prix-des-transpalettes-guide-des-tarifs-complet/':
-        ('301', '/prix/transpalette/', 'intention prix'),
+        ('301', '/transpalette/prix/', 'intention prix'),
     '/transpalette/5-astuces-pour-trouver-un-transpalette-pas-cher/':
-        ('301', '/prix/transpalette/', 'intention prix, cannibalisation'),
+        ('301', '/transpalette/prix/', 'intention prix, cannibalisation'),
     # Hors-sujet assumé (dilution ère précédente)
     '/accessoire/les-remorques-pour-voitures-lesquelles-choisir/': ('410', '', 'hors sujet — remorques auto'),
     '/accessoire/crics/crics-et-chariots-elevateurs/': ('RECREATE', '', 'limite mais lié chariots — conservé'),
@@ -85,14 +102,14 @@ OVERRIDES = {
 
 # /produit/ : familles d'absorption par mot-clé du slug (ordre = priorité)
 PRODUIT_ROUTES = [
-    (r'aimant|magnetique', '/levage/aimant-de-levage/'),
-    (r'palan', '/levage/palan/'),
-    (r'treuil', '/levage/treuil/'),
+    (r'aimant|magnetique', '/aimant-de-levage/'),
+    (r'palan', '/treuil-palonnier/'),
+    (r'treuil', '/treuil-palonnier/'),
     (r'retractable', '/chariot-elevateur/retractable/'),
     (r'diesel', '/chariot-elevateur/diesel/'),
     (r'chariot-elevateur-electrique', '/chariot-elevateur/electrique/'),
     (r'chariot-elevateur-a-gaz', '/chariot-elevateur/gaz/'),
-    (r'chariot-de-transport|chariot-a-engrenage', '/manutention/chariot/'),
+    (r'chariot-de-transport|chariot-a-engrenage', '/transpalette/'),
     (r'grue|griffe|poutrelle', '/levage/'),
 ]
 
@@ -168,19 +185,19 @@ function arw_legacy_redirects(): void {
         $routes = [
             'nacelle'            => '/nacelle/',
             'chariot-elevateur'  => '/chariot-elevateur/',
-            'gerbeur'            => '/manutention/gerbeur/',
-            'transpalette'       => '/manutention/transpalette/',
-            'diable'             => '/manutention/diable/',
-            'pont-roulant'       => '/levage/pont-roulant/',
-            'ponts-roulants'     => '/levage/pont-roulant/',
-            'palan'              => '/levage/palan/',
-            'treuil'             => '/levage/treuil/',
-            'aimant'             => '/levage/aimant-de-levage/',
-            'potence'            => '/levage/potence/',
-            'table-elevatrice'   => '/levage/table-elevatrice/',
-            'rayonnage'          => '/stockage/rayonnage/',
+            'gerbeur'            => '/gerbeur/',
+            'transpalette'       => '/transpalette/',
+            'diable'             => '/diable-chariot/',
+            'pont-roulant'       => '/pont-roulant/',
+            'ponts-roulants'     => '/pont-roulant/',
+            'palan'              => '/treuil-palonnier/',
+            'treuil'             => '/treuil-palonnier/',
+            'aimant'             => '/aimant-de-levage/',
+            'potence'            => '/pont-roulant/',
+            'table-elevatrice'   => '/table-elevatrice/',
+            'rayonnage'          => '/rayonnage/',
             'stockage'           => '/stockage/',
-            'rack'               => '/stockage/rayonnage/',
+            'rack'               => '/rayonnage/',
             'levage'             => '/levage/',
             'manutention'        => '/manutention/',
         ];
