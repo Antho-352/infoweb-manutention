@@ -47,8 +47,10 @@ C'est ici que le mot de passe est stocké. Il reste dans un fichier de config su
 Ouvre le Terminal et lance cette commande, en remplaçant les deux valeurs entre chevrons :
 
 ```bash
-claude mcp add-json infoweb-wp '{"command":"npx","args":["-y","@automattic/mcp-wordpress-remote@latest"],"env":{"WP_API_URL":"https://infoweb-manutention.fr/","WP_API_USERNAME":"<TON_IDENTIFIANT_WP>","WP_API_PASSWORD":"<LE_MOT_DE_PASSE_DE_LETAPE_3>"}}'
+claude mcp add-json -s user infoweb-wp '{"command":"npx","args":["-y","@automattic/mcp-wordpress-remote@latest"],"env":{"WP_API_URL":"https://infoweb-manutention.fr/","WP_API_USERNAME":"<TON_IDENTIFIANT_WP>","WP_API_PASSWORD":"<LE_MOT_DE_PASSE_DE_LETAPE_3>"}}'
 ```
+
+⚠️ **Le `-s user` n'est pas optionnel.** Sans lui, le serveur est enregistré en portée « locale », c'est-à-dire **rattaché au dossier depuis lequel tu lances la commande**. Si tu es dans `~` et que la session Claude tourne dans `~/manutention`, elle ne le verra jamais — et `claude mcp list` affichera « already exists » d'un côté et rien de l'autre. Avec `-s user`, le serveur est visible depuis tous les dossiers.
 
 - `<TON_IDENTIFIANT_WP>` : ton nom d'utilisateur de connexion à WordPress (pas ton email, sauf si tu te connectes avec)
 - `<LE_MOT_DE_PASSE_DE_LETAPE_3>` : le mot de passe d'application, espaces compris, entre les guillemets
@@ -81,7 +83,9 @@ Dis-moi simplement « le MCP est en place » et j'enchaîne : dépôt du mu-plug
 
 | Symptôme | Cause probable | Correction |
 |---|---|---|
+| `infoweb-wp` absent de `claude mcp list`, mais « already exists » quand tu l'ajoutes | Il a été enregistré en portée locale, rattaché à un autre dossier | Le rebasculer en portée utilisateur : `claude mcp add-json -s user infoweb-wp '{...}'` |
 | `infoweb-wp` absent de `claude mcp list` | La commande de l'étape 4 a échoué | Relance-la, vérifie que les guillemets simples encadrent bien tout le bloc JSON |
+| `/wp-json/` renvoie 404 alors que le site répond | Permaliens en mode « Simple » | Réglages → Permaliens → **Nom de l'article** → Enregistrer |
 | Erreur d'authentification | Identifiant ou mot de passe incorrect | Refais l'étape 3 avec un nouveau mot de passe, puis `claude mcp remove infoweb-wp` et refais l'étape 4 |
 | Connexion OK mais je ne peux rien créer | L'autorisation d'écriture n'est pas cochée | Retourne à l'étape 2, point 3 |
 | Erreur 401 alors que tout semble bon | Certains hébergeurs filtrent l'en-tête d'authentification | Dis-le-moi, on passe par une autre méthode (SFTP ou WP-CLI) |
