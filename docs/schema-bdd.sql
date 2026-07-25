@@ -97,19 +97,85 @@ CREATE TABLE arw_revendications (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Pages croisement : contenu local unique + pilotage indexation (règles anti-thin du brief)
+-- + publication par lots de 100 (décision 2026-07-25) : la clé unique garantit l'absence
+-- de doublon ville/département, et `statut` + `lot` pilotent la mise en ligne progressive.
 CREATE TABLE arw_croisements (
   id             BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   type           ENUM('location','sav','concessionnaire','formation') NOT NULL,
   cle            VARCHAR(64) NOT NULL,               -- machine_slug | marque_slug | recommandation ('r489')
-  departement    VARCHAR(3)  NOT NULL,
+  niveau         ENUM('region','departement','ville') NOT NULL,
+  region_slug    VARCHAR(64) NULL,
+  departement    VARCHAR(3)  NULL,
+  ville_slug     VARCHAR(96) NOT NULL DEFAULT '',    -- '' pour région/département : permet l'unicité
   nb_etabs       INT UNSIGNED NOT NULL DEFAULT 0,    -- cache, recalculé à l'import
   contenu_local  MEDIUMTEXT  NULL,                   -- bloc unique : fourchette tarifaire, ZFE, tissu éco local
   faq            JSON        NULL,                   -- FAQ contextualisée (schema.org FAQPage)
   indexable      TINYINT(1)  NOT NULL DEFAULT 0,     -- 1 seulement si nb_etabs >= 3 ET contenu_local non NULL
+  statut         ENUM('brouillon','pret','publie','retire') NOT NULL DEFAULT 'brouillon',
+  lot            INT UNSIGNED NULL,                  -- numéro de lot de publication (100 pages par lot)
+  published_at   DATETIME    NULL,
   updated_at     DATETIME    NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  UNIQUE KEY uq_croisement (type, cle, departement),
-  KEY idx_index (indexable),
+  -- Garantit qu'une même page (type + machine + géo) ne peut jamais exister en double,
+  -- quelle que soit la vague d'import. Un ré-import fait un UPDATE, pas un INSERT.
+  UNIQUE KEY uq_croisement (type, cle, niveau, region_slug, departement, ville_slug),
+  KEY idx_index  (indexable),
+  KEY idx_lot    (statut, lot),
+  KEY idx_eligible (statut, indexable, nb_etabs),
   CONSTRAINT fk_cr_dept FOREIGN KEY (departement) REFERENCES arw_departements(code)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Journal des lots de publication : traçabilité de ce qui est parti en ligne et quand.
+CREATE TABLE arw_lots_publication (
+  lot          INT UNSIGNED NOT NULL PRIMARY KEY,
+  type         ENUM('location','sav','concessionnaire','formation') NOT NULL,
+  nb_pages     INT UNSIGNED NOT NULL,
+  publie_at    DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  -- relevé d'indexation à J+30, pour décider si on lance le lot suivant
+  indexees_j30 INT UNSIGNED NULL,
+  notes        TEXT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =====================================================================
+-- PRIX — données, jamais de la prose (cf. docs/protocole-fiabilite.md §2)
+-- Un prix révisé ici met à jour toutes les pages qui l'affichent.
+-- Volume cible : 40 à 60 points de référence maximum.
+-- =====================================================================
+CREATE TABLE arw_prix (
+  id            BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  slug          VARCHAR(96)  NOT NULL UNIQUE,        -- 'chariot-electrique-2t-achat-neuf'
+  libelle       VARCHAR(191) NOT NULL,               -- 'Chariot élévateur électrique 2 t, neuf'
+  famille_slug  VARCHAR(64)  NOT NULL,
+  mode          ENUM('achat','location_jour','location_semaine','location_mois','lld_mois','prestation') NOT NULL,
+  montant_min   DECIMAL(10,2) NOT NULL,
+  montant_max   DECIMAL(10,2) NOT NULL,
+  unite         VARCHAR(24)  NOT NULL DEFAULT 'EUR_HT',
+  perimetre     VARCHAR(255) NULL,                   -- 'hors options, transport et mise en service'
+  source_type   ENUM('marchand','loueur','devis_agrege','constructeur') NOT NULL,
+  source_detail VARCHAR(255) NULL,                   -- nom du marchand, ou 'agrégat de N devis'
+  nb_releves    INT UNSIGNED NOT NULL DEFAULT 1,     -- minimum 3 pour source_type='devis_agrege'
+  constate_le   DATE NOT NULL,                       -- date affichée publiquement
+  revue_prevue  DATE NOT NULL,                       -- alerte de péremption au tableau de bord
+  actif         TINYINT(1) NOT NULL DEFAULT 1,
+  KEY idx_famille (famille_slug, mode),
+  KEY idx_revue   (revue_prevue, actif)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- =====================================================================
+-- VÉRIFICATIONS RÉGLEMENTAIRES (cf. docs/protocole-fiabilite.md §1.4)
+-- Une ligne par affirmation réglementaire publiée, avec sa source.
+-- =====================================================================
+CREATE TABLE arw_verifications (
+  id           BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  page_url     VARCHAR(255) NOT NULL,
+  affirmation  TEXT         NOT NULL,
+  source_ref   VARCHAR(255) NOT NULL,                -- 'Arrêté du 1er mars 2004, art. 23'
+  source_url   VARCHAR(255) NULL,
+  fichier_local VARCHAR(255) NULL,                   -- sources/reglementaire/...
+  verifie_le   DATE         NOT NULL,
+  verifie_par  VARCHAR(64)  NOT NULL,                -- 'agent-reviewer' | 'anthony'
+  revue_prevue DATE         NOT NULL,
+  KEY idx_page  (page_url),
+  KEY idx_revue (revue_prevue)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- =====================================================================
