@@ -157,6 +157,62 @@ Les deux dernières lignes corrigent les défauts P3 et P4 de pluscestsimple : d
 
 ---
 
+## 5 bis. Structure des titres — règles contraignantes
+
+Un plan de titres n'est pas de la mise en forme : c'est ce que Google et les modèles de langage lisent pour comprendre la page. Trois règles, sans exception.
+
+**Un seul H1 par page**, et c'est le titre de la page. Jamais le logo, jamais un intertitre de bloc.
+
+**Aucun saut de niveau.** Un H3 ne peut exister que sous un H2.
+
+**Un titre décrit du contenu, pas un élément d'interface.** C'est la règle qui tranche tous les cas douteux. « Caractéristiques », « Points forts », « Points faibles », « Notre avis en 30 secondes », « Sommaire », « Aller directement à un modèle » sont des libellés : ils se répètent à l'identique dix fois dans la page et pollueraient le plan sans rien lui apprendre. Ils restent des `<p>` ou des `<span>` stylés. À l'inverse, une question de FAQ est du contenu réel et unique : elle prend un H3, ce qui la rend aussi cohérente avec le balisage `FAQPage`.
+
+### Le plan d'une page comparatif
+
+```
+H1   Les 10 meilleurs transpalettes électriques pour PME
+H2   Notre sélection en bref
+H2   Tableau comparatif des 10 modèles
+H2   Jungheinrich EJE 116          ← marque + modèle, un H2 par produit
+H2   Pramac QX 18
+H2   Comment nous avons classé
+H2   Questions fréquentes
+  H3   Faut-il un CACES pour un transpalette électrique ?
+  H3   Lithium ou plomb pour un usage quotidien ?
+```
+
+Le titre de produit est **toujours « marque + modèle exact »**, et rien d'autre. C'est ce que l'internaute tape quand il cherche des informations sur une machine précise — « Jungheinrich EJE 116 avis », « Jungheinrich EJE 116 prix ». Un H2 « Le premier de notre sélection » ne capte rien.
+
+Le mettre en H2 plutôt qu'en H3 n'est pas cosmétique : chaque produit devient une section de premier niveau du document, ce qui sert l'indexation par passages et les liens de saut affichés dans les résultats de recherche.
+
+### Le plan d'une page article
+
+```
+H1   Le gerbeur Fenwick : gammes, capacités et CACES applicable
+H2   Ce qu'il faut retenir
+H2   « CACES Fenwick » : la confusion à lever
+H2   Les gammes Fenwick-Linde et leurs capacités
+  H3   (sous-sections si nécessaire)
+H2   Vu en exploitation
+H2   Sources
+H2   À lire dans le même univers
+  H3   (titre de chaque article lié)
+```
+
+Les encarts de la colonne latérale portent un H2 **à l'intérieur d'un `<aside>`**. C'est correct pour l'accessibilité — les lecteurs d'écran annoncent la zone complémentaire séparément — et sans effet sur le plan du contenu principal.
+
+### Appels à l'action
+
+Le libellé visible reste court (« Voir l'offre »). L'intitulé complet passe en `aria-label` : « Voir l'offre pour le Jungheinrich EJE 116 ». On garde un bouton lisible sans sacrifier l'accessibilité.
+
+Les liens sortants commerciaux portent `rel="sponsored nofollow"`, sans exception.
+
+### Vérification
+
+La maquette `design/gabarits.html` embarque un bouton **« ⌗ Voir les titres »** qui affiche le niveau réel de chaque titre directement sur la page. Il sert à la recette et ne fait pas partie du thème.
+
+---
+
 ## 6. Comparatif « les meilleurs… »
 
 Gabarit d'affiliation pure.

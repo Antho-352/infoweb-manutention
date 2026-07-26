@@ -11,6 +11,17 @@ h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
 .sw button{flex:1;padding:13px;border:0;background:none;color:#8b9199;font:700 12.5px/1 inherit;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;border-bottom:3px solid transparent}
 .sw button[aria-selected=true]{color:#fff;border-bottom-color:var(--amb)}
 .stage{display:none}.stage[data-on]{display:block}
+/* Inspecteur de structure : affiche le niveau réel de chaque titre.
+   Outil de recette, absent du thème final. */
+.sw .insp{flex:0 0 auto;padding:13px 18px;border-left:1px solid #2b3036}
+[data-outline] :is(h1,h2,h3,h4)::before{display:inline-block;background:#d6220f;color:#fff;
+  font:800 10px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.09em;
+  padding:4px 6px;border-radius:4px;margin-right:9px;vertical-align:middle}
+[data-outline] h1::before{content:"H1"}
+[data-outline] h2::before{content:"H2"}
+[data-outline] h3::before{content:"H3"}
+[data-outline] h4::before{content:"H4";background:#8a6d00}
+[data-outline] aside :is(h2,h3)::before{background:#2f5d94}
 .w{max-width:1180px;margin:0 auto;padding:0 22px}
 
 /* en-tête simplifié */
@@ -89,7 +100,7 @@ h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
 /* colonne de droite */
 .side{position:sticky;top:110px;display:flex;flex-direction:column;gap:16px}
 .sbox{background:var(--card);border:1px solid var(--rul);border-radius:12px;padding:16px}
-.sbox b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
+.sbox h2{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
 .sbox a.li{display:block;padding:9px 0;border-top:1px solid var(--rul);font-size:13.5px;font-weight:650;line-height:1.3}
 .sbox a.li:first-of-type{border-top:0}
 .au{display:flex;gap:12px;align-items:center}
@@ -106,10 +117,10 @@ h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
 
 /* ---------- COMPARATIF ---------- */
 .verdict{background:linear-gradient(168deg,#fffefb,#f0ece1);border:1px solid var(--rul);border-radius:16px;padding:26px 28px;margin:22px 0 30px}
-.verdict b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
+.verdict h2{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
 .vrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
 .vit strong{display:block;font-size:12px;color:var(--amb);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
-.vit h3{font-size:17px;margin-bottom:5px}
+.vit .vname{font-size:17px;font-weight:800;letter-spacing:-.03em;margin-bottom:5px}
 .vit p{font-size:13.5px;color:var(--sub)}
 .tw{overflow-x:auto;border:1px solid var(--rul);border-radius:12px;margin:26px 0;background:var(--card)}
 table{border-collapse:collapse;width:100%;min-width:640px;font-size:13.5px}
@@ -125,12 +136,12 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 .spec span{background:#f0ece1;border-radius:6px;padding:3px 9px;font-size:11.5px;font-weight:650}
 /* le produit est le sujet : sa description et ses caractéristiques
    priment visuellement sur le résumé forts/faibles qui les commente */
-.pdet h3{font-size:23px;margin-bottom:10px}
+.pdet h2{font-size:23px;margin-bottom:10px}
 .pdet .desc{font-size:15.5px;line-height:1.68;color:#23272c}
 .pdet .desc p{font-size:inherit;line-height:inherit;color:inherit;margin-bottom:11px}
 .pdet .desc p:last-child{margin-bottom:0}
 .specs{border:1px solid var(--rul);border-radius:12px;overflow:hidden;margin-top:20px;background:var(--card)}
-.specs h4{background:#efece4;padding:10px 15px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--sub);font-weight:800}
+.specs .sh4{background:#efece4;padding:10px 15px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--sub);font-weight:800}
 .specg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}
 .specg > div{padding:12px 15px;border-top:1px solid var(--rul);border-right:1px solid var(--rul)}
 .specg dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
@@ -174,7 +185,9 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 .faq{border-top:2px solid var(--ink);padding-top:22px;margin-top:32px}
 .faq h2{font-size:21px;margin-bottom:14px}
 .faq details{background:var(--card);border:1px solid var(--rul);border-radius:10px;padding:14px 17px;margin-bottom:9px}
-.faq summary{font-weight:700;cursor:pointer;font-size:15px}
+.faq summary{cursor:pointer;list-style:none}
+.faq summary h3{font-size:15px;display:inline}
+.faq summary::-webkit-details-marker{display:none}
 .faq p{font-size:14px;color:var(--sub);margin-top:9px}
 
 /* la nav ne tient plus sur la ligne du logo : elle passe en bande
@@ -192,6 +205,18 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
   .prod .im{height:150px}
   .buy{text-align:left}.buy a{text-align:center}
   .pmz{grid-template-columns:1fr}
+  /* fiche produit : l'image passe en haut, puis le texte, puis le prix
+     et l'appel à l'action. La colonne centrale à 200 px était illisible. */
+  .phead{grid-template-columns:1fr;gap:16px}
+  .phead .im{height:180px}
+  .buy{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+       border-top:1px solid var(--rul);padding-top:14px}
+  .buy .p{font-size:24px}
+  .buy .d{margin-bottom:0}
+  .buy a{margin-left:auto;padding:13px 22px}
+}
+@media(max-width:520px){
+  .buy a{margin-left:0;width:100%}
 }
 @media(max-width:640px){
   .btn.fill .dsk{display:none}
@@ -202,6 +227,7 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 <div class="sw">
   <button aria-selected="true" data-t="A">Gabarit article</button>
   <button aria-selected="false" data-t="B">Gabarit comparatif · affiliation</button>
+  <button class="insp" id="insp">⌗ Voir les titres</button>
 </div>
 
 <!-- ============ GABARIT ARTICLE ============ -->
@@ -302,13 +328,13 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
     </article>
 
     <aside class="side">
-      <div class="sbox"><b>L'auteur</b><div class="au"><div class="avm"></div><div>
+      <div class="sbox"><h2>L'auteur</h2><div class="au"><div class="avm"></div><div>
         <b>Denis Verhaeghe</b><span>28 ans en manutention — SAV puis responsable de parc</span></div></div></div>
-      <div class="sbox"><b>Dans la même rubrique</b>
+      <div class="sbox"><h2>Dans la même rubrique</h2>
         <a class="li">Chariots élévateurs : électrique, gaz ou diesel</a>
         <a class="li">Nacelles : quelle catégorie pour quel chantier</a>
         <a class="li">Palans et treuils : capacités et vérifications</a></div>
-      <div class="sbox"><b>Le dossier</b>
+      <div class="sbox"><h2>Le dossier</h2>
         <a class="li">CACES et autorisation de conduite — 6 volets</a></div>
     </aside>
   </div>
@@ -329,14 +355,15 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
   <div class="sig">Par <b>Denis Verhaeghe</b> · Mis à jour le 20 juillet 2026 · 14 min
     <span class="vf">✓ Prix relevés le 20.07.2026</span></div>
 
-  <div class="verdict"><b>Le verdict en trois lignes</b>
+  <section class="verdict"><h2>Notre sélection en bref</h2>
     <div class="vrow">
-      <div class="vit"><strong>Notre choix</strong><h3>Jungheinrich EJE 116</h3><p>Le meilleur compromis autonomie / maniabilité pour un usage quotidien en allée étroite.</p></div>
-      <div class="vit"><strong>Meilleur rapport prix</strong><h3>Pramac QX 18</h3><p>Les mêmes capacités pour 900 € de moins, au prix d'un réseau SAV plus clairsemé.</p></div>
-      <div class="vit"><strong>Usage intensif</strong><h3>Linde MT15</h3><p>Le seul de la sélection réellement dimensionné pour deux équipes par jour.</p></div>
+      <div class="vit"><strong>Notre choix</strong><p class="vname">Jungheinrich EJE 116</p><p>Le meilleur compromis autonomie / maniabilité pour un usage quotidien en allée étroite.</p></div>
+      <div class="vit"><strong>Meilleur rapport prix</strong><p class="vname">Pramac QX 18</p><p>Les mêmes capacités pour 900 € de moins, au prix d'un réseau SAV plus clairsemé.</p></div>
+      <div class="vit"><strong>Usage intensif</strong><p class="vname">Linde MT15</p><p>Le seul de la sélection réellement dimensionné pour deux équipes par jour.</p></div>
     </div>
-  </div>
+  </section>
 
+  <h2 style="font-size:22px;margin-top:34px">Tableau comparatif des 10 modèles</h2>
   <div class="tw"><table>
     <thead><tr><th>Modèle</th><th>Capacité</th><th>Batterie</th><th>Autonomie</th><th>Largeur</th><th>Prix indicatif</th></tr></thead>
     <tbody>
@@ -358,15 +385,15 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
     <div class="phead">
       <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
         <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
-      <div><span class="rank">N° 1 · Notre choix</span><h3>Jungheinrich EJE 116</h3>
+      <div><span class="rank">N° 1 · Notre choix</span><h2>Jungheinrich EJE 116</h2>
         <div class="desc">
           <p>Transpalette à conducteur accompagnant conçu pour un usage quotidien en entrepôt : chargement de camion depuis le quai, alimentation de lignes de préparation, navette entre zones. La batterie lithium-ion se recharge pendant les pauses, ce qui supprime la batterie de rechange et le local de charge — deux postes que les comparatifs ne comptent presque jamais.</p>
           <p>Le timon court et le rayon de braquage réduit lui permettent de manœuvrer en allée de 2,20 m, là où la plupart des concurrents demandent 2,50 m. La commande proportionnelle dose la vitesse au millimètre en approche de palette, ce qui compte quand on charge en hauteur ou près d'un rack.</p>
         </div></div>
-      <div class="buy"><div class="p">4 200 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
+      <div class="buy"><div class="p">4 200 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow" aria-label="Voir l'offre pour le Jungheinrich EJE 116">Voir l'offre ↗</a></div>
     </div>
 
-    <div class="specs"><h4>Caractéristiques</h4><dl class="specg">
+    <div class="specs"><p class="sh4">Caractéristiques</p><dl class="specg">
       <div><dt>Capacité de charge</dt><dd>1 600 kg</dd></div>
       <div><dt>Batterie</dt><dd>Li-ion 24 V<small>24 Ah, charge d'opportunité</small></dd></div>
       <div><dt>Autonomie constatée</dt><dd>≈ 5 h<small>usage mixte, une équipe</small></dd></div>
@@ -399,15 +426,15 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
     <div class="phead">
       <div class="im"><svg width="92" height="66" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="2.6">
         <path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></div>
-      <div><span class="rank">N° 2 · Meilleur rapport prix</span><h3>Pramac QX 18</h3>
+      <div><span class="rank">N° 2 · Meilleur rapport prix</span><h2>Pramac QX 18</h2>
         <div class="desc">
           <p>La plus forte capacité de la sélection à 1 800 kg, pour 900 € de moins que le premier. Le chargeur est intégré à la machine : pas de station séparée à installer, ce qui simplifie l'implantation sur un site où l'espace de charge n'était pas prévu.</p>
           <p>Le compromis se situe sur l'après-vente. Le réseau est réel mais inégal selon les régions, avec des délais d'intervention qui montent à 48 h hors des zones bien couvertes. Sur un parc mono-machine et un flux tendu, ce délai coûte plus cher que l'économie réalisée à l'achat.</p>
         </div></div>
-      <div class="buy"><div class="p">3 300 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow">Voir l'offre ↗</a></div>
+      <div class="buy"><div class="p">3 300 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow" aria-label="Voir l'offre pour le Pramac QX 18">Voir l'offre ↗</a></div>
     </div>
 
-    <div class="specs"><h4>Caractéristiques</h4><dl class="specg">
+    <div class="specs"><p class="sh4">Caractéristiques</p><dl class="specg">
       <div><dt>Capacité de charge</dt><dd>1 800 kg</dd></div>
       <div><dt>Batterie</dt><dd>Li-ion 24 V<small>20 Ah, chargeur intégré</small></dd></div>
       <div><dt>Autonomie constatée</dt><dd>≈ 4 h<small>usage mixte, une équipe</small></dd></div>
@@ -444,9 +471,9 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
   </div>
 
   <div class="faq"><h2>Questions fréquentes</h2>
-    <details open><summary>Faut-il un CACES pour un transpalette électrique ?</summary>
+    <details open><summary><h3>Faut-il un CACES pour un transpalette électrique ?</h3></summary>
       <p>Un transpalette à conducteur accompagnant ne relève pas du CACES. Un transpalette à conducteur porté relève de la R489 catégorie 1A. Dans tous les cas, l'autorisation de conduite délivrée par l'employeur reste obligatoire (article R4323-56 du Code du travail).</p></details>
-    <details><summary>Lithium ou plomb pour un usage quotidien ?</summary>
+    <details><summary><h3>Lithium ou plomb pour un usage quotidien ?</h3></summary>
       <p>Le lithium se rembourse à partir de deux équipes par jour, grâce à la charge d'opportunité qui supprime la batterie de rechange et le local de charge. En dessous, le plomb reste plus économique.</p></details>
   </div>
   <div style="height:50px"></div>
@@ -454,7 +481,12 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 </section>
 
 <script>
-document.querySelectorAll('.sw button').forEach(b=>b.onclick=()=>{
+document.getElementById('insp').onclick=e=>{
+  const on=document.body.toggleAttribute('data-outline');
+  e.target.style.color = on ? '#fff' : '';
+  e.stopPropagation();
+};
+document.querySelectorAll('.sw button:not(.insp)').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.sw button').forEach(x=>x.setAttribute('aria-selected',x===b));
   document.querySelectorAll('.stage').forEach(s=>s.toggleAttribute('data-on',s.dataset.t===b.dataset.t));
   scrollTo(0,0);
