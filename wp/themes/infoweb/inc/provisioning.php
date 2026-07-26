@@ -16,6 +16,18 @@ defined('ABSPATH') || exit;
 
 add_action('after_switch_theme', 'infoweb_mise_en_place');
 
+/**
+ * Déclenchement aussi sur montée de version : une mise à jour du thème par
+ * téléversement ne passe pas par after_switch_theme, et les pages ajoutées
+ * dans la nouvelle version ne seraient jamais créées.
+ */
+add_action('init', function () {
+    if (get_option('infoweb_provision_version') !== INFOWEB_VERSION) {
+        infoweb_mise_en_place();
+        update_option('infoweb_provision_version', INFOWEB_VERSION);
+    }
+}, 20);
+
 function infoweb_mise_en_place(): void {
     $pages = infoweb_pages_systeme();
     $ids = [];
