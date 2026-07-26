@@ -23,6 +23,10 @@ h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
 [data-outline] h4::before{content:"H4";background:#8a6d00}
 [data-outline] aside :is(h2,h3)::before{background:#2f5d94}
 .w{max-width:1180px;margin:0 auto;padding:0 22px}
+/* texte réservé au plan du document et aux lecteurs d'écran :
+   qualifie un titre générique sans l'alourdir visuellement */
+.vh{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* en-tête simplifié */
 .hd{background:rgba(246,244,239,.95);border-bottom:1px solid var(--rul);position:sticky;top:41px;z-index:60}
@@ -119,8 +123,9 @@ h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
 .verdict{background:linear-gradient(168deg,#fffefb,#f0ece1);border:1px solid var(--rul);border-radius:16px;padding:26px 28px;margin:22px 0 30px}
 .verdict h2{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
 .vrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.vit strong{display:block;font-size:12px;color:var(--amb);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
-.vit .vname{font-size:17px;font-weight:800;letter-spacing:-.03em;margin-bottom:5px}
+.vit h3{font-size:12px;display:block;color:var(--amb);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+.vit .vname{display:block;font-size:17px;font-weight:800;letter-spacing:-.03em;margin-bottom:5px;color:var(--blu)}
+.vit .vname:hover{text-decoration:underline}
 .vit p{font-size:13.5px;color:var(--sub)}
 .tw{overflow-x:auto;border:1px solid var(--rul);border-radius:12px;margin:26px 0;background:var(--card)}
 table{border-collapse:collapse;width:100%;min-width:640px;font-size:13.5px}
@@ -141,7 +146,7 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 .pdet .desc p{font-size:inherit;line-height:inherit;color:inherit;margin-bottom:11px}
 .pdet .desc p:last-child{margin-bottom:0}
 .specs{border:1px solid var(--rul);border-radius:12px;overflow:hidden;margin-top:20px;background:var(--card)}
-.specs .sh4{background:#efece4;padding:10px 15px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--sub);font-weight:800}
+.specs h3{background:#efece4;padding:10px 15px;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--sub);font-weight:800}
 .specg{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}
 .specg > div{padding:12px 15px;border-top:1px solid var(--rul);border-right:1px solid var(--rul)}
 .specg dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
@@ -157,15 +162,16 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 .jump a:hover{color:var(--blu)}
 .jump .pz{margin-left:auto;color:var(--mut);font-weight:600;font-size:12px}
 /* fiche produit détaillée */
-.pdet{background:var(--card);border:1px solid var(--rul);border-radius:14px;padding:20px;margin-bottom:20px;scroll-margin-top:120px}
+.pdet{background:var(--card);border:1px solid var(--rul);border-top:4px solid var(--ink);
+  border-radius:4px 4px 14px 14px;padding:22px;margin-bottom:34px;scroll-margin-top:120px}
 .phead{display:grid;grid-template-columns:132px minmax(0,1fr) auto;gap:20px;align-items:center}
 /* résumé secondaire : plus compact et plus léger que le produit */
 .pmz{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
 .pm{border-radius:10px;padding:12px 14px}
 .pm.up{background:#f3f9f5;border:1px solid #dcebe3}
 .pm.dn{background:#fdf5f4;border:1px solid #f0dedb}
-.pm b{display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:8px}
-.pm.up b{color:#25714a}.pm.dn b{color:#b1382f}
+.pm h3{display:flex;align-items:center;gap:7px;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:8px}
+.pm.up h3{color:#25714a}.pm.dn h3{color:#b1382f}
 .pm ul{list-style:none;margin:0}
 .pm li{display:grid;grid-template-columns:16px 1fr;gap:8px;padding:6px 0;border-top:1px solid rgba(0,0,0,.05);font-size:13px;line-height:1.4;align-items:start}
 .pm li:first-child{border-top:0;padding-top:0}
@@ -174,9 +180,18 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 .pm.dn li::before{content:"✕";background:#dc5b50}
 /* notre avis en 30 secondes */
 .avis{border-left:4px solid #1f5c43;background:#f4f8f6;border-radius:0 11px 11px 0;padding:17px 19px;margin-top:18px}
-.avis b{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:9px}
+.avis h3{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:9px}
 .avis p{font-size:14.5px;line-height:1.6;color:#20262b;margin:0}
 .avis strong{font-weight:800}
+/* rappel de l'offre en pied de fiche : le lecteur qui vient de lire
+   l'avis est au pic d'intention, et ça borne visuellement la fiche */
+.pfoot{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px;
+  padding-top:16px;border-top:1px solid var(--rul)}
+.pfoot .pp{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.pfoot .pd{font-size:11px;color:var(--mut)}
+.pfoot a{margin-left:auto;background:var(--amb);color:var(--ink);border-radius:9px;
+  padding:12px 22px;font-weight:800;font-size:14px}
+@media(max-width:520px){.pfoot a{margin-left:0;width:100%;text-align:center}}
 .buy{text-align:right}
 .buy .p{font-size:20px;font-weight:800;letter-spacing:-.02em}
 .buy .d{font-size:10.5px;color:var(--mut);margin-bottom:9px}
@@ -357,9 +372,9 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 
   <section class="verdict"><h2>Notre sélection en bref</h2>
     <div class="vrow">
-      <div class="vit"><strong>Notre choix</strong><p class="vname">Jungheinrich EJE 116</p><p>Le meilleur compromis autonomie / maniabilité pour un usage quotidien en allée étroite.</p></div>
-      <div class="vit"><strong>Meilleur rapport prix</strong><p class="vname">Pramac QX 18</p><p>Les mêmes capacités pour 900 € de moins, au prix d'un réseau SAV plus clairsemé.</p></div>
-      <div class="vit"><strong>Usage intensif</strong><p class="vname">Linde MT15</p><p>Le seul de la sélection réellement dimensionné pour deux équipes par jour.</p></div>
+      <div class="vit"><h3>Notre choix</h3><a class="vname" href="#p1">Jungheinrich EJE 116</a><p>Le meilleur compromis autonomie / maniabilité pour un usage quotidien en allée étroite.</p></div>
+      <div class="vit"><h3>Meilleur rapport prix</h3><a class="vname" href="#p2">Pramac QX 18</a><p>Les mêmes capacités pour 900 € de moins, au prix d'un réseau SAV plus clairsemé.</p></div>
+      <div class="vit"><h3>Usage intensif</h3><a class="vname" href="#p3">Linde MT15</a><p>Le seul de la sélection réellement dimensionné pour deux équipes par jour.</p></div>
     </div>
   </section>
 
@@ -367,19 +382,13 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
   <div class="tw"><table>
     <thead><tr><th>Modèle</th><th>Capacité</th><th>Batterie</th><th>Autonomie</th><th>Largeur</th><th>Prix indicatif</th></tr></thead>
     <tbody>
-      <tr><td>Jungheinrich EJE 116</td><td>1 600 kg</td><td>Li-ion 24 V</td><td>~5 h</td><td>720 mm</td><td>4 200 – 4 900 €</td></tr>
-      <tr><td>Pramac QX 18</td><td>1 800 kg</td><td>Li-ion 24 V</td><td>~4 h</td><td>730 mm</td><td>3 300 – 3 900 €</td></tr>
-      <tr><td>Linde MT15</td><td>1 500 kg</td><td>Li-ion 24 V</td><td>~6 h</td><td>710 mm</td><td>4 800 – 5 400 €</td></tr>
-      <tr><td>Still EXU 18</td><td>1 800 kg</td><td>Plomb 24 V</td><td>~4 h</td><td>740 mm</td><td>3 900 – 4 400 €</td></tr>
+      <tr><td><a href="#p1">Jungheinrich EJE 116</a></td><td>1 600 kg</td><td>Li-ion 24 V</td><td>~5 h</td><td>720 mm</td><td>4 200 – 4 900 €</td></tr>
+      <tr><td><a href="#p2">Pramac QX 18</a></td><td>1 800 kg</td><td>Li-ion 24 V</td><td>~4 h</td><td>730 mm</td><td>3 300 – 3 900 €</td></tr>
+      <tr><td><a href="#p3">Linde MT15</a></td><td>1 500 kg</td><td>Li-ion 24 V</td><td>~6 h</td><td>710 mm</td><td>4 800 – 5 400 €</td></tr>
+      <tr><td><a href="#p4">Still EXU 18</a></td><td>1 800 kg</td><td>Plomb 24 V</td><td>~4 h</td><td>740 mm</td><td>3 900 – 4 400 €</td></tr>
     </tbody>
   </table></div>
 
-  <nav class="jump"><b>Aller directement à un modèle</b><ol>
-    <li><a href="#p1">Jungheinrich EJE 116 <span class="pz">4 200 €</span></a></li>
-    <li><a href="#p2">Pramac QX 18 <span class="pz">3 300 €</span></a></li>
-    <li><a href="#p3">Linde MT15 <span class="pz">4 800 €</span></a></li>
-    <li><a href="#p4">Still EXU 18 <span class="pz">3 900 €</span></a></li>
-  </ol></nav>
 
   <article class="pdet" id="p1">
     <div class="phead">
@@ -393,7 +402,7 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
       <div class="buy"><div class="p">4 200 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow" aria-label="Voir l'offre pour le Jungheinrich EJE 116">Voir l'offre ↗</a></div>
     </div>
 
-    <div class="specs"><p class="sh4">Caractéristiques</p><dl class="specg">
+    <div class="specs"><h3>Caractéristiques<span class="vh"> du Jungheinrich EJE 116</span></h3><dl class="specg">
       <div><dt>Capacité de charge</dt><dd>1 600 kg</dd></div>
       <div><dt>Batterie</dt><dd>Li-ion 24 V<small>24 Ah, charge d'opportunité</small></dd></div>
       <div><dt>Autonomie constatée</dt><dd>≈ 5 h<small>usage mixte, une équipe</small></dd></div>
@@ -405,21 +414,23 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
     </dl></div>
 
     <div class="pmz">
-      <div class="pm up"><b>Points forts</b><ul>
+      <div class="pm up"><h3>Points forts<span class="vh"> du Jungheinrich EJE 116</span></h3><ul>
         <li>Autonomie tenue sur une journée complète sans charge intermédiaire</li>
         <li>Réseau de service après-vente le plus dense de la sélection</li>
         <li>Timon court : manœuvre en allée de 2,20 m</li>
         <li>Pièces d'usure disponibles sous 48 h</li>
       </ul></div>
-      <div class="pm dn"><b>Points faibles</b><ul>
+      <div class="pm dn"><h3>Points faibles<span class="vh"> du Jungheinrich EJE 116</span></h3><ul>
         <li>Le plus cher de la sélection à capacité égale</li>
         <li>Chargeur externe non fourni en série</li>
         <li>Roues de charge à changer tôt sur sol dégradé</li>
       </ul></div>
     </div>
 
-    <div class="avis"><b>❝ Notre avis en 30 secondes</b>
+    <div class="avis"><h3>❝ Notre avis en 30 secondes<span class="vh"> sur le Jungheinrich EJE 116</span></h3>
       <p><strong>L'EJE 116 est le choix par défaut d'une PME qui tourne une équipe par jour.</strong> Son autonomie réelle évite la batterie de rechange et le local de charge, deux postes de coût que les comparatifs oublient. Le surcoût à l'achat se rattrape sur la disponibilité des pièces et le délai d'intervention. <strong>À écarter si</strong> votre sol est dégradé et votre budget serré : les roues de charge deviennent un consommable.</p></div>
+
+    <div class="pfoot"><span class="pp">4 200 €</span><span class="pd">à partir de, HT · relevé 20.07.2026</span><a rel="sponsored nofollow" aria-label="Voir l'offre pour le Jungheinrich EJE 116">Voir l'offre ↗</a></div>
   </article>
 
   <article class="pdet" id="p2">
@@ -434,7 +445,7 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
       <div class="buy"><div class="p">3 300 €</div><div class="d">à partir de, HT · relevé 20.07.2026</div><a rel="sponsored nofollow" aria-label="Voir l'offre pour le Pramac QX 18">Voir l'offre ↗</a></div>
     </div>
 
-    <div class="specs"><p class="sh4">Caractéristiques</p><dl class="specg">
+    <div class="specs"><h3>Caractéristiques<span class="vh"> du Pramac QX 18</span></h3><dl class="specg">
       <div><dt>Capacité de charge</dt><dd>1 800 kg</dd></div>
       <div><dt>Batterie</dt><dd>Li-ion 24 V<small>20 Ah, chargeur intégré</small></dd></div>
       <div><dt>Autonomie constatée</dt><dd>≈ 4 h<small>usage mixte, une équipe</small></dd></div>
@@ -446,20 +457,22 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
     </dl></div>
 
     <div class="pmz">
-      <div class="pm up"><b>Points forts</b><ul>
+      <div class="pm up"><h3>Points forts<span class="vh"> du Pramac QX 18</span></h3><ul>
         <li>900 € de moins que le premier de la sélection, à capacité supérieure</li>
         <li>1 800 kg : la plus forte capacité du comparatif</li>
         <li>Chargeur intégré, pas de station séparée</li>
       </ul></div>
-      <div class="pm dn"><b>Points faibles</b><ul>
+      <div class="pm dn"><h3>Points faibles<span class="vh"> du Pramac QX 18</span></h3><ul>
         <li>Réseau après-vente clairsemé selon les régions</li>
         <li>Autonomie plus courte : juste pour une journée chargée</li>
         <li>Largeur hors-tout de 730 mm, limite en allée étroite</li>
       </ul></div>
     </div>
 
-    <div class="avis"><b>❝ Notre avis en 30 secondes</b>
+    <div class="avis"><h3>❝ Notre avis en 30 secondes<span class="vh"> sur le Pramac QX 18</span></h3>
       <p><strong>Le bon calcul quand le site accepte 48 h d'immobilisation.</strong> À capacité supérieure et 900 € de moins, l'écart de prix couvre plusieurs années de contrat de maintenance. <strong>Idéal si</strong> vous avez une deuxième machine en secours ou un flux qui tolère un arrêt ; <strong>à éviter</strong> en mono-machine sur un flux tendu, où le délai d'intervention coûte plus cher que l'économie à l'achat.</p></div>
+
+    <div class="pfoot"><span class="pp">3 300 €</span><span class="pd">à partir de, HT · relevé 20.07.2026</span><a rel="sponsored nofollow" aria-label="Voir l'offre pour le Pramac QX 18">Voir l'offre ↗</a></div>
   </article>
 
   <p class="disc"><strong>Transparence.</strong> Les liens « Voir l'offre » sont des liens commerciaux : si vous achetez, nous percevons une commission, sans surcoût pour vous. Le classement ne s'achète pas — les critères de sélection sont détaillés ci-dessous et les prix sont relevés à date fixe chez plusieurs marchands.</p>

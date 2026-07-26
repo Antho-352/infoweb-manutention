@@ -165,21 +165,45 @@ Un plan de titres n'est pas de la mise en forme : c'est ce que Google et les mod
 
 **Aucun saut de niveau.** Un H3 ne peut exister que sous un H2.
 
-**Un titre décrit du contenu, pas un élément d'interface.** C'est la règle qui tranche tous les cas douteux. « Caractéristiques », « Points forts », « Points faibles », « Notre avis en 30 secondes », « Sommaire », « Aller directement à un modèle » sont des libellés : ils se répètent à l'identique dix fois dans la page et pollueraient le plan sans rien lui apprendre. Ils restent des `<p>` ou des `<span>` stylés. À l'inverse, une question de FAQ est du contenu réel et unique : elle prend un H3, ce qui la rend aussi cohérente avec le balisage `FAQPage`.
+**Tout bloc de contenu porte un titre ; un titre générique est qualifié pour le plan.** « Caractéristiques », « Points forts », « Points faibles », « Notre avis en 30 secondes » sont bien des H3 : ils sont hiérarchiquement corrects sous le H2 du produit, ils permettent la navigation par titres au lecteur d'écran, et ils servent l'extraction par les modèles de langage — un modèle interrogé sur les défauts d'une machine trouve la section explicitement nommée.
+
+Restent des libellés simples, sans balise de titre, les seuls éléments qui relèvent de la navigation et non du contenu : le sommaire d'article et les en-têtes de tableau.
+
+**La qualification par texte masqué.** Un H3 « Points forts » répété dix fois n'apprend rien au plan. On lui adjoint donc le nom du produit dans un `<span class="vh">` invisible à l'écran mais présent dans le document :
+
+```html
+<h3>Points forts<span class="vh"> du Jungheinrich EJE 116</span></h3>
+```
+
+L'écran affiche « Points forts ». Le plan et le lecteur d'écran lisent « Points forts du Jungheinrich EJE 116 ». On garde une interface sobre et un document sans ambiguïté.
 
 ### Le plan d'une page comparatif
 
 ```
 H1   Les 10 meilleurs transpalettes électriques pour PME
 H2   Notre sélection en bref
+  H3   Notre choix                ← libellés uniques, pas de qualification
+  H3   Meilleur rapport prix
+  H3   Usage intensif
 H2   Tableau comparatif des 10 modèles
 H2   Jungheinrich EJE 116          ← marque + modèle, un H2 par produit
+  H3   Caractéristiques du Jungheinrich EJE 116
+  H3   Points forts du Jungheinrich EJE 116
+  H3   Points faibles du Jungheinrich EJE 116
+  H3   Notre avis en 30 secondes sur le Jungheinrich EJE 116
 H2   Pramac QX 18
+  H3   …
 H2   Comment nous avons classé
 H2   Questions fréquentes
   H3   Faut-il un CACES pour un transpalette électrique ?
   H3   Lithium ou plomb pour un usage quotidien ?
 ```
+
+### Navigation interne et répétition de l'appel à l'action
+
+Pas de bloc « aller directement à un modèle » : il faisait double emploi. Les ancres vivent là où le lecteur les cherche — **le nom de chaque produit du verdict et de la première colonne du tableau comparatif renvoie à sa fiche**. Le tableau sert donc à la fois de comparaison et d'index complet.
+
+**L'appel à l'action est répété deux fois par fiche** : une fois en tête, près du prix, pour le lecteur pressé ; une fois en pied, après l'avis, pour celui qui vient de lire et se trouve au pic d'intention. Ce rappel borne aussi visuellement la fiche — combiné au filet épais qui ouvre la suivante, la frontière entre deux produits devient évidente, ce qui n'était pas le cas avec un seul appel en tête.
 
 Le titre de produit est **toujours « marque + modèle exact »**, et rien d'autre. C'est ce que l'internaute tape quand il cherche des informations sur une machine précise — « Jungheinrich EJE 116 avis », « Jungheinrich EJE 116 prix ». Un H2 « Le premier de notre sélection » ne capte rien.
 
