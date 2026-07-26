@@ -33,8 +33,11 @@ os.makedirs(OUT, exist_ok=True)
 
 CLE = os.environ.get('GOOGLE_PLACES_API_KEY', '')
 
-# Le palier de facturation dépend des champs demandés, pas d'un réglage.
-# On demande ici le strict nécessaire à une fiche d'annuaire.
+# Le palier de facturation dépend des champs demandés, pas d'un réglage :
+# téléphone, horaires, note et site web relèvent du palier Enterprise, qui
+# offre 1 000 appels gratuits par mois. C'est exactement le rythme de
+# publication de l'annuaire (lots de 100), donc la collecte reste gratuite
+# tant qu'on ne dépasse pas ce quota mensuel — d'où le garde-fou ci-dessous.
 CHAMPS_RECHERCHE = 'places.id,places.displayName,places.formattedAddress'
 CHAMPS_DETAIL = ','.join([
     'id', 'displayName', 'formattedAddress', 'nationalPhoneNumber',
@@ -42,7 +45,26 @@ CHAMPS_DETAIL = ','.join([
     'businessStatus', 'location', 'primaryTypeDisplayName',
 ])
 
-TARIF = {'recherche': 32.0 / 1000, 'detail': 17.0 / 1000}  # USD, paliers Pro
+QUOTA_MENSUEL_GRATUIT = 1000          # palier Enterprise
+TARIF = {'recherche': 32.0 / 1000, 'detail': 25.0 / 1000}  # USD au-delà du quota
+COMPTEUR = os.path.join(SRC, 'gmb', '_quota.json')
+
+
+def quota_utilise():
+    """Appels Enterprise déjà consommés sur le mois en cours."""
+    mois = time.strftime('%Y-%m')
+    if os.path.exists(COMPTEUR):
+        with open(COMPTEUR) as f:
+            d = json.load(f)
+        if d.get('mois') == mois:
+            return d.get('appels', 0)
+    return 0
+
+
+def quota_ajouter(n):
+    mois = time.strftime('%Y-%m')
+    with open(COMPTEUR, 'w') as f:
+        json.dump({'mois': mois, 'appels': quota_utilise() + n}, f)
 
 
 def charger_cache():
@@ -138,9 +160,16 @@ def traiter(dept, simuler=False):
 
     cache = charger_cache()
     enrichies, appels, echecs = [], 0, 0
+    deja = quota_utilise()
 
     for i, fiche in enumerate(fiches, 1):
         siret = fiche['siret']
+        if deja + appels >= QUOTA_MENSUEL_GRATUIT:
+            # On s'arrête net plutôt que de basculer en facturé sans le dire.
+            fiche['gmb'] = None
+            fiche['gmb_motif'] = 'quota mensuel gratuit atteint'
+            enrichies.append(fiche)
+            continue
         if siret in cache:
             fiche.update(cache[siret])
             enrichies.append(fiche)
@@ -171,14 +200,16 @@ def traiter(dept, simuler=False):
         time.sleep(0.12)  # on reste loin des limites de débit
 
     sauver_cache(cache)
+    quota_ajouter(appels)
     with open(os.path.join(OUT, f'dept-{str(dept).zfill(2)}.json'), 'w', encoding='utf-8') as f:
         json.dump(enrichies, f, ensure_ascii=False, indent=1)
 
     ok = len(enrichies) - echecs
-    cout = appels * TARIF['detail']  # approximation : recherche + détail
+    restant = max(0, QUOTA_MENSUEL_GRATUIT - quota_utilise())
     print(f"dept {str(dept).zfill(2)} : {ok}/{len(fiches)} appariés, "
-          f"{echecs} sans correspondance, ~{cout:.2f} $", flush=True)
-    return ok, cout
+          f"{echecs} sans correspondance · quota gratuit restant ce mois : {restant}",
+          flush=True)
+    return ok, 0.0
 
 
 def main():
