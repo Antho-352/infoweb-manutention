@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || exit;
 
-const INFOWEB_VERSION = '0.1.0';
+const INFOWEB_VERSION = '0.2.0';
 
 /**
  * Chargement des modules. Chacun est autonome et n'expose que des hooks —
@@ -15,6 +15,7 @@ const INFOWEB_VERSION = '0.1.0';
  */
 foreach ([
     'setup',        // supports du thème, menus, tailles d'image
+    'db',           // tables dédiées : demandes de devis, points de prix
     'assets',       // CSS critique inliné, aucun JS par défaut
     'rubriques',    // carte rubrique éditoriale -> familles
     'breadcrumbs',  // fil d'Ariane + BreadcrumbList
@@ -23,6 +24,8 @@ foreach ([
     'metabox-seo',  // les trois champs par page
     'security',     // en-têtes HTTP, durcissement
     'performance',  // nettoyage des sorties inutiles de WordPress
+    'prix',         // points de prix + code court [prix]
+    'leads',        // formulaire de devis, écran d'administration, export
 ] as $module) {
     require_once get_theme_file_path("inc/{$module}.php");
 }

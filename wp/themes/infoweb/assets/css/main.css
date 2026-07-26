@@ -194,3 +194,87 @@ p,ul,ol,figure,table{margin:0}
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.01ms !important;transition-duration:.01ms !important}
 }
+
+/* ============ ACCUEIL ============ */
+.une{padding:22px 0 8px;display:grid;gap:20px}
+.une h1{font-size:clamp(28px,6.2vw,46px);margin:10px 0 12px}
+.une h1 a{color:var(--ink);text-decoration:none}
+.une h1 a:hover{color:var(--blu)}
+.une-chapo{font-size:17px;color:var(--sub);max-width:58ch}
+.une-sig{margin-top:14px;font-size:12.5px;color:var(--mut);display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.une-sig b{color:var(--ink)}
+.une-img img{border-radius:var(--r)}
+
+.sect{padding:30px 0 4px}
+.sect-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;
+  margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.sect-h h2{font-size:20px}
+.sect-h h2 a{color:var(--ink);text-decoration:none}
+.sect-h h2 a:hover{color:var(--blu)}
+.sect-h span{font-size:12.5px;color:var(--mut)}
+
+.familles{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.familles a{background:var(--card);border:1px solid var(--rul);border-radius:8px;
+  padding:8px 13px;font-size:13px;font-weight:650;text-decoration:none;color:var(--ink)}
+.familles a:hover{border-color:var(--ink)}
+
+.grille-prix{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.cprix{background:var(--card);border:1px solid var(--rul);border-radius:var(--r);padding:15px}
+.cprix .v{display:block;font-size:19px;font-weight:800;letter-spacing:-.025em;font-variant-numeric:tabular-nums}
+.cprix .l{display:block;font-size:13.5px;margin-top:5px}
+.cprix .d{display:block;font-size:11px;color:var(--mut);margin-top:7px}
+
+.redac{background:var(--card);border:1px solid var(--rul);border-radius:16px;
+  padding:20px;margin:30px 0 10px;display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+.redac img{border-radius:50%;flex:none;width:72px;height:72px}
+.redac h2{font-size:19px;margin-bottom:7px}
+.redac p{font-size:14px;color:var(--sub)}
+.redac-note{font-size:12.5px;color:var(--mut);margin-top:7px}
+.redac .btn{margin-left:auto}
+
+/* ============ BLOC PRIX ============ */
+.bloc-prix{border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;margin:24px 0}
+.bp-h{background:var(--ink);color:#fff;padding:9px 15px;font-size:11px;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px}
+.bp-r{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:12px 15px;border-bottom:1px solid var(--rul);font-size:14px;background:var(--card)}
+.bp-r:last-of-type{border-bottom:0}
+.bp-r small{display:block;color:var(--mut);font-size:11px}
+.bp-v{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bp-f{background:#efece4;padding:9px 15px;font-size:11.5px;color:var(--mut)}
+
+/* ============ FORMULAIRE DE DEVIS ============ */
+.form-devis{background:var(--card);border:2px solid var(--ink);border-radius:16px;overflow:hidden}
+.fd-h{background:var(--ink);color:#fff;padding:16px 20px}
+.fd-h .t{font-size:19px;font-weight:800;display:block;margin-bottom:4px}
+.fd-h p{font-size:12.5px;color:#a9aeb6}
+.fd-b{padding:18px 20px 20px}
+.fd-ok{background:#e7f0e8;color:#2c6b45;border-radius:9px;padding:14px;font-size:14.5px}
+.fd-l{display:block;margin-bottom:12px}
+.fd-l span{display:block;font-size:12.5px;font-weight:700;margin-bottom:5px}
+.fd-l input,.fd-l select,.fd-l textarea{width:100%;border:1.5px solid var(--rul);border-radius:9px;
+  padding:11px 12px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+.fd-c{display:flex;gap:9px;align-items:flex-start;font-size:12.5px;color:var(--sub);margin:14px 0}
+.fd-c input{margin-top:3px;flex:none;width:18px;height:18px}
+.fd-sub{width:100%;border:0;border-radius:10px;background:var(--amb);color:var(--ink);
+  padding:14px;font:inherit;font-weight:800;font-size:15px;cursor:pointer}
+.fd-rgpd{font-size:11px;color:var(--mut);margin-top:10px;line-height:1.45}
+.fd-piege{position:absolute;left:-9999px}
+.fd-trust{border-top:1px solid var(--rul);padding:14px 20px;background:#faf8f3;display:grid;gap:8px}
+.fd-trust div{display:grid;grid-template-columns:17px 1fr;gap:9px;font-size:12.5px;color:var(--sub)}
+.fd-trust div::before{content:"✓";color:var(--grn);font-weight:800}
+
+/* ============ GABARIT PAGE À DEVIS ============ */
+.devis-grille{display:grid;gap:26px;padding:8px 0 44px}
+.dg-tete h1{font-size:clamp(27px,6vw,42px);margin:12px 0 14px}
+
+@media(min-width:720px){
+  .une{grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+}
+@media(min-width:1101px){
+  .devis-grille{grid-template-columns:minmax(0,1fr) 380px;gap:40px;
+    grid-template-areas:"tete form" "corps form";align-items:start}
+  .dg-tete{grid-area:tete}
+  .dg-form{grid-area:form;position:sticky;top:82px}
+  .dg-corps{grid-area:corps}
+}
