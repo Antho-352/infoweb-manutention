@@ -34,7 +34,11 @@ API = 'https://recherche-entreprises.api.gouv.fr/search'
 # `strict` : le code suffit à qualifier l'établissement.
 # `large`  : le code est trop générique, un mot-clé métier est exigé en plus.
 NAF = {
-    '77.32Z': ('loueur',          'strict'),  # location de machines pour la construction
+    # 77.32Z couvre TOUTE la location d'engins de chantier — dragage,
+    # terrassement, échafaudage, nacelles. Il représente 72 % de la collecte
+    # et ne qualifie donc rien à lui seul : classé `large` après le pilote
+    # Moselle, où il ramenait l'essentiel du bruit.
+    '77.32Z': ('loueur',          'large'),
     '77.39Z': ('loueur',          'large'),   # location d'autres machines
     '46.69B': ('concessionnaire', 'large'),   # gros de fournitures et équipements industriels
     '28.22Z': ('concessionnaire', 'strict'),  # fabrication d'équipements de levage et manutention
@@ -42,6 +46,14 @@ NAF = {
     '71.20B': ('controle_vgp',    'large'),   # analyses, essais et inspections techniques
     '85.59A': ('formation',       'large'),   # formation continue d'adultes
 }
+
+# Signaux d'exclusion : métiers voisins que les NAF ci-dessus ramènent
+# systématiquement et qui ne relèvent pas de la manutention.
+EXCLUSIONS = [
+    'dragage', 'terrassement', 'travaux publics', 'btp', 'echafaudage',
+    'demenagement', 'transport frigorifique', 'frigo', 'recyclage',
+    'nettoyage', 'utilitaire', 'ascenseur', 'espaces verts', 'benne',
+]
 
 # Mots-clés métier, cherchés dans la raison sociale et l'enseigne.
 MOTS = [
@@ -59,9 +71,9 @@ def sans_accents(t):
 
 
 def pertinent(nom, enseignes):
-    """Un mot-clé métier apparaît-il dans la dénomination ?"""
+    """Mots-clés métier trouvés dans la dénomination, et signaux d'exclusion."""
     hay = sans_accents(nom) + ' ' + sans_accents(' '.join(enseignes or []))
-    return [m for m in MOTS if m in hay]
+    return [m for m in MOTS if m in hay], [x for x in EXCLUSIONS if x in hay]
 
 
 def get(url, essais=3):
@@ -96,7 +108,9 @@ def collecter_dept(dept):
                     if not (e.get('code_postal') or '').startswith(str(dept).zfill(2)):
                         continue
 
-                    mots = pertinent(nom, e.get('liste_enseignes'))
+                    mots, exclus = pertinent(nom, e.get('liste_enseignes'))
+                    if exclus:
+                        continue  # métier voisin explicitement hors périmètre
                     if mode == 'large' and not mots:
                         continue  # code NAF trop générique et aucun signal métier
 
@@ -127,11 +141,9 @@ def collecter_dept(dept):
                     for m in mots:
                         if m not in fiche['mots_cles']:
                             fiche['mots_cles'].append(m)
-                    # Un NAF `strict` qualifie à lui seul : 77.32Z et 28.22Z ne
-                    # désignent que de la location de machines et de la
-                    # fabrication d'appareils de levage. Un NAF `large` ne vaut
-                    # que par le mot-clé métier qui l'accompagne, et reste à
-                    # faire trancher.
+                    # La confiance définitive ne se joue pas ici : c'est la
+                    # catégorie Google, récupérée à l'enrichissement, qui
+                    # tranchera. Ce champ n'ordonne que la file de revue.
                     if mode == 'strict':
                         fiche['confiance'] = 'haute'
                     elif fiche['confiance'] != 'haute':
