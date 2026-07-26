@@ -29,7 +29,10 @@ SOURCE = re.compile(
 ERREURS = [
     (re.compile(r'\ble CACES\b[^.]{0,60}\b(est|sont)\s+obligatoire', re.I),
      "Le CACES n'est PAS obligatoire — c'est l'autorisation de conduite qui l'est (R4323-56)."),
-    (re.compile(r'\bCACES\b[^.]{0,40}\bobligation légale\b', re.I),
+    # On ne doit pas déclencher sur la forme négative, qui est la bonne :
+    # « le CACES n'est pas une obligation légale » est exactement ce qu'on veut lire.
+    (re.compile(r"\bCACES\b(?![^.]{0,40}\bn['e]\w*\s+(?:est|constitue)\s+pas)"
+                r"[^.]{0,40}\b(?:est|constitue)\s+une\s+obligation\s+légale\b", re.I),
      "Le CACES n'est pas une obligation légale."),
     (re.compile(r'\[À VÉRIFIER\]|\[A VERIFIER\]', re.I),
      "Marqueur [À VÉRIFIER] non résolu — publication interdite."),
