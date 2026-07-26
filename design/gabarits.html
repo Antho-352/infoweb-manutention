@@ -123,10 +123,14 @@ h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.12;font-weight:800}
 .verdict{background:linear-gradient(168deg,#fffefb,#f0ece1);border:1px solid var(--rul);border-radius:16px;padding:26px 28px;margin:22px 0 30px}
 .verdict h2{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:11px}
 .vrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-.vit h3{font-size:12px;display:block;color:var(--amb);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
-.vit .vname{display:block;font-size:17px;font-weight:800;letter-spacing:-.03em;margin-bottom:5px;color:var(--blu)}
-.vit .vname:hover{text-decoration:underline}
-.vit p{font-size:13.5px;color:var(--sub)}
+.vit h3{font-size:11px;display:block;color:var(--amb);letter-spacing:.09em;text-transform:uppercase;margin-bottom:9px}
+.vcard{display:grid;grid-template-columns:66px minmax(0,1fr);gap:12px;align-items:center;margin-bottom:9px}
+.vim{height:56px;border-radius:9px;background:#f0ece1;display:flex;align-items:center;justify-content:center}
+.vname{display:block;font-size:16.5px;font-weight:800;letter-spacing:-.03em;color:var(--blu);line-height:1.2}
+.vcard:hover .vname{text-decoration:underline}
+.vprice{display:block;font-size:14px;font-weight:800;margin-top:3px;font-variant-numeric:tabular-nums}
+.vprice small{font-weight:500;color:var(--mut);font-size:11px}
+.vit p{font-size:13.5px;color:var(--sub);line-height:1.55}
 .tw{overflow-x:auto;border:1px solid var(--rul);border-radius:12px;margin:26px 0;background:var(--card)}
 table{border-collapse:collapse;width:100%;min-width:640px;font-size:13.5px}
 th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--rul);white-space:nowrap}
@@ -372,13 +376,13 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
 
   <section class="verdict"><h2>Notre sélection en bref</h2>
     <div class="vrow">
-      <div class="vit"><h3>Notre choix</h3><a class="vname" href="#p1">Jungheinrich EJE 116</a><p>Le meilleur compromis autonomie / maniabilité pour un usage quotidien en allée étroite.</p></div>
-      <div class="vit"><h3>Meilleur rapport prix</h3><a class="vname" href="#p2">Pramac QX 18</a><p>Les mêmes capacités pour 900 € de moins, au prix d'un réseau SAV plus clairsemé.</p></div>
-      <div class="vit"><h3>Usage intensif</h3><a class="vname" href="#p3">Linde MT15</a><p>Le seul de la sélection réellement dimensionné pour deux équipes par jour.</p></div>
+      <div class="vit"><h3>Notre choix</h3><a class="vcard" href="#p1"><span class="vim"><svg width="46" height="34" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="3.4"><path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></span><span><span class="vname">Jungheinrich EJE 116</span><span class="vprice">4 200 € <small>à partir de, HT</small></span></span></a><p>Autonomie tenue sur une journée complète et timon court qui passe en allée de 2,20 m. Le réseau après-vente le plus dense de la sélection : sur un parc, c'est le délai d'intervention qui coûte, pas le prix d'achat.</p></div>
+      <div class="vit"><h3>Meilleur rapport prix</h3><a class="vcard" href="#p2"><span class="vim"><svg width="46" height="34" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="3.4"><path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></span><span><span class="vname">Pramac QX 18</span><span class="vprice">3 300 € <small>à partir de, HT</small></span></span></a><p>La plus forte capacité du comparatif à 1 800 kg, pour 900 € de moins que le premier. Chargeur intégré, donc pas de station à installer. Le compromis se paie sur la couverture après-vente selon les régions.</p></div>
+      <div class="vit"><h3>Usage intensif</h3><a class="vcard" href="#p3"><span class="vim"><svg width="46" height="34" viewBox="0 0 92 66" fill="none" stroke="#b9ae95" stroke-width="3.4"><path d="M10 48h56M20 48V30h16v18M36 30h22v18" stroke-linejoin="round"/><circle cx="24" cy="54" r="5"/><circle cx="58" cy="54" r="5"/></svg></span><span><span class="vname">Linde MT15</span><span class="vprice">4 800 € <small>à partir de, HT</small></span></span></a><p>Le seul réellement dimensionné pour deux équipes par jour, avec six heures d'autonomie constatée. Plus lourd et plus large que les autres : à vérifier contre vos allées avant de commander.</p></div>
     </div>
   </section>
 
-  <h2 style="font-size:22px;margin-top:34px">Tableau comparatif des 10 modèles</h2>
+  <h2 style="font-size:22px;margin-top:34px">Tableau comparatif</h2>
   <div class="tw"><table>
     <thead><tr><th>Modèle</th><th>Capacité</th><th>Batterie</th><th>Autonomie</th><th>Largeur</th><th>Prix indicatif</th></tr></thead>
     <tbody>
@@ -386,6 +390,12 @@ td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;backgro
       <tr><td><a href="#p2">Pramac QX 18</a></td><td>1 800 kg</td><td>Li-ion 24 V</td><td>~4 h</td><td>730 mm</td><td>3 300 – 3 900 €</td></tr>
       <tr><td><a href="#p3">Linde MT15</a></td><td>1 500 kg</td><td>Li-ion 24 V</td><td>~6 h</td><td>710 mm</td><td>4 800 – 5 400 €</td></tr>
       <tr><td><a href="#p4">Still EXU 18</a></td><td>1 800 kg</td><td>Plomb 24 V</td><td>~4 h</td><td>740 mm</td><td>3 900 – 4 400 €</td></tr>
+      <tr><td>Toyota LWE 160</td><td>1 600 kg</td><td>Li-ion 24 V</td><td>~5 h</td><td>720 mm</td><td>4 100 – 4 700 €</td></tr>
+      <tr><td>Crown WP 3080</td><td>1 800 kg</td><td>Plomb 24 V</td><td>~4 h</td><td>750 mm</td><td>3 700 – 4 200 €</td></tr>
+      <tr><td>Hyster P1.6</td><td>1 600 kg</td><td>Li-ion 24 V</td><td>~4 h</td><td>725 mm</td><td>3 800 – 4 300 €</td></tr>
+      <tr><td>BT Levio LWE 180</td><td>1 800 kg</td><td>Li-ion 24 V</td><td>~5 h</td><td>735 mm</td><td>4 400 – 5 000 €</td></tr>
+      <tr><td>Manitou MT 15</td><td>1 500 kg</td><td>Plomb 24 V</td><td>~3 h</td><td>710 mm</td><td>3 100 – 3 600 €</td></tr>
+      <tr><td>Pallit BUDGET-E</td><td>1 500 kg</td><td>Li-ion 24 V</td><td>~4 h</td><td>715 mm</td><td>2 900 – 3 400 €</td></tr>
     </tbody>
   </table></div>
 

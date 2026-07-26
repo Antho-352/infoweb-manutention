@@ -1,0 +1,374 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>infoweb-manutention — gabarits leads et annuaire</title>
+<style>
+:root{--pap:#f6f4ef;--card:#fff;--ink:#14161a;--sub:#3f444b;--mut:#767c85;--rul:#e2ddd2;--amb:#e39a12;--blu:#2f5d94;--grn:#2f7a52}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--pap);color:var(--ink);font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{letter-spacing:-.03em;line-height:1.13;font-weight:800}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sw{position:sticky;top:0;z-index:99;display:flex;background:var(--ink)}
+.sw button{flex:1;padding:13px 8px;border:0;background:none;color:#8b9199;font:700 12px/1 inherit;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;border-bottom:3px solid transparent}
+.sw button[aria-selected=true]{color:#fff;border-bottom-color:var(--amb)}
+.stage{display:none}.stage[data-on]{display:block}
+.w{max-width:1180px;margin:0 auto;padding:0 22px}
+.hd{background:rgba(246,244,239,.95);border-bottom:1px solid var(--rul);position:sticky;top:41px;z-index:60}
+.hdi{display:flex;align-items:center;gap:18px;height:56px}
+.lg{font-weight:800;font-size:16.5px;letter-spacing:-.05em}.lg i{font-style:normal;color:var(--amb)}
+.hnav{display:flex;gap:19px;font-size:13px;font-weight:650;color:var(--sub);overflow-x:auto;scrollbar-width:none}
+.hnav::-webkit-scrollbar{display:none}.hnav a{white-space:nowrap}
+.btn{border:1.5px solid var(--ink);border-radius:8px;padding:7px 13px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.btn.fill{background:var(--ink);color:var(--pap)}
+.hact{margin-left:auto}
+.bc{font-size:12px;color:var(--mut);padding:18px 0 0}
+.bc a{color:var(--blu)}.bc i{font-style:normal;margin:0 6px;color:var(--rul)}
+.tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blu)}
+
+/* ======= COLONNES ======= */
+.two{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:40px;padding:14px 0 50px;align-items:start}
+h1{font-size:clamp(28px,3.7vw,42px);margin:12px 0 14px}
+.lead{font-size:17px;color:var(--sub);max-width:58ch}
+.bd h2{font-size:24px;margin:34px 0 12px}
+.bd h3{font-size:17.5px;margin:22px 0 8px}
+.bd p{margin-bottom:14px;color:#23272c}
+.bd ul{margin:0 0 14px 20px}.bd li{margin-bottom:6px}
+
+/* ======= FORMULAIRE DE DEVIS ======= */
+.form{position:sticky;top:112px;background:var(--card);border:2px solid var(--ink);border-radius:16px;overflow:hidden}
+.formh{background:var(--ink);color:#fff;padding:16px 20px}
+.formh h2{font-size:19px;margin-bottom:5px}
+.formh p{font-size:12.5px;color:#a9aeb6}
+.formb{padding:18px 20px 20px}
+.step{display:flex;gap:7px;margin-bottom:16px}
+.step span{flex:1;height:4px;border-radius:2px;background:var(--rul)}
+.step span.on{background:var(--amb)}
+.fl{display:block;margin-bottom:13px}
+.fl b{display:block;font-size:12.5px;font-weight:700;margin-bottom:6px}
+.fl input,.fl select{width:100%;border:1.5px solid var(--rul);border-radius:9px;padding:11px 12px;font:inherit;font-size:14.5px;background:#fff}
+.fl input:focus,.fl select:focus{outline:2px solid var(--amb);border-color:var(--amb)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips label{border:1.5px solid var(--rul);border-radius:8px;padding:8px 12px;font-size:13px;font-weight:650;cursor:pointer}
+.chips input{position:absolute;opacity:0}
+.chips input:checked+span{color:var(--amb)}
+.chips label:has(input:checked){border-color:var(--ink);background:var(--ink);color:#fff}
+.sub{width:100%;border:0;border-radius:10px;background:var(--amb);color:var(--ink);padding:14px;font:inherit;font-weight:800;font-size:15px;cursor:pointer;margin-top:6px}
+.rgpd{font-size:11px;color:var(--mut);margin-top:10px;line-height:1.45}
+.trust{border-top:1px solid var(--rul);padding:14px 20px;background:#faf8f3;display:grid;gap:9px}
+.trust div{display:grid;grid-template-columns:18px 1fr;gap:9px;font-size:12.5px;color:var(--sub);align-items:start}
+.trust div::before{content:"✓";color:var(--grn);font-weight:800;font-size:12px}
+
+/* ======= ÉTAPES ======= */
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:20px 0 8px}
+.hw{background:var(--card);border:1px solid var(--rul);border-radius:13px;padding:17px}
+.hw b{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:13px;margin-bottom:10px}
+.hw h3{font-size:15.5px;margin-bottom:6px}
+.hw p{font-size:13.5px;color:var(--sub);margin:0}
+
+/* ======= PRIX ======= */
+.tw{overflow-x:auto;border:1px solid var(--rul);border-radius:12px;background:var(--card);margin:18px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:13.5px}
+th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--rul);white-space:nowrap}
+th{background:#efece4;font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800}
+td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;background:var(--card)}
+tr:last-child td{border-bottom:0}
+.note{background:#efece4;border-radius:9px;padding:11px 14px;font-size:12px;color:var(--sub)}
+
+/* ======= ANNUAIRE : filtres + liste ======= */
+.filters{background:var(--card);border:1px solid var(--rul);border-radius:14px;padding:15px 17px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0}
+.local{background:var(--card);border-left:4px solid var(--amb);border-radius:0 12px 12px 0;padding:18px 20px;margin:18px 0}
+.local h2{font-size:18px;margin-bottom:9px}
+.local p{font-size:14.5px;color:#23272c;margin-bottom:10px}
+.local .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:11px;border-top:1px solid var(--rul);padding-top:13px}
+.local .kv div{font-size:13px}
+.local .kv b{display:block;font-size:16px;font-variant-numeric:tabular-nums}
+.local .kv span{color:var(--mut);font-size:11.5px}
+.cnt{display:flex;align-items:baseline;gap:10px;margin:24px 0 12px}
+.cnt h2{font-size:20px}.cnt span{font-size:13px;color:var(--mut)}
+.eta{background:var(--card);border:1px solid var(--rul);border-radius:13px;padding:17px 19px;margin-bottom:12px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:start}
+.eta h3{font-size:17px;margin-bottom:4px}
+.eta h3 a{color:var(--ink)}.eta h3 a:hover{color:var(--blu)}
+.eta .adr{font-size:13px;color:var(--mut);margin-bottom:9px}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.acts span{background:#eef4fb;color:var(--blu);border-radius:6px;padding:3px 9px;font-size:11.5px;font-weight:700}
+.mach{font-size:13px;color:var(--sub)}
+.eta .side2{text-align:right;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.eta .tel{font-weight:800;font-size:15px;white-space:nowrap}
+.eta .cta2{background:var(--amb);color:var(--ink);border-radius:8px;padding:10px 15px;font-weight:800;font-size:13px;white-space:nowrap}
+.map{height:260px;border:1px solid var(--rul);border-radius:13px;background:
+  repeating-linear-gradient(0deg,#eae6dc 0 1px,transparent 1px 34px),
+  repeating-linear-gradient(90deg,#eae6dc 0 1px,transparent 1px 34px),#f2efe7;
+  display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:13px;margin:18px 0}
+.near{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.near a{background:var(--card);border:1px solid var(--rul);border-radius:8px;padding:8px 13px;font-size:13px;font-weight:650}
+.near a:hover{border-color:var(--ink)}
+
+/* ======= FICHE ÉTABLISSEMENT ======= */
+.fh{background:var(--card);border:1px solid var(--rul);border-radius:16px;padding:24px 26px;margin-top:14px}
+.fhead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:start;border-bottom:1px solid var(--rul);padding-bottom:18px;margin-bottom:18px}
+.fh h1{font-size:clamp(25px,3.2vw,34px);margin:8px 0 8px}
+.claim{background:#eef4fb;border:1px solid #d3e0f0;border-radius:10px;padding:13px 16px;font-size:13.5px;color:var(--sub);margin-top:18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.claim a{margin-left:auto;border:1.5px solid var(--blu);color:var(--blu);border-radius:8px;padding:9px 15px;font-weight:800;font-size:13px;white-space:nowrap}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--rul);border-radius:12px;overflow:hidden;margin:16px 0}
+.info > div{padding:13px 16px;border-right:1px solid var(--rul);border-bottom:1px solid var(--rul)}
+.info dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.info dd{font-size:15px;font-weight:700}
+
+footer{border-top:1px solid var(--rul);margin-top:30px;padding:22px 0 44px;font-size:12.5px;color:var(--mut)}
+@media(max-width:1080px){
+  .hdi{flex-wrap:wrap;height:auto;padding-top:10px;gap:12px}
+  .hnav{order:3;width:100%;margin:0;padding:2px 0 9px}
+  .hd{top:41px}
+}
+@media(max-width:960px){
+  .two{grid-template-columns:1fr;gap:28px}
+  .form{position:static}
+  .eta{grid-template-columns:1fr}
+  .eta .side2{text-align:left;flex-direction:row;align-items:center;flex-wrap:wrap;
+    border-top:1px solid var(--rul);padding-top:12px}
+  .eta .cta2{margin-left:auto}
+  .fhead{grid-template-columns:1fr}
+}
+</style>
+
+<div class="sw">
+  <button aria-selected="true" data-t="A">Page à devis (leads)</button>
+  <button aria-selected="false" data-t="B">Annuaire · page géo</button>
+  <button aria-selected="false" data-t="C">Annuaire · fiche</button>
+</div>
+
+<!-- ==================== A · PAGE À DEVIS ==================== -->
+<section class="stage" data-t="A" data-on>
+<div class="hd"><div class="w hdi"><span class="lg">infoweb<i>·</i>manutention</span>
+  <nav class="hnav"><a>Équipements</a><a>Applications</a><a>Réglementation</a><a>Coûts</a><a>Marché</a></nav>
+  <span class="hact"><a class="btn fill">Trouver un prestataire</a></span></div></div>
+
+<div class="w">
+  <div class="bc"><a>Accueil</a><i>›</i><a>Équipements</a><i>›</i><a>Chariot élévateur</a><i>›</i>Location</div>
+  <div class="two">
+    <div>
+      <span class="tag">Chariot élévateur · Location</span>
+      <h1>Louer un chariot élévateur : tarifs 2026 et demande de devis</h1>
+      <p class="lead">Comptez de 85 à 210 € par jour selon la capacité et l'énergie, hors transport et carburant. Les écarts entre loueurs atteignent 30 % sur une même machine : la comparaison vaut le temps qu'elle prend.</p>
+
+      <div class="bd">
+        <h2>Ce qui fait varier le prix</h2>
+        <p>Quatre paramètres pèsent réellement sur un devis de location. Les connaître avant d'appeler évite de comparer des offres qui ne portent pas sur la même chose.</p>
+        <ul>
+          <li><strong>La capacité et la hauteur de levée</strong> — un 2,5 t à 4,5 m et un 3,5 t à 6 m ne jouent pas dans la même catégorie tarifaire.</li>
+          <li><strong>L'énergie</strong> — l'électrique coûte plus cher à la journée mais s'impose en intérieur ; le diesel reste moins cher et sort en extérieur, sous réserve des restrictions ZFE.</li>
+          <li><strong>La durée</strong> — le tarif journalier chute d'environ 40 % dès la semaine, et de moitié au mois.</li>
+          <li><strong>Le transport</strong> — facturé aller-retour, il représente souvent le premier poste caché sur une location courte.</li>
+        </ul>
+
+        <h2>Tarifs constatés</h2>
+        <div class="tw"><table>
+          <thead><tr><th>Machine</th><th>Jour</th><th>Semaine</th><th>Mois</th></tr></thead>
+          <tbody>
+            <tr><td>Chariot électrique 1,5 – 2 t</td><td>85 – 120 €</td><td>320 – 450 €</td><td>780 – 1 100 €</td></tr>
+            <tr><td>Chariot électrique 2,5 – 3 t</td><td>110 – 155 €</td><td>420 – 580 €</td><td>980 – 1 400 €</td></tr>
+            <tr><td>Chariot diesel 2,5 – 3,5 t</td><td>95 – 140 €</td><td>360 – 520 €</td><td>850 – 1 250 €</td></tr>
+            <tr><td>Chariot télescopique</td><td>150 – 210 €</td><td>560 – 790 €</td><td>1 400 – 1 950 €</td></tr>
+          </tbody>
+        </table></div>
+        <p class="note">Fourchettes indicatives HT constatées en juillet 2026, hors transport, carburant et assurance. Elles ne constituent pas une offre commerciale.</p>
+
+        <h2>Comment se passe une demande</h2>
+        <div class="how">
+          <div class="hw"><b>1</b><h3>Vous décrivez le besoin</h3><p>Quatre questions : machine, capacité, durée et département. Deux minutes.</p></div>
+          <div class="hw"><b>2</b><h3>Nous transmettons</h3><p>Votre demande part chez trois loueurs de votre secteur, pas davantage.</p></div>
+          <div class="hw"><b>3</b><h3>Ils vous rappellent</h3><p>Sous 24 à 48 h ouvrées, avec un tarif ferme incluant le transport.</p></div>
+        </div>
+
+        <h2>Faut-il un CACES pour l'utiliser ?</h2>
+        <p>La location ne dispense d'aucune obligation. L'opérateur doit détenir une <a href="#" style="color:var(--blu);font-weight:650">autorisation de conduite</a> délivrée par son employeur, au titre de l'article R4323-56 du Code du travail, et l'entreprise utilisatrice reste responsable de la vérification de l'aptitude. La plupart des loueurs demandent une attestation avant la mise à disposition.</p>
+      </div>
+    </div>
+
+    <aside>
+      <form class="form" onsubmit="return false">
+        <div class="formh"><h2>Recevoir 3 devis de loueurs</h2><p>Gratuit, sans engagement, réponse sous 48 h</p></div>
+        <div class="formb">
+          <div class="step"><span class="on"></span><span></span><span></span></div>
+          <label class="fl"><b>Quelle machine ?</b>
+            <select><option>Chariot élévateur frontal</option><option>Chariot télescopique</option><option>Gerbeur</option><option>Nacelle</option></select></label>
+          <div class="fl"><b>Capacité de charge</b>
+            <div class="chips">
+              <label><input type="radio" name="c"><span>1,5 – 2 t</span></label>
+              <label><input type="radio" name="c" checked><span>2,5 – 3 t</span></label>
+              <label><input type="radio" name="c"><span>3,5 t et +</span></label>
+            </div></div>
+          <div class="fl"><b>Durée</b>
+            <div class="chips">
+              <label><input type="radio" name="d"><span>Journée</span></label>
+              <label><input type="radio" name="d" checked><span>Semaine</span></label>
+              <label><input type="radio" name="d"><span>Mois et +</span></label>
+            </div></div>
+          <label class="fl"><b>Département d'utilisation</b><input placeholder="Ex. 57 — Moselle"></label>
+          <button class="sub">Continuer →</button>
+          <p class="rgpd">Vos coordonnées sont demandées à l'étape suivante. Elles servent uniquement à transmettre votre demande aux loueurs sélectionnés, et sont conservées 24 mois. Vous pouvez en demander la suppression à tout moment.</p>
+        </div>
+        <div class="trust">
+          <div>Trois loueurs maximum contactés, jamais plus</div>
+          <div>Aucune revente de vos données à des tiers</div>
+          <div>Média indépendant : aucun loueur au capital</div>
+        </div>
+      </form>
+    </aside>
+  </div>
+</div>
+</section>
+
+<!-- ==================== B · ANNUAIRE PAGE GÉO ==================== -->
+<section class="stage" data-t="B">
+<div class="hd"><div class="w hdi"><span class="lg">infoweb<i>·</i>manutention</span>
+  <nav class="hnav"><a>Équipements</a><a>Applications</a><a>Réglementation</a><a>Coûts</a><a>Marché</a></nav>
+  <span class="hact"><a class="btn fill">Trouver un prestataire</a></span></div></div>
+
+<div class="w">
+  <div class="bc"><a>Accueil</a><i>›</i><a>Annuaire</a><i>›</i><a>Grand Est</a><i>›</i>Moselle</div>
+  <span class="tag" style="display:block;margin-top:14px">Annuaire · Location</span>
+  <h1>Location de chariot élévateur en Moselle (57)</h1>
+  <p class="lead">14 loueurs référencés à Metz, Thionville, Forbach et Sarreguemines. Tarifs constatés localement, coordonnées vérifiées et demande de devis groupée.</p>
+
+  <section class="local">
+    <h2>Ce qu'il faut savoir en Moselle</h2>
+    <p>Le tissu mosellan est marqué par la sidérurgie et la logistique transfrontalière : la demande porte davantage sur les fortes capacités que la moyenne nationale, et les loueurs locaux disposent de parcs de 3,5 t et plus mieux fournis qu'ailleurs.</p>
+    <p>Deux points à anticiper. La proximité du Luxembourg et de l'Allemagne tend les disponibilités en fin de trimestre, période de forte activité logistique. Et l'agglomération messine applique une zone à faibles émissions : vérifiez la vignette Crit'Air de l'engin thermique avant une intervention en centre-ville.</p>
+    <div class="kv">
+      <div><b>95 – 145 €</b><span>Chariot 2,5 t, la journée</span></div>
+      <div><b>360 – 540 €</b><span>Le même, à la semaine</span></div>
+      <div><b>14</b><span>Loueurs référencés</span></div>
+      <div><b>48 h</b><span>Délai moyen de mise à disposition</span></div>
+    </div>
+  </section>
+
+  <div class="filters">
+    <label class="fl"><b>Machine</b><select><option>Chariot élévateur</option><option>Nacelle</option><option>Gerbeur / transpalette</option></select></label>
+    <label class="fl"><b>Ville</b><select><option>Toute la Moselle</option><option>Metz</option><option>Thionville</option><option>Forbach</option></select></label>
+    <label class="fl"><b>Prestation</b><select><option>Location</option><option>Vente</option><option>Réparation</option><option>Contrôle VGP</option></select></label>
+    <label class="fl"><b>Trier par</b><select><option>Proximité</option><option>Nom</option></select></label>
+  </div>
+
+  <div class="map">Carte des 14 établissements — chargée au clic, pas au chargement de page</div>
+
+  <div class="cnt"><h2>Les loueurs en Moselle</h2><span>14 établissements · mis à jour le 20 juillet 2026</span></div>
+
+  <article class="eta">
+    <div>
+      <h3><a href="#">Manutention Lorraine — Metz</a></h3>
+      <p class="adr">12 rue de la Fonderie, 57000 Metz · 4,2 km du centre</p>
+      <div class="acts"><span>Location</span><span>Vente</span><span>Réparation</span><span>Contrôle VGP</span></div>
+      <p class="mach">Chariots frontaux 1,5 à 8 t, télescopiques, nacelles ciseaux · Concessionnaire Toyota et Manitou</p>
+    </div>
+    <div class="side2"><span class="tel">03 87 XX XX XX</span><a class="cta2">Demander un devis</a></div>
+  </article>
+
+  <article class="eta">
+    <div>
+      <h3><a href="#">Est Levage Services — Thionville</a></h3>
+      <p class="adr">ZI du Linkling, 57100 Thionville · 28 km du centre</p>
+      <div class="acts"><span>Location</span><span>Réparation</span></div>
+      <p class="mach">Chariots diesel 2,5 à 5 t, gerbeurs électriques · Intervention Luxembourg et Sarre</p>
+    </div>
+    <div class="side2"><span class="tel">03 82 XX XX XX</span><a class="cta2">Demander un devis</a></div>
+  </article>
+
+  <article class="eta">
+    <div>
+      <h3><a href="#">Sarre Manutention — Forbach</a></h3>
+      <p class="adr">45 avenue Saint-Rémy, 57600 Forbach · 52 km du centre</p>
+      <div class="acts"><span>Location</span><span>Vente</span><span>Formation CACES</span></div>
+      <p class="mach">Chariots électriques et gaz 1,5 à 3,5 t · Centre de formation R489 sur site</p>
+    </div>
+    <div class="side2"><span class="tel">03 87 XX XX XX</span><a class="cta2">Demander un devis</a></div>
+  </article>
+
+  <h2 style="font-size:19px;margin-top:30px">Autour de la Moselle</h2>
+  <div class="near">
+    <a>Meurthe-et-Moselle (54)</a><a>Bas-Rhin (67)</a><a>Meuse (55)</a><a>Vosges (88)</a>
+    <a>Location de nacelle en Moselle</a><a>Contrôle VGP en Moselle</a>
+  </div>
+  <footer>Établissements collectés puis vérifiés manuellement. Une information erronée ? Signalez-la depuis la fiche concernée.</footer>
+</div>
+</section>
+
+<!-- ==================== C · FICHE ÉTABLISSEMENT ==================== -->
+<section class="stage" data-t="C">
+<div class="hd"><div class="w hdi"><span class="lg">infoweb<i>·</i>manutention</span>
+  <nav class="hnav"><a>Équipements</a><a>Applications</a><a>Réglementation</a><a>Coûts</a><a>Marché</a></nav>
+  <span class="hact"><a class="btn fill">Trouver un prestataire</a></span></div></div>
+
+<div class="w">
+  <div class="bc"><a>Accueil</a><i>›</i><a>Annuaire</a><i>›</i><a>Moselle</a><i>›</i><a>Metz</a><i>›</i>Manutention Lorraine</div>
+  <div class="two">
+    <div>
+      <div class="fh">
+        <div class="fhead">
+          <div>
+            <span class="tag">Loueur · Concessionnaire · SAV</span>
+            <h1>Manutention Lorraine</h1>
+            <p class="adr" style="color:var(--mut);font-size:14px">12 rue de la Fonderie, 57000 Metz</p>
+          </div>
+          <div style="text-align:right"><span class="tel" style="font-size:18px;font-weight:800">03 87 XX XX XX</span>
+            <p style="font-size:11px;color:var(--mut);margin-top:4px">Numéro suivi — voir mentions</p></div>
+        </div>
+
+        <div class="info">
+          <div><dt>Activités</dt><dd>Location, vente, réparation, VGP</dd></div>
+          <div><dt>Marques distribuées</dt><dd>Toyota, Manitou</dd></div>
+          <div><dt>Zone d'intervention</dt><dd>Moselle, Meurthe-et-Moselle</dd></div>
+          <div><dt>Parc</dt><dd>Frontaux 1,5 – 8 t, télescopiques</dd></div>
+          <div><dt>Horaires</dt><dd>Lun – ven, 7 h 30 – 18 h</dd></div>
+          <div><dt>Fiche vérifiée</dt><dd>20 juillet 2026</dd></div>
+        </div>
+
+        <div class="bd">
+          <h2>Ce que propose l'établissement</h2>
+          <p>Concessionnaire Toyota et Manitou implanté sur la zone industrielle messine, l'établissement couvre la location courte et longue durée, la vente de matériel neuf, ainsi que la maintenance et les vérifications générales périodiques. L'atelier intervient sur site dans un rayon d'environ 80 km.</p>
+          <h3>Location</h3>
+          <p>Parc de chariots frontaux de 1,5 à 8 tonnes, en électrique, gaz et diesel, complété par des télescopiques. Mise à disposition sous 48 h en moyenne, transport facturé en sus.</p>
+          <h3>Maintenance et contrôle</h3>
+          <p>Contrats de maintenance préventive et réalisation des VGP semestrielles sur appareils de levage, quel que soit le constructeur.</p>
+        </div>
+
+        <div class="claim">
+          <span><strong>Vous dirigez cet établissement ?</strong> Complétez la fiche, corrigez les informations et recevez les demandes de devis de votre secteur.</span>
+          <a>Revendiquer cette fiche</a>
+        </div>
+      </div>
+
+      <h2 style="font-size:19px;margin-top:26px">Autres loueurs en Moselle</h2>
+      <div class="near"><a>Est Levage Services — Thionville</a><a>Sarre Manutention — Forbach</a><a>Voir les 14 loueurs</a></div>
+    </div>
+
+    <aside>
+      <form class="form" onsubmit="return false">
+        <div class="formh"><h2>Demander un devis</h2><p>Votre demande part directement à cet établissement</p></div>
+        <div class="formb">
+          <label class="fl"><b>Votre besoin</b>
+            <select><option>Location de matériel</option><option>Achat de matériel</option><option>Réparation / SAV</option><option>Contrôle VGP</option></select></label>
+          <label class="fl"><b>Entreprise</b><input placeholder="Raison sociale"></label>
+          <label class="fl"><b>E-mail professionnel</b><input type="email" placeholder="vous@entreprise.fr"></label>
+          <label class="fl"><b>Téléphone</b><input placeholder="Pour être rappelé"></label>
+          <button class="sub">Envoyer la demande</button>
+          <p class="rgpd">Vos données sont transmises à Manutention Lorraine et conservées 24 mois. Suppression sur simple demande.</p>
+        </div>
+        <div class="trust">
+          <div>Demande transmise à cet établissement uniquement</div>
+          <div>Aucune revente de vos données</div>
+        </div>
+      </form>
+      <div class="map" style="height:200px;margin-top:16px">Plan d'accès</div>
+    </aside>
+  </div>
+</div>
+</section>
+
+<script>
+document.querySelectorAll('.sw button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.sw button').forEach(x=>x.setAttribute('aria-selected',x===b));
+  document.querySelectorAll('.stage').forEach(s=>s.toggleAttribute('data-on',s.dataset.t===b.dataset.t));
+  scrollTo(0,0);
+});
+</script>
