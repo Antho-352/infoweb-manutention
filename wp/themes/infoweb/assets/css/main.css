@@ -278,3 +278,74 @@ p,ul,ol,figure,table{margin:0}
   .dg-form{grid-area:form;position:sticky;top:82px}
   .dg-corps{grid-area:corps}
 }
+
+/* ============ COMPARATIF ============ */
+.cmp-tab{overflow-x:auto;border:1px solid var(--rul);border-radius:var(--r);background:var(--card);margin:22px 0}
+.cmp-tab table{border-collapse:collapse;width:100%;min-width:600px;font-size:13.5px}
+.cmp-tab th,.cmp-tab td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rul);white-space:nowrap}
+.cmp-tab th{background:#efece4;font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800}
+.cmp-tab td:first-child{white-space:normal;font-weight:700;position:sticky;left:0;background:var(--card)}
+.cmp-tab tr:last-child td{border-bottom:0}
+
+.pfiche{background:var(--card);border:1px solid var(--rul);border-top:4px solid var(--ink);
+  border-radius:4px 4px var(--r) var(--r);padding:20px;margin:0 0 30px;scroll-margin-top:90px}
+.pf-h{display:grid;gap:16px}
+.pf-im img{border-radius:10px;width:100%}
+.pf-rang{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:800;
+  padding:3px 9px;border-radius:5px;margin-bottom:8px}
+.pfiche h2{font-size:22px;margin-bottom:10px}
+.pf-desc{font-size:15.5px;line-height:1.66;color:#23272c}
+.pf-desc p+p{margin-top:11px}
+.pf-buy .p{display:block;font-size:24px;font-weight:800;letter-spacing:-.025em}
+.pf-buy .d{display:block;font-size:11px;color:var(--mut);margin-bottom:10px}
+.pf-buy a,.pf-pied a{display:inline-block;background:var(--amb);color:var(--ink);border-radius:9px;
+  padding:12px 20px;font-weight:800;font-size:14px;text-decoration:none}
+.pf-specs{border:1px solid var(--rul);border-radius:var(--r);overflow:hidden;margin-top:18px}
+.pf-specs h3{background:#efece4;padding:10px 15px;font-size:11px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--sub)}
+.pf-specs dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin:0}
+.pf-specs dl>div{padding:12px 15px;border-top:1px solid var(--rul);border-right:1px solid var(--rul)}
+.pf-specs dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.pf-specs dd{font-size:16px;font-weight:800;letter-spacing:-.02em;margin:0}
+.pf-pm{display:grid;gap:12px;margin-top:16px}
+.pm{border-radius:10px;padding:12px 14px}
+.pm.up{background:#f3f9f5;border:1px solid #dcebe3}
+.pm.dn{background:#fdf5f4;border:1px solid #f0dedb}
+.pm h3{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:8px}
+.pm.up h3{color:#25714a}.pm.dn h3{color:#b1382f}
+.pm ul{list-style:none;padding:0;margin:0}
+.pm li{display:grid;grid-template-columns:16px 1fr;gap:8px;padding:6px 0;
+  border-top:1px solid rgba(0,0,0,.05);font-size:13px;line-height:1.4;align-items:start}
+.pm li:first-child{border-top:0;padding-top:0}
+.pm li::before{font-size:10px;font-weight:800;width:16px;height:16px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:#fff;margin-top:2px}
+.pm.up li::before{content:"✓";background:#2fa06a}
+.pm.dn li::before{content:"✕";background:#dc5b50}
+.pf-avis{border-left:4px solid #1f5c43;background:#f4f8f6;border-radius:0 11px 11px 0;
+  padding:16px 18px;margin-top:16px}
+.pf-avis h3{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:9px}
+.pf-avis p{font-size:14.5px;line-height:1.6}
+.pf-pied{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px;
+  padding-top:15px;border-top:1px solid var(--rul)}
+.pf-pied .p{font-size:19px;font-weight:800}
+.pf-pied .d{font-size:11px;color:var(--mut)}
+.pf-pied a{margin-left:auto}
+.pf-transparence{background:#efece4;border-radius:10px;padding:14px 17px;font-size:12.5px;color:var(--sub)}
+
+/* ============ PLAN DU SITE ============ */
+.plan h2{font-size:19px;margin-top:26px}
+.plan p{font-size:13.5px;color:var(--mut);margin:4px 0 8px}
+.plan ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.plan li a{display:inline-block;background:var(--card);border:1px solid var(--rul);border-radius:8px;
+  padding:8px 13px;font-size:13.5px;font-weight:650;text-decoration:none;color:var(--ink)}
+.plan li small{color:var(--mut);font-weight:400;margin-left:5px}
+
+/* ============ ÉTAT VIDE ============ */
+.vide{background:var(--card);border:1px dashed var(--rul);border-radius:var(--r);
+  padding:22px;text-align:center;color:var(--mut);font-size:14px}
+.vide strong{display:block;color:var(--ink);font-size:16px;margin-bottom:5px}
+
+@media(min-width:720px){
+  .pf-h{grid-template-columns:150px minmax(0,1fr) auto;align-items:center}
+  .pf-pm{grid-template-columns:1fr 1fr}
+}

@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || exit;
 
-const INFOWEB_VERSION = '0.2.0';
+const INFOWEB_VERSION = '0.3.0';
 
 /**
  * Chargement des modules. Chacun est autonome et n'expose que des hooks —
@@ -26,6 +26,8 @@ foreach ([
     'performance',  // nettoyage des sorties inutiles de WordPress
     'prix',         // points de prix + code court [prix]
     'leads',        // formulaire de devis, écran d'administration, export
+    'produits',     // fiches produit, code court [comparatif], redirections /go/
+    'provisioning', // pages système et menus créés à l'activation
 ] as $module) {
     require_once get_theme_file_path("inc/{$module}.php");
 }
