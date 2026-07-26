@@ -9,3 +9,4 @@ content/publie/
 
 # Collecte annuaire : données régénérables via scripts/collecte_annuaire.py
 data/annuaire/
+wp/themes/*.zip
