@@ -82,18 +82,10 @@ p,ul,ol,figure,table{margin:0}
 .ess-f{display:flex;flex-wrap:wrap;gap:8px 18px;border-top:1px solid #eceff3;
   margin-top:13px;padding-top:11px;font-size:11.5px;color:var(--mut)}
 
-/* ---------- sommaire ---------- */
-.toc{background:var(--card);border:1px solid var(--rul);border-radius:12px;padding:16px 18px;margin:22px 0 26px}
-.toc b{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:9px}
-.toc ol{margin:0;padding-left:18px;font-size:14.5px}
-.toc li{padding:3px 0}
-.toc a{color:var(--blu);text-decoration:none}
-.toc a:hover{text-decoration:underline}
-
 /* ---------- corps de texte ---------- */
 .corps{font-size:16.5px}
 .corps>*+*{margin-top:15px}
-.corps h2{font-size:clamp(21px,4.6vw,25px);margin-top:32px;scroll-margin-top:80px}
+.corps h2{font-size:clamp(21px,4.6vw,25px);margin-top:32px}
 .corps h3{font-size:18.5px;margin-top:24px}
 .corps p{color:#23272c}
 .corps ul,.corps ol{padding-left:20px}
@@ -204,20 +196,14 @@ p,ul,ol,figure,table{margin:0}
 }
 
 /* ============ ACCUEIL ============ */
-/* La une, en encart : fond dégradé, bord, coin arrondi — l'entête « dossier »
-   du gabarit. Une colonne sur mobile, deux dès qu'il y a la place. */
-.une{margin:22px 0 8px;background:linear-gradient(168deg,#fffefb,#f0ece1);
-  border:1px solid var(--rul);border-radius:18px;padding:28px 24px;display:grid;gap:22px}
-.une-txt .eyebrow{margin-top:0}
-.une h1{font-size:clamp(28px,6vw,44px);margin:12px 0 12px}
+.une{padding:22px 0 8px;display:grid;gap:20px}
+.une h1{font-size:clamp(28px,6.2vw,46px);margin:10px 0 12px}
 .une h1 a{color:var(--ink);text-decoration:none}
 .une h1 a:hover{color:var(--blu)}
-.une-chapo{font-size:17px;color:var(--sub);max-width:56ch}
-.une-sig{margin-top:16px;font-size:12.5px;color:var(--mut);display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.une-chapo{font-size:17px;color:var(--sub);max-width:58ch}
+.une-sig{margin-top:14px;font-size:12.5px;color:var(--mut);display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
 .une-sig b{color:var(--ink)}
-.une-img{display:block}
-.une-img img{border-radius:14px;width:100%}
-.une-fig{display:none}
+.une-img img{border-radius:var(--r)}
 
 .sect{padding:30px 0 4px}
 .sect-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;
@@ -328,10 +314,8 @@ p,ul,ol,figure,table{margin:0}
 .devis-grille{display:grid;gap:26px;padding:8px 0 44px}
 .dg-tete h1{font-size:clamp(27px,6vw,42px);margin:12px 0 14px}
 
-@media(min-width:820px){
-  .une{grid-template-columns:minmax(0,1fr) 300px;align-items:center;gap:40px;padding:44px 46px}
-  .une-fig{display:flex;align-items:center;justify-content:center;aspect-ratio:1;
-    background:#eae5d8;border-radius:16px;color:#b9ae95}
+@media(min-width:720px){
+  .une{grid-template-columns:1fr 1fr;align-items:center;gap:30px}
 }
 @media(min-width:1101px){
   .devis-grille{grid-template-columns:minmax(0,1fr) 380px;gap:40px;

@@ -107,28 +107,6 @@ function infoweb_secteurs(): array {
  *
  * @return array<int,array<string,string>>
  */
-add_action('init', function () {
-    register_setting('options', 'infoweb_evenements', [
-        'type'         => 'array',
-        'default'      => [],
-        'show_in_rest' => [
-            'schema' => [
-                'type'  => 'array',
-                'items' => [
-                    'type'       => 'object',
-                    'properties' => [
-                        'date' => ['type' => 'string'],
-                        'fin'  => ['type' => 'string'],
-                        'nom'  => ['type' => 'string'],
-                        'lieu' => ['type' => 'string'],
-                        'url'  => ['type' => 'string'],
-                    ],
-                ],
-            ],
-        ],
-    ]);
-});
-
 function infoweb_evenements(int $max = 6): array {
     $brut = get_option('infoweb_evenements', []);
     if (!is_array($brut) || !$brut) {

@@ -52,14 +52,6 @@ $exclus = $une ? [$une->ID] : [];
         <a class="une-img" href="<?php echo esc_url(get_permalink($une)); ?>" tabindex="-1" aria-hidden="true">
           <?php echo get_the_post_thumbnail($une, 'infoweb-une', ['fetchpriority' => 'high']); ?>
         </a>
-      <?php else : ?>
-        <div class="une-fig" aria-hidden="true">
-          <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.4" width="150" height="150">
-            <path d="M18 86h56M30 86V62h20v24M50 62l14-22h12v46" stroke-linejoin="round"/>
-            <circle cx="36" cy="94" r="7"/><circle cx="64" cy="94" r="7"/>
-            <path d="M84 34h20M84 44h20M84 54h14" stroke-linecap="round" opacity=".5"/>
-          </svg>
-        </div>
       <?php endif; ?>
     </section>
   <?php endif; ?>

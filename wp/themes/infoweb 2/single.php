@@ -45,37 +45,9 @@ $rubrique = infoweb_rubrique_du_post();
         <p class="chapo"><?php echo esc_html(get_the_excerpt()); ?></p>
       <?php endif; ?>
 
-      <?php
-      // L'essentiel, en tête : lecture rapide et extraction par les moteurs.
-      echo infoweb_bloc_essentiel();
-
-      // Contenu + sommaire déduit des titres de niveau 2. On capture le rendu
-      // pour y injecter les ancres avant affichage.
-      ob_start();
-      the_content();
-      $rendu = infoweb_sommaire(ob_get_clean());
-      ?>
-
-      <?php if (count($rendu['toc']) >= 3) : ?>
-        <nav class="toc" aria-label="Sommaire">
-          <b>Sommaire</b>
-          <ol>
-            <?php foreach ($rendu['toc'] as $item) : ?>
-              <li><a href="#<?php echo esc_attr($item['id']); ?>"><?php echo esc_html($item['texte']); ?></a></li>
-            <?php endforeach; ?>
-          </ol>
-        </nav>
-      <?php endif; ?>
-
-      <div class="corps"><?php echo $rendu['contenu']; ?></div>
-
-      <?php
-      // Appel à l'action imposé par le gabarit, avant les sources.
-      echo infoweb_bloc_cta();
-
-      // Sources, rendues depuis le champ structuré.
-      echo infoweb_bloc_sources();
-      ?>
+      <div class="corps">
+        <?php the_content(); ?>
+      </div>
 
       <?php
       // Lien remontant contextuel : le fil d'Ariane ne suffit pas, il faut un

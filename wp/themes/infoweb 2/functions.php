@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || exit;
 
-const INFOWEB_VERSION = '0.5.1';
+const INFOWEB_VERSION = '0.5.0';
 
 /**
  * Chargement des modules. Chacun est autonome et n'expose que des hooks —
@@ -22,7 +22,6 @@ foreach ([
     'seo',          // title, meta description, canonique, Open Graph
     'schema',       // Article, FAQPage, LocalBusiness
     'metabox-seo',  // les trois champs par page
-    'article',      // L'essentiel, sommaire, sources, CTA (champs REST)
     'security',     // en-têtes HTTP, durcissement
     'performance',  // nettoyage des sorties inutiles de WordPress
     'prix',         // points de prix + code court [prix]
