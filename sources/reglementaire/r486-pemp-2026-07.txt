@@ -1,0 +1,70 @@
+Extraction de sources primaires — article nacelles-elevatrices.json
+Date d'extraction : 2026-07-27
+
+--- Source A : INRS, page "Nacelles et plates-formes élévatrices"
+URL : https://www.inrs.fr/risques/chutes-hauteur/nacelles-plates-formes-elevatrices.html
+Consulté le : 2026-07-27
+
+Claims extraites :
+- Les plates-formes élévatrices mobiles de personnel (PEMP) sont des appareils de levage
+  permettant l'élévation d'un poste de travail, pour travailler en hauteur.
+- Classification selon la norme NF EN 280-1 :
+  - Par mode d'élévation (groupes) : Groupe A = élévation verticale uniquement ;
+    Groupe B = élévation multidirectionnelle, avec écart horizontal possible.
+  - Par capacité de translation (types) : Type 1 = pas de déplacement en élévation
+    (translation possible uniquement PEMP en position basse) ; Type 2 = translation
+    commandée depuis le porteur pendant l'élévation ; Type 3 = translation commandée
+    depuis la plate-forme elle-même pendant l'élévation.
+- Ces appareils ne doivent être utilisés que par des personnes formées et autorisées,
+  dans le respect des règles d'utilisation de la notice d'instructions.
+- Effectifs minimum requis : Types 1 et 3 = deux personnes (opérateur + personne au sol) ;
+  Type 2 = trois personnes (conducteur porteur, opérateur plate-forme, personne d'assistance).
+
+--- Source B : INRS / Ameli, page et FAQ CACES — catégories R.486
+URL : https://www.inrs.fr/demarche/caces-certificat-aptitude-conduite-securite/categories-caces.html
+Consulté le : 2026-07-27
+
+Claims extraites :
+- CACES R.486 catégorie A : PEMP de groupe A (élévation verticale), types 1A ou 3A.
+- CACES R.486 catégorie B : PEMP de groupe B (élévation multidirectionnelle), types 1B ou 3B.
+- Catégorie C : conduite hors production (transport, chargement/déchargement sur
+  porte-engins, transferts) des PEMP de catégorie A ou B, sans activité de production.
+- Le § 3 de la recommandation R.486 (repris FAQ CACES 2020 Éd.7, item U.008, fichier local
+  inrs-faq-caces.txt lignes 218-230) mentionne que la mise en œuvre d'une PEMP de catégorie
+  A ou B peut nécessiter la présence d'un accompagnateur au sol.
+
+--- Source C : INRS, FAQ CACES 2020 Édition 7 (déjà en local : sources/reglementaire/inrs-faq-caces.txt)
+Applicable au 1er mars 2026.
+
+Claims extraites (déjà vérifiées pour l'article caces-chariot-elevateur-guide-complet.json,
+réutilisées ici) :
+- Ligne 40 : les 8 recommandations R.4xx incluent R.486A, applicables depuis le
+  1er janvier 2020.
+- Ligne 307 : les CACES R.4xx ont une durée de validité de 5 ans (10 ans pour la R.482
+  uniquement) — donc R.486 = 5 ans.
+- Ligne 159-165 (item U.003) : un CACES R.486 catégorie B ne permet PAS de délivrer une
+  autorisation de conduite pour une PEMP de groupe A (1A ou 3A) — les deux catégories ne
+  sont pas interchangeables, chacune couvre son propre groupe.
+
+--- Source D : Légifrance, article R.4323-56 du Code du travail
+Déjà utilisé et vérifié pour caces-chariot-elevateur-guide-complet.json (fichier
+sources/reglementaire/legifrance-LEGIARTI000018489087.html / 089 — pages bloquées par
+Cloudflare lors de la tentative de fetch automatisé, non réutilisables comme preuve
+textuelle ; le fait retenu ("l'autorisation de conduite est délivrée par l'employeur,
+article R.4323-56") est celui déjà validé dans l'article modèle et n'est PAS remis en
+cause ici).
+
+Claim retenue pour ce nouvel article (portée volontairement limitée à ce point non
+disputé) :
+- L'autorisation de conduite pour la conduite de certains équipements présentant des
+  risques particuliers (dont les PEMP) est délivrée par l'employeur (art. R.4323-56 du
+  Code du travail). Le CACES R.486 est le moyen reconnu (recommandation CNAM) d'évaluer
+  les connaissances et savoir-faire du conducteur pour cette catégorie de PEMP — il n'est
+  pas, en lui-même, une obligation légale.
+
+Point NON retenu / écarté par prudence :
+- La question de la suppression de la vérification de l'aptitude médicale au 1er octobre
+  2025 (mentionnée dans l'article modèle CACES chariot élévateur) N'EST PAS reprise dans
+  l'article nacelles, une tentative de refetch de legifrance ayant renvoyé un contenu
+  contradictoire et invérifiable dans cette session. Ne pas trancher ce point ici évite
+  tout risque d'erreur ; le sujet n'est de toute façon pas central à l'angle "nacelle".

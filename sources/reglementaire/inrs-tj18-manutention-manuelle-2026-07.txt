@@ -1,0 +1,1546 @@
+AIDE-MÉMOIRE JURIDIQUETJ 18
+Manutention manuelle
+L’Institut national de recherche et de sécurité (INRS)
+Dans le domaine de la prévention des risques  
+professionnels, l’INRS est un organisme scientifique  
+et technique qui travaille, au plan institutionnel,  
+avec la CNAMTS, les Carsat, Cramif, CGSS 
+et plus ponctuellement pour les services de l’État 
+ainsi que pour tout autre organisme s’occupant  
+de prévention des risques professionnels. 
+Il développe un ensemble de savoir-faire pluridisciplinaires 
+qu’il met à la disposition de tous ceux qui, en entreprise, 
+sont chargés de la prévention : chef d’entreprise,  
+médecin du travail, CHSCT, salariés. Face à la complexité 
+des problèmes, l’Institut dispose de compétences 
+scientifiques, techniques et médicales couvrant  
+une très grande variété de disciplines, toutes  
+au service de la maîtrise des risques professionnels.
+Ainsi, l’INRS élabore et diffuse des documents  
+intéressant l’hygiène et la sécurité du travail :  
+publications (périodiques ou non), affiches,  
+audiovisuels, multimédias, site Internet…  
+Les publications de l’INRS sont distribuées  
+par les Carsat. Pour les obtenir, adressez-vous  
+au service Prévention de la caisse régionale  
+ou de la caisse générale de votre circonscription,  
+dont l’adresse est mentionnée en fin de brochure.
+L’INRS est une association sans but lucratif (loi 1901) 
+constituée sous l’égide de la CNAMTS et soumise  
+au contrôle financier de l’État. Géré par un conseil 
+d’administration constitué à parité d’un collège 
+représentant les employeurs et d’un collège  
+représentant les salariés, il est présidé alternativement  
+par un représentant de chacun des deux collèges.  
+Son financement est assuré en quasi-totalité  
+par la CNAMTS sur le Fonds national de prévention  
+des accidents du travail et des maladies professionnelles. 
+Les caisses d’assurance retraite et de la santé au travail (Carsat),  
+la caisse régionale d’assurance maladie d’Île-de-France (Cramif) 
+et les caisses générales de sécurité sociale (CGSS) 
+Les caisses d’assurance retraite et de la santé au travail,  
+la caisse régionale d’assurance maladie d’Île-de-France  
+et les caisses générales de sécurité sociale disposent,  
+pour participer à la diminution des risques professionnels  
+dans leur région, d’un service Prévention composé  
+d’ingénieurs-conseils et de contrôleurs de sécurité. 
+Spécifiquement formés aux disciplines de la prévention 
+des risques professionnels et s’appuyant sur l’expérience 
+quotidienne de l’entreprise, ils sont en mesure  
+de conseiller et, sous certaines conditions, de soutenir  
+les acteurs de l’entreprise (direction, médecin du travail, 
+CHSCT, etc.) dans la mise en œuvre des démarches  
+et outils de prévention les mieux adaptés à chaque  
+situation. Ils assurent la mise à disposition  
+de tous les documents édités par l’INRS.
+Toute représentation ou reproduction intégrale ou partielle faite sans le consentement de l’INRS, 
+de l’auteur ou de ses ayants droit ou ayants cause, est illicite. 
+Il en est de même pour la traduction, l’adaptation ou la transformation, l’arrangement ou la reproduction, 
+par un art ou un procédé quelconque (article L. 122-4 du code de la propriété intellectuelle). 
+La violation des droits d’auteur constitue une contrefaçon punie d’un emprisonnement de trois ans 
+et d’une amende de 300 000 euros (article L. 335-2 et suivants du code de la propriété intellectuelle).
+© INRS, 2016.
+Mise en page : VirguleRouge
+TJ 18
+février 2016
+Manutention manuelle
+Aide-mémoire juridique
+Synthèse établie par Monica Ferreira,  
+assistance juridique, INRS, Paris
+2
+TJ 18
+L
+ 
+e législateur désigne par le terme de manutention manuelle, toute opération de transport ou de soutien 
+d’une charge, dont le levage, la pose, la poussée, la traction, le port ou le déplacement exige l’effort 
+physique d’un ou de plusieurs travailleurs. 
+Malgré l’introduction en entreprise de systèmes d’automatisation et de mécanisation des procédés de travail, 
+la manutention manuelle reste une activité courante pour de nombreux salariés, d’autant plus que ces manu-
+tentions ne sont pas spécifiques d’un secteur d’activité professionnelle mais sont présentes dans de nombreux 
+secteurs comme le tertiaire, le bâtiment, le commerce ou l’agroalimentaire.
+Les risques générés par les manutentions sont importants et variés. Ils s’analysent le plus souvent en des 
+contusions, plaies, fractures, douleurs dorsales, déchirures musculaires, pouvant aller jusqu’à la reconnaissance 
+de maladies professionnelles. La réduction de ces risques est une préoccupation constante des institutions de 
+prévention des risques professionnels. En effet, les statistiques d’accidents du travail de la CNAMTS (Caisse 
+nationale de l’assurance maladie des travailleurs salariés) font régulièrement état d’un nombre important 
+d’accidents provoqués par des manutentions. 
+Historiquement, les axes de prévention mis en place par la réglementation ont été d’abord la prise en compte 
+du risque de port de charge, la limitation des charges et la formation professionnelle des salariés.
+Le premier texte de base a été un décret du 21 mai 1965. Ce texte établissait un poids maximal des charges 
+pouvant être transportées par un seul travailleur. Les limites ainsi fixées étaient de 105 kg (limite à ne pas 
+dépasser) et de 55 kg (limite pour laquelle il fallait une reconnaissance d’aptitude médicale). Ces deux valeurs 
+avaient été établies pour tenir compte de deux modes d’emballage, le sac de jute de 100 kg et le sac en 
+papier de 50 kg.
+Au niveau international, l’Organisation internationale du travail a élaboré en 1967 deux textes : la Convention 
+OIT n° 127 et une recommandation n° 128. La recommandation allait plus loin que les textes en vigueur en 
+prévoyant une formation des travailleurs affectés au transport manuel régulier de charges avant affectation. 
+Cette formation concernait les méthodes de travail à utiliser en vue de préserver la santé et d’éviter les 
+accidents.
+Au niveau communautaire, la directive n° 90/269/CEE du 29 mai 1990, visait l’ensemble des manutentions 
+manuelles de charges comportant des risques, notamment dorsolombaires, pour les travailleurs.
+La réglementation française est issue de cette directive. Le décret du 3 septembre 1992, intégré dans le Code 
+du travail lors de sa publication, avait vocation à s’appliquer à toutes les opérations de manutention manuelle, 
+quel que soit le secteur d’activité.
+Ses dispositions ont été codifiées, depuis la nouvelle numérotation du Code du travail, aux articles  
+R. 4541-1 à R. 4541-10 et prévoient que, dans la mesure du possible, l’employeur évite le recours à des ma-
+nutentions manuelles, en utilisant notamment des équipements mécaniques. Les autres grands principes de 
+cette réglementation sont une formation des salariés aux méthodes de travail et à l’organisation des postes de 
+travail, et un rôle accru du médecin du travail qui est le principal conseiller en matière d’évaluation des risques.
+La réglementation actuelle s’inscrit dans la démarche globale de prévention mise en place par la loi du 31 
+décembre 1991, relative à la prévention des risques professionnels et illustrée à l’article L. 4121-2 du Code du 
+travail. Les fondements de cette démarche résident dans plusieurs éléments dont les principaux sont :
+• une élimination des risques,
+• une évaluation des risques qui ne peuvent être évités,
+• une adaptation du travail à l’homme,
+• un remplacement de ce qui est dangereux par ce qui l’est moins.
+Un arrêté du 29 janvier 1993 complète le dispositif et précise quels sont les éléments de référence et autres 
+facteurs de risques à prendre en compte pour l’évaluation préalable des risques et l’organisation des postes 
+de travail. Cette évaluation s’impose pour tous les salariés, même si la manutention manuelle ne constitue pas 
+l’activité principale du salarié mais seulement une opération accessoire au poste qu’il occupe.
+3
+TJ 18
+Les abréviations utilisées dans ce document sont les suivantes : 
+Arr. = arrêté,  Art. = article.
+Lorsque qu’il est fait mention de textes officiels en référence, le texte figurant au-dessus de cette référence en italique est  
+soit une reproduction intégrale du texte officiel, soit une reformulation.
+I. L’ORGANISATION DU TRAVAIL
+Limitation du recours  
+à la manutention manuelle p. 4
+Utilisation en priorité d’appareils  
+de levage mécaniques p. 4
+Mise à disposition de dispositifs  
+d’aide à la manutention p. 4
+Évaluation des risques p. 4
+Principe de l’évaluation p. 4
+Facteurs de risque p. 4
+Norme AFNOR X 35-109 p. 4
+Méthode d’analyse des manutentions manuelles p. 5
+Postes pénibles p. 5
+2. MESURES DE PRÉVENTION
+Limites de port de charges p. 6
+Prescriptions générales p. 6
+Dispositions spécifiques aux femmes et  
+aux jeunes travailleurs p. 6
+Utilisation de moyens de manutention  
+à traction manuelle p. 7
+Dispositions propres à certaines activités p. 7
+Utilisation d’échelles p. 7
+Travaux effectués sur les ascenseurs,  
+monte-charges et assimilés p. 7
+Hypermarchés et supermarchés p. 7
+SOMMAIRE
+Équipements de protection individuelle p. 7
+Formation et information des salariés p. 8
+Information des salariés p. 8
+Formation à la sécurité p. 8
+3. RÔLE DU MÉDECIN DU TRAVAIL
+Le médecin du travail, conseiller  
+de l’employeur p. 9
+Surveillance médicale des salariés p. 10
+Décision d’aptitude au poste de travail p. 10
+Critères d’évaluation de l’aptitude p. 10
+4. MALADIES PROFESSIONNELLES
+Tableau n° 57 p. 11
+Tableau n° 79 p. 12
+Tableau n° 98 p. 13
+4
+TJ 18
+Le médecin du travail, le comité d’hygiène, de sécu-
+rité et des conditions de travail (CHSCT) ou les délé-
+gués du personnel sont associés à cette évaluation.
+ Facteurs de risque
+Les caractéristiques de la charge, l’effort physique 
+requis, les caractéristiques du milieu de travail, les 
+exigences de l’activité sont des facteurs de risque 
+à prendre en compte. L’arrêté du 29 janvier 1993 
+donne des indications précises quant aux conditions 
+dans lesquelles ces facteurs peuvent présenter un 
+danger réel pour les salariés.
+Caractéristiques de la charge
+Les opérations de manutention manuelle peuvent 
+présenter un risque, notamment lorsque la charge est 
+trop lourde, trop grande, encombrante ou difficile à 
+saisir. Un facteur de risque peut résider également 
+dans le fait que la charge est déplacée de telle façon 
+qu’elle doit être tenue ou manipulée à distance du 
+tronc ou avec une flexion ou une torsion du tronc.
+Effort physique
+L’effort physique peut présenter un risque lorsqu’il 
+est par exemple trop important, qu’il ne peut être 
+réalisé que par un mouvement de torsion du tronc 
+ou qu’il est accompli alors que le corps est en position 
+instable.
+Caractéristiques du milieu de travail
+Les caractéristiques du milieu de travail peuvent 
+accroître le risque. Il en est ainsi par exemple lorsque 
+l’espace libre, notamment vertical, est insuffisant 
+pour l’exercice de l’activité concernée, ou que le sol 
+est inégal (donc source de trébuchements) ou bien 
+glissant. Le milieu de travail ne permet pas alors au 
+salarié d’effectuer des manutentions manuelles de 
+charges à une hauteur sûre et dans une bonne pos-
+ture. 
+Une température, une humidité ou une circulation 
+d’air inadéquates peuvent rendre également la tâche 
+difficile.
+Exigences de l’activité
+Les efforts physiques sollicitant notamment le rachis, 
+trop fréquents ou trop prolongés, une période de 
+repos physiologique ou de récupération insuffisante, 
+des distances trop grandes d’élévation, d’abaissement 
+ou de transport et une cadence imposée constituent 
+aussi des facteurs de risque.
+ Norme AFNOR X 35-109
+Cette norme de l’AFNOR  (*) est un outil d’aide à 
+l’évaluation des risques professionnels liés à la manu-
+tention manuelle. Elle s’applique à l’activité de manu-
+tention de charges (lever, transporter, pousser/tirer, 
+avec déplacement de la charge) dans un cadre pro-
+I. L’ORGANISATION DU TRAVAIL
+Limitation du recours  
+à la manutention manuelle
+ Utilisation en priorité d’appareils  
+de levage mécaniques
+La réglementation n’envisage le recours à la manu-
+tention manuelle que lorsqu’il ne peut véritablement 
+en être fait autrement. Ainsi, l’article R. 4541-3 du 
+Code du travail exige d'éviter le recours à la manu-
+tention manuelle de charges par les travailleurs.  Des 
+mesures d’organisation du travail ou l’utilisation de 
+moyens adéquats de mécanisation doivent être pré-
+vues en ce sens.
+La priorité est à donner aux moyens de manutention 
+mécanique. Le chef d’entreprise doit ainsi prévoir 
+l’utilisation d’appareils mécaniques pour le levage de 
+charges comme par exemple des chariots élévateurs, 
+ponts roulants, grues.
+ Mise à disposition de dispositifs d’aide  
+à la manutention
+Dans l’hypothèse où le recours à la manutention 
+manuelle ne peut être évité, l’effort physique des 
+travailleurs et les risques notamment dorso-lom-
+baires doivent être limités au maximum. L’objectif 
+est de rendre la tâche plus sûre et moins pénible 
+pour le salarié, soit par la mise en œuvre d’outils 
+d’aide mécanique à la manutention adaptés tels 
+que des palonniers ou des treuils, soit par l’utilisa-
+tion d’accessoires de préhension tels que des crics, 
+vérins, crochets ou encore par la mise à disposition 
+de moyens de mise à niveau de la charge tels que des 
+tables élévatrices…
+Évaluation des risques 
+ Principe de l’évaluation 
+Lorsque la manutention manuelle ne peut être évitée, 
+le chef d’entreprise doit procéder à une évaluation 
+préalable des risques que font courir les opérations 
+de manutention dans un souci de sécurité et de santé 
+des travailleurs. Il est aidé dans cette démarche par le 
+médecin du travail.
+L’article R. 4541-6 du Code du travail et l’arrêté du 29 
+janvier 1993 donnent des indications sur le déroule-
+ment de cette évaluation des risques et sur les facteurs 
+à prendre en considération.
+Le chef d’entreprise tient compte lors de cette évalua-
+tion des caractéristiques de la charge, de l’effort phy-
+sique requis, des caractéristiques du milieu de travail, 
+des exigences de l’activité et des facteurs individuels 
+de risque.
+(*) La norme X35-109  
+peut être commandée à 
+titre payant via le site de 
+l’ AFNOR (www.afnor.org).
+5
+TJ 18
+ser des traces durables, identifiables et irréversibles 
+sur sa santé et une association de ces risques à des 
+contraintes physiques marquées, un environnement 
+physique agressif ou certains rythmes de travail. 
+L’article D. 4161-2 du Code du travail qui définit les 
+facteurs de pénibilité, fait figurer les manutentions 
+manuelles de charges dans les facteurs de risques pro-
+fessionnels liés à des contraintes physiques marquées, 
+qui doivent faire l’objet d’une déclaration à compter 
+du 1
+er juillet 2016.
+Seules les expositions dépassant certains seuils, après 
+application des mesures de protection collective et 
+individuelle sont toutefois prises en compte dans 
+cette déclaration. Les seuils d’exposition sont chiffrés 
+et associent à la fois des actions ou situations prédé-
+terminées et une intensité ou durée minimale.
+Dans le cadre de l’évaluation des risques, le chef 
+d’entreprise étudie donc dans un premier temps les 
+postes de travail qui impliquent des manutentions 
+manuelles et met en œuvre les mesures de prévention 
+appropriées afin de garantir la santé et la sécurité de 
+ses salariés. 
+Dans un deuxième temps, il identifie les postes 
+pénibles où sont effectuées des manutentions  
+manuelles qui peuvent laisser chez le travailleur des 
+traces durables, identifiables et irréversibles sur sa 
+santé car ils mettent en évidence des niveaux exposi-
+tions dépassant les seuils de pénibilité réglementaire-
+ment définis. Il procède ensuite chaque année à une 
+déclaration de façon dématérialisée aux CARSAT, 
+CRAM ou CGSS (Caisses d'assurance retraite et 
+de la santé au travail, Caisse nationale d'assurance 
+vieillesse des travailleurs salariés pour la région Ile-
+de-France ou Caisses générales de sécurité sociale 
+pour les départements d'outre-mer) pour chaque 
+travailleur concerné.
+Pour être prises en compte dans le dispositif de tra-
+çabilité de la pénibilité au travail, les manutentions 
+manuelles doivent dépasser aux termes de l’article 
+D.  4161-2 du Code du travail les seuils figurant 
+dans le tableau I page suivante après application des 
+mesures de protection collective et individuelle.
+Le dépassement du seuil est apprécié en cumulant les 
+durées pendant lesquelles se déroulent chacune des 
+actions ou pendant lesquelles chacune des situations 
+sont constatées.
+Accords de prévention de la pénibilité
+L’article L. 4163-2 du Code du travail invite chaque 
+entreprise ou groupe d’entreprises, totalisant au 
+moins 50 salariés, à établir un diagnostic du nombre 
+de ses travailleurs exposés aux facteurs de risques 
+professionnels liés à la pénibilité (dont font partie 
+les manutentions manuelles). Si ce diagnostic révèle 
+que 50 % au moins des salariés sont exposés à ces 
+fessionnel, avec ou sans utilisation d’aide à la manu-
+tention, par une personne. Elle propose des critères 
+d’analyse des risques ainsi que des valeurs seuils de 
+manutention de charges en fonction d’éléments de 
+référence comme la distance parcourue, la hauteur 
+de manutention, le tonnage, la position corporelle, la 
+fréquence, etc...).
+ Méthode d’analyse des manutentions 
+manuelles
+L’INRS propose une méthode d’analyse de la charge 
+physique de travail dans sa brochure ED 6161. Cette 
+méthode permet de repérer les risques liés notam-
+ment à la manutention manuelle, de les analyser, 
+d’orienter vers des pistes de prévention et enfin 
+d’évaluer l’efficacité des actions.
+La méthode comprend plusieurs phases successives 
+qui sont axées schématiquement sur :
+• Le repérage du risque lié à la charge physique de 
+travail à travers des questions clés : notamment y 
+a-t-il des objets à soulever, à transporter, du tirer/ 
+pousser de manuel de charges ?
+• La hiérarchisation des situations de travail avec 
+charge physique. Cette étape consiste à observer 
+les situations de travail, analyser l’activité réelle, 
+recueillir les perceptions des salariés à l’aide de grilles 
+d’identification et d’indicateurs concernant la charge 
+physique de travail : efforts physiques, dimension-
+nement des locaux ou des pièces à manutentionner, 
+caractéristiques temporelles, caractéristiques de l’en-
+vironnement et organisation.
+• L’analyse de la charge physique de travail à tra-
+vers les précédents indicateurs. Les indicateurs sont 
+ensuite cotés selon quatre niveaux de risque.
+• La recherche de pistes de prévention basée sur les 
+actions prioritaires mises en évidence au terme de 
+l’analyse conduite et en respectant les principes géné-
+raux de prévention de l’article L. 4121-2 du Code du 
+travail.
+• L’évaluation des actions réalisées.
+ Postes pénibles
+Traçabilité des manutentions manuelles en tant que 
+facteur de risque lié à la pénibilité 
+Lorsque les mesures de prévention se révèlent insuf-
+fisantes, certains risques sont facteurs de pénibilité 
+et peuvent occasionner des dommages durables aux 
+salariés qui y sont exposés. L’article L. 4161-1 du 
+Code du travail fait alors obligation à l’employeur de 
+déclarer de façon dématérialisée aux caisses de sécu-
+rité sociale chargées de la gestion des retraites,  les 
+conditions de pénibilité auxquelles chaque travailleur 
+est exposé. 
+La pénibilité se caractérise par une exposition à un 
+facteur de risque professionnel susceptible de lais-
+6
+TJ 18
+tère technique (adaptation par exemple des équipe-
+ments de travail et des mobiliers aux opérations de 
+manutention, choix d’éléments de stockage appro-
+priés, techniques de manipulation des charges…) 
+ou organisationnelles (notamment réduction de la 
+fréquence et de la durée des manutentions, limites 
+des poids unitaires des charges et des dimensions, 
+mise en œuvre de conditions de circulation adaptées, 
+formation des salariés… ).
+Limites de port de charges 
+Des prescriptions ergonomiques ou réglementaires 
+donnent des indications quant aux limites de port de 
+charges à respecter. Ces limites s’appliquent lorsque, 
+après l’évaluation des risques, il apparaît qu’il n’est 
+pas possible de supprimer les opérations de manu-
+tention manuelle ou que des moyens mécaniques 
+d’aide au transport et au lever sont difficiles à ins-
+taller en raison notamment de la configuration des 
+lieux.
+Ces données s’adressent parfois à l’ensemble des 
+salariés et sont parfois spécifiques aux femmes et aux 
+jeunes travailleurs.
+ Prescriptions générales 
+Le Code du travail dispose que les travailleurs ne 
+peuvent être admis à porter des charges supérieures à 
+55 kg qu’à condition d’y avoir été reconnus aptes par 
+le médecin du travail.
+ Art. R. 4541-9 du Code du travail 
+Cependant les charges transportées par un travailleur 
+ne peuvent en aucun cas être d’un poids supérieur à 
+105 kg.
+ Dispositions spécifiques aux femmes  
+et aux jeunes travailleurs 
+Des dispositions particulières sont applicables aux 
+femmes et jeunes travailleurs. 
+Ainsi, d’une façon générale, l’article R. 4541-9 du 
+Code du travail dispose que les femmes ne sont pas 
+facteurs et au-delà des seuils annuels prévus par l’ar-
+ticle D. 4161-2 du Code du travail, l’entreprise devra 
+conclure un accord ou un plan d’action de préven-
+tion de la pénibilité (la proportion minimum de tra-
+vailleurs exposés passera à 25 % au 1er janvier 2018).
+Ce dispositif doit permettre aux salariés exposés aux 
+risques liés à la manutention manuelle, facteur de 
+pénibilité, de bénéficier d’actions de suppression ou 
+de réduction de ces risques, de manière à prévenir 
+chez ces travailleurs, des lésions durables et irréver-
+sibles et leur permettre de continuer à travailler tout 
+en préservant leur santé.
+L’accord d’entreprise ou le plan d’action doit com-
+porter des engagements de l’employeur en matière 
+de prévention des situations de pénibilité comme la 
+réduction des polyexpositions aux facteurs de péni-
+bilité ou l’aménagement des postes de travail. Les 
+autres thèmes traités par les accords sont à choisir 
+selon les modalités prévues par l’article D. 4163-3.
+2. MESURES DE PRÉVENTION
+Une fois que les différents facteurs de risques liés à 
+la manutention manuelle ont été évalués et analysés, 
+l’employeur met en œuvre les mesures de prévention 
+appropriées en vue de pallier à ces risques. 
+Si la règlementation fixe une série de prescriptions 
+qui ont trait aux limites de port de charges, à l’in-
+formation et à la formation des salariés amenés à 
+manutentionner des charges, ces dispositions doivent 
+être considérées comme un minimum à respecter 
+et impliquent dans tous les cas la mise en œuvre 
+sur le terrain, de mesures de prévention adaptées à 
+chaque poste de travail impliquant des manutentions 
+manuelles. Il s’agit pour le chef d’entreprise de choisir 
+les mesures propres à garantir la sécurité des travail-
+leurs amenés à manutentionner des charges. Cela 
+suppose de mettre en place un plan d’actions de pré-
+vention destinées à prévenir tous les risques liés à la 
+manutention. Ces mesures pourront avoir un carac-
+ ▶ Tableau I
+Se u i l
+Action ou situation Intensité minimale Durée minimale
+Lever ou porter Charge unitaire de 15 kilogrammes
+600 heures par an
+Pousser ou tirer Charge unitaire de 250 kilogrammes
+Déplacement du travailleur avec la 
+charge ou prise de la charge au sol 
+ou à une hauteur située au-dessus 
+des épaules
+Charge unitaire de 10 kilogrammes
+Cumul de manutentions de charges 7,5 tonnes cumulées par jour 120 jours par an
+7
+TJ 18
+ Hypermarchés et supermarchés
+En ce qui concerne les postes d’encaissement des 
+hypermarchés (commerces de détail non spécialisés à 
+prédominance alimentaire dont la surface de vente est 
+supérieure à 2 500 m ) et supermarchés (commerces 
+de détail non spécialisés à prédominance alimentaire 
+dont la surface de vente est inférieure à 2 500 m
+2 mais 
+supérieure à 400 m2), la recommandation R 440 de la 
+CNAMTS fixe à 8 kg la valeur limite acceptable, pour 
+le port manuel de charges, par une personne au poste 
+d'encaissement de ces établissements. Cette valeur a 
+été déterminée en tenant compte de coefficients de 
+correction comme l'absence de moyens de prise, les 
+formes irrégulières des paquets et les nécessaires tor-
+sions du tronc pour soulever la charge.
+En outre, en ce qui concerne la mise en rayon dans 
+les hypermarchés et les supermarchés, la recom-
+mandation R 478 de la CNAMTS décrit une série 
+de mesures de prévention qui peuvent être mises en 
+œuvre dans les magasins dont la surface de vente 
+est supérieure à 400 m
+2. Ces mesures sont destinées 
+notamment à prévenir les contraintes articulaires et 
+musculaires liées à des efforts importants lors de la 
+disposition des produits destinés à la vente libre-ser-
+vice dans les mobiliers commerciaux. 
+Les mesures proposées concernent : 
+• l’organisation du travail (prévention des troubles 
+musculosquelettiques en amont par le choix de coli-
+sages adaptés, intégration du poids et des dimensions 
+des produits dans la réflexion du plan d’implantation 
+des produits en rayon) ; 
+• le développement de la polyactivité des salariés ;
+• l’aménagement et la conception des lieux de travail 
+(prise en compte des conditions de circulation et 
+de manutention lors d’implantation des gondoles, 
+accès facilité des salariés aux zones de stockage et de 
+travail…) ;
+• la mise à disposition d’équipements de manuten-
+tion mécanique électriques ou la sécurisation des 
+procédés de travail (hauteur de prise ou de dépose 
+des marchandises, contraintes posturales, profon-
+deur de prise des produits…).
+Équipements de protection 
+individuelle
+L’article L. 4121-34 du Code du travail dispose qu’il 
+appartient à l’employeur d’évaluer les risques pour la 
+santé et la sécurité des travailleurs, y compris dans le 
+choix des procédés de fabrication, des équipements 
+de travail et dans la définition des postes de travail. 
+À l’issue de cette évaluation, l’employeur prend les 
+mesures de prévention et de sécurité qui s’imposent. 
+Si nécessaire, des équipements de protection indi-
+autorisées à porter des charges supérieures à 25 kg. 
+Il leur est, en outre, interdit de transporter à l’aide 
+d’une brouette des charges supérieures à 40 kg, 
+brouette comprise.
+Le transport de charges sans considération de poids, 
+à l’aide d’un diable est, de plus, toujours interdit à la 
+femme enceinte (art. D. 4152-12 du Code du travail).
+En ce qui concerne les jeunes, l’article D. 4153-4 du 
+Code du travail, n’autorise l’emploi des mineurs âgés 
+de 14 ans à moins de 16 ans, pendant les vacances 
+scolaires, qu’à des travaux légers qui ne sont pas 
+susceptibles de porter préjudice à leur santé, leur 
+sécurité ou leur développement.
+Par ailleurs, une aptitude médicale spécifique est 
+nécessaire avant d’affecter des jeunes, titulaires d’un 
+diplôme ou d’un titre professionnel correspondant 
+à l’activité exercée, à des travaux comportant des 
+manutentions manuelles excédant 20 % de leur poids 
+(art. R. 4153-52 du Code du travail).
+ Utilisation de moyens de manutention à 
+traction manuelle
+La recommandation R 367 de la CNAMTS, relative à 
+la prévention des risques dus aux moyens de manu-
+tention à poussée ou à traction manuelle, indique les 
+limites d’effort à ne pas dépasser en cas d’utilisation 
+de ce type d’engins.
+Les limites d’effort en translation sur un sol parfaite-
+ment horizontal sont de : 
+• 25 kg pour un homme (soit une charge maximale 
+de 600 kg sur l’engin de manutention),
+• 15 kg pour une femme (soit une charge maximale 
+de 360 kg sur l’engin). 
+Pour ces valeurs, il est néanmoins prudent de faire 
+aider l’opérateur par un tiers au démarrage.
+Dispositions propres à certaines 
+activités
+ Utilisation d’échelles
+L’article R. 4323-88 du Code du travail dispose que 
+le port de charges doit rester exceptionnel sur des 
+échelles et limité à des charges légères et peu encom-
+brantes. Il ne doit pas, de plus, empêcher le travailleur 
+de disposer d’une prise sûre.
+ Travaux effectués sur les ascenseurs, 
+monte-charges et assimilés
+L'article R. 4543-20 du Code du travail précise qu'un 
+travailleur isolé ne peut réaliser des interventions 
+ou travaux sur ascenseurs qui comportent le port 
+manuel d'une masse supérieure à 30 kg, la pose ou la 
+dépose manuelle d'éléments d'appareils d'une masse 
+supérieure à 50 kg, ou la pose ou la dépose des câbles 
+de traction d'ascenseur.
+8
+TJ 18
+marqué peut être exceptionnellement un poids maxi-
+mal, établi d’après la nature et le volume du colis.
+Art. R. 4541-10 du Code du travail 
+À défaut de l’expéditeur, cette obligation incombe au 
+mandataire chargé de l’expédition du colis.
+Manutention de machines 
+La réglementation relative à la conception des équi-
+pements de travail précise que la notice d’instructions 
+qui accompagne chaque machine, doit indiquer les 
+conditions de manutention de la machine, ainsi que 
+sa masse, afin que le transport puisse s’effectuer sans 
+risque pour la sécurité des salariés.
+Art. R. 4312-1 du Code du travail, annexe 1, 
+§ 1.7.4.2 (p) 
+ Formation à la sécurité
+Formation générale à la sécurité
+La formation générale à la sécurité est obligatoire et 
+concerne notamment les travailleurs nouvellement 
+embauchés, les travailleurs temporaires et les salariés 
+qui changent de poste ou de technique.
+ Art. L. 4141-2 du Code du travail 
+Son contenu et ses modalités sont explicités dans les 
+articles R. 4141-1 à R. 4141-10, R. 4141-13 à R. 4141-
+15 du Code du travail. 
+La formation à la sécurité est répétée périodique-
+ment.
+Elle instruit les salariés affectés à des opérations de 
+manutention, de manière pratique et appropriée, 
+aux risques auxquels ils sont exposés. Elle a pour 
+objet d’enseigner au salarié les comportements et les 
+gestes les plus sûrs en ayant recours, si possible, à 
+des démonstrations, de lui expliquer les modes opé-
+ratoires retenus et de lui montrer le fonctionnement 
+des dispositifs de protection.
+Art. R. 4141-13 à R. 4141-15 du Code du travail
+L’article R. 4141-16 du Code du travail précise en 
+outre, qu’en cas de création ou de modification d’un 
+poste de travail exposant à des risques nouveaux et 
+comportant des opérations de manutention, l’em-
+ployeur doit organiser une formation à la sécurité 
+portant sur les règles de circulation et sur les gestes et 
+techniques à adopter.
+Formation aux gestes et postures
+En complément de la formation générale à la sécurité, 
+les salariés dont l’activité comporte des manutentions 
+manuelles, doivent recevoir une formation adéquate 
+à la sécurité relative à l’exécution des opérations. 
+Cette formation pratique instruit les salariés sur les 
+gestes et postures à adopter pour réaliser en sécurité 
+les manutentions.
+Art. R. 4541-8 du Code du travail 
+viduelle (EPI) adaptés sont mis à la disposition des 
+salariés et l’employeur veille à leur utilisation effec-
+tive (art. R. 4321-4 du Code du travail).
+C’est une évaluation des risques propre à chaque 
+poste qui permettra de déterminer quels sont les EPI 
+adaptés à chaque opération de manutention déter-
+minée. En effet, dans le domaine de la manutention 
+manuelle, les textes réglementaires ne décrivent pas 
+expressément le type d’équipement que les travail-
+leurs doivent effectivement porter.
+Dans la pratique, il est souvent recommandé de 
+porter des chaussures de sécurité résistantes au glis-
+sement avec embout de sécurité ainsi que des gants. 
+Le type de gant sera choisi en fonction de la nature 
+des tâches effectuées par les salariés. Ainsi, par 
+exemple, des gants renforcés à la paume et au doigt 
+pour les manutentions de tôles, briques, parpaings...
+Formation et information des salariés
+ Information des salariés
+Information sur les risques
+L’employeur fait bénéficier les travailleurs dont l’ac-
+tivité comporte des manutentions manuelles, d’une 
+information sur les risques qu’ils encourent lorsque 
+les activités ne sont pas exécutées d’une manière 
+technique correcte. L’information donnée tient 
+compte de l’évaluation des risques qui a été faite 
+préalablement, en particulier des caractéristiques de 
+la charge, de l’effort nécessaire à la manutention, des 
+particularités du milieu de travail et des facteurs de 
+risque propres à chaque salarié.
+Art. R. 4541-8 du Code du travail 
+Indication du poids des charges
+Les travailleurs appelés à manipuler des charges 
+doivent recevoir des informations précises sur les 
+caractéristiques de celles-ci. En particulier, ils doivent 
+recevoir des informations estimatives et, à chaque 
+fois que possible, précises, sur le poids de la charge 
+qu’ils sont amenés à manutentionner.
+Lorsque la charge est placée de façon excentrée dans 
+un emballage, les salariés doivent pouvoir être infor-
+més sur la position de son centre de gravité ou de son 
+côté le plus lourd.
+Art. R. 4541-7 du Code du travail 
+Expédition de colis
+En cas d’expédition d’un colis ou objet pesant 1 000 
+kilogrammes ou plus de poids brut et lorsque le 
+transport a lieu par mer ou par voie navigable inté-
+rieure, l’expéditeur doit indiquer sur l’extérieur du 
+colis le poids de celui-ci de façon claire et durable.
+S’il est difficile de déterminer le poids exact, le poids 
+9
+TJ 18
+treprise est consulté sur le programme de formation 
+à la sécurité et sur les conditions générales de son 
+organisation. Enfin, le CHSCT est également associé 
+aux formations à la sécurité mises en œuvre dans 
+l’entreprise (consultation sur le programme de for-
+mation, les thèmes, les méthodes pédagogiques, le 
+lieu, le public visé).
+3. RÔLE DU MÉDECIN DU TRAVAIL
+Le médecin du travail, conseiller  
+de l’employeur
+Les services de santé au travail ont pour mission 
+d’éviter toute altération de la santé des travailleurs 
+du fait de leur travail et conduisent, dans cet objectif, 
+des actions de santé au travail, dans le but de pré-
+server la santé des travailleurs tout au long de leur 
+parcours professionnel. Ils conseillent également 
+les employeurs et les travailleurs notamment sur les 
+dispositions et mesures nécessaires afin d'éviter ou 
+Cette formation aux gestes et postures s’adresse à 
+tous les salariés appelés à effectuer des manutentions 
+manuelles même si celles-ci sont exceptionnelles, et 
+non plus seulement aux nouveaux embauchés ou aux 
+salariés mutés. Elle repose sur des principes ergono-
+miques qui décrivent les principes d’une utilisation 
+rationnelle de la colonne vertébrale afin de réduire 
+les contraintes qui participent à la détérioration du 
+disque intervertébral. Les principes de cette forma-
+tion sont :
+• le placement de la colonne vertébrale et du bassin,
+• le rapprochement maximal de la charge (rappro-
+chement des centres de gravité),
+• la recherche d’appuis stables,
+• l’utilisation de la force des cuisses.
+La formation aux gestes et postures est, de plus, adap-
+tée à chaque entreprise en fonction de son impor-
+tance, de son domaine d’activité et des conditions de 
+travail.
+Modalités
+Les formations sont organisées par l’employeur avec 
+le concours du médecin du travail. Le comité d’en-
+Référentiel de formation INRS à la prévention 
+des risques liés à l’activité physique
+Dans ce référentiel de formation INRS dénommé PRAP, il existe 
+un module à destination des salariés qui ont dans leur activité une 
+part importante d’activité ou de travail physique comme notam-
+ment de la manutention manuelle ou du port de charges, ce qui 
+peut entraîner efforts inutiles ou excessifs, affections ou lésions 
+articulaires ou lombalgies. 
+Des filières de formation spécifiques sont proposées en fonction 
+du secteur d’activité : industrie, bâtiment et commerce ou sani-
+taire et social. 
+La formation a pour objectif de rendre le salarié acteur de la pré-
+vention des risques liés à l’activité physique et de lui permettre 
+notamment d’analyser en détail sa situation de travail, d’adopter 
+de bonnes pratiques et des gestes appropriés à la tâche à effec-
+tuer et proposer à son encadrement des améliorations techniques 
+ou organisationnelles d’aménagement de son poste de travail.
+Un autre module de formation s’adresse aux salariés désireux de 
+devenir formateurs PRAP certifiés au sein de leur entreprise ou 
+dans un organisme de formation habilité. Elle a pour objectif de 
+rendre ces personnes capables d’établir un diagnostic des risques, 
+de mettre en œuvre des outils d’analyse et de mesure des situa-
+tions de travail, de proposer des solutions techniques et organisa-
+tionnelles et d’accompagner la mise en place de ces solutions par 
+une formation des salariés, pour rendre ces derniers acteurs des 
+actions de prévention des risques liés à l’activité physique.
+10
+TJ 18
+manuelle sont à analyser particulièrement en consul-
+tant l’évaluation des risques réalisée pour ces postes.
+Art. 4624-10, R. 4624-11, R. 4624-16 du Code  
+du travail
+Avis d’aptitude complémentaire
+Un avis complémentaire du médecin du travail doit 
+être donné lorsqu’un salarié doit porter de façon 
+habituelle des charges de plus de 55 kilogrammes. 
+Cette aptitude est déterminée après prise en compte 
+des particularités du poste, de l’analyse des risques 
+réalisée et des caractères propres au salarié.
+Art. R. 4541-9 du Code du travail
+Le médecin du travail doit tenir compte également 
+des limitations au port de charges inscrites dans le 
+Code du travail et concernant par exemple les jeunes.
+Ces limites ne conduisent pas automatiquement à 
+une décision positive d’aptitude lorsque les charges à 
+manutentionner sont d’un poids inférieur à celles-ci. 
+Le médecin du travail évalue dans tous les cas l’apti-
+tude des salariés à des travaux comportant une part 
+significative de manutention manuelle.
+Critères d’évaluation de l’aptitude
+Le médecin du travail est juge de la nature des 
+examens médicaux qu’il estime nécessaires à la 
+détermination de l’aptitude médicale du salarié 
+à manutentionner des charges. Il peut cependant 
+s’aider dans cette évaluation de l’aptitude, d’élé-
+ments de référence mentionnés dans certains textes 
+réglementaires ou de recommandations de bonnes 
+pratiques élaborées par les professionnels de la santé 
+au travail.
+Des recommandations de bonnes pratiques ont ainsi 
+été élaborées sous l’égide de la Société française de 
+médecine du travail, par un groupe de travail  multi-
+disciplinaire de professionnels de la santé au travail. 
+Ces recommandations relatives à la surveillance 
+médico-professionnelle du risque lombaire pour les 
+travailleurs exposés à des manipulations de charges 
+ont été labellisées par la Haute autorité de santé en 
+octobre 2013.  Elles détaillent le contenu de la sur-
+veillance médicale pour les travailleurs réalisant des 
+manutentions manuelles de charges, les examens 
+complémentaires qui peuvent être utiles à la déter-
+mination de l’aptitude médicale en fonction de l’état 
+de santé du travailleur et de ses antécédents médi-
+caux, la conduite à tenir en cas de salariés victimes 
+de lombalgies ou les interventions possibles à visée 
+préventive (formation aux bons gestes, programmes 
+d’exercices physiques, interventions sur les condi-
+tions de travail…).
+de diminuer les risques professionnels, d'améliorer 
+les conditions de travail et de prévenir ou de réduire 
+la pénibilité au travail. Les missions des services de 
+santé au travail sont assurées par une équipe pluri-
+disciplinaire de santé au travail qui comprend des 
+médecins du travail, des intervenants en prévention 
+des risques professionnels (IPRP) et des infirmiers.
+L’article R. 4623-1 du Code du travail précise que le 
+médecin du travail est le conseiller de l'employeur 
+et des travailleurs notamment sur l'adaptation des 
+postes, des techniques et des rythmes de travail à la 
+santé physique et mentale. 
+Ces missions très larges et exclusivement préventives 
+l’amènent à conduire avec les autres membres de 
+l’équipe pluridisciplinaire, des actions sur le milieu 
+de travail qui pourront concerner tous les procé-
+dés de travail et en particulier les manutentions 
+manuelles : étude des postes en vue de l’améliora-
+tion des conditions de travail ou de leur adaptation, 
+identification et analyse des risques professionnels, 
+réalisation de mesures métrologiques. 
+Dans ce cadre, l’IPRP, en tant que membre de l’équipe 
+pluridisciplinaire et en coordination avec le médecin 
+du travail, a vocation à participer à ces actions. Il  
+possède en effet des compétences techniques ou 
+organisationnelles en matière de santé et de sécurité 
+au travail (ergonomie, hygiène industrielle, organi-
+sation du travail…) utiles pour conseiller et accom-
+pagner l’employeur dans l’organisation du travail et 
+la diminution des risques liés aux manutentions. Il 
+pourra assurer des missions de diagnostic, de conseil, 
+des relevés métrologiques, des études ergonomiques 
+concernant les conditions de réalisation des tâches 
+de manutentions manuelles : caractéristiques des 
+charges, exigences de la tâche imposée, contraintes 
+de temps à respecter,  conditions d’ambiances de 
+travail, mouvements réalisés, équipements de travail, 
+caractéristiques des zones de travail…
+Surveillance médicale des salariés
+ Décision d’aptitude au poste de travail 
+Avis général d’aptitude
+Le médecin du travail exerce la surveillance médicale 
+des salariés par le biais d’examens médicaux avant 
+l’embauche ou au plus tard avant l’expiration de sa 
+période d’essai, puis de façon périodique (tous les 24 
+mois au moins en principe). Par ce biais, il apprécie 
+l’aptitude médicale du salarié au poste de travail. 
+L’objet est de vérifier que l’état de santé du salarié est 
+compatible avec les exigences du poste de travail qu’il 
+occupe et que ses conditions de travail ne sont pas 
+susceptibles d’altérer sa santé. À ce niveau, les postes 
+de travail comportant une part de manutention 
+11
+TJ 18
+précise les symptômes de ces maladies et les délais de 
+prise en charge, et la nature des travaux susceptibles 
+de les provoquer.
+Les tableaux ayant trait aux manutentions manuelles 
+sont les tableaux n° 57, n° 79 et n° 98.
+4. MALADIES PROFESSIONNELLES 
+Les manutentions manuelles de charges peuvent 
+avoir pour conséquence directe la survenance de 
+maladies professionnelles. Une série de tableaux 
+Tableau n° 57 
+Affections périarticulaires provoquées par certains gestes et postures de travail
+Création : Décret n° 72-1010 du 2 novembre 1972
+Dernière mise à jour : Décret n° 2012-937 du 1
+er août 2012
+Désignation des maladies Délai de prise  
+en charge
+Liste limitative des travaux 
+susceptibles de provoquer  
+ces maladies
+- A - Épaule
+Tendinopathie aiguë non rompue non 
+calcifiante avec ou sans enthésopathie de 
+la coiffe des rotateurs.
+Tendinopathie chronique non 
+rompue non calcifiante avec ou sans 
+enthésopathie de la coiffe des rotateurs 
+objectivée par IRM
+ (*).
+Rupture partielle ou transfixiante de la 
+coiffe des rotateurs objectivée par IRM 
+(*).
+30 jours
+6 mois (sous réserve  
+d'une durée d'exposition 
+de 6 mois)
+1 an (sous réserve d'une 
+durée d'exposition d'un an)
+Travaux comportant des mouvements 
+ou le maintien de l'épaule sans soutien 
+en abduction
+ (**) avec un angle supérieur 
+ou égal à 60° pendant au moins 3h30 par 
+jour en cumulé.
+Travaux comportant des mouvements 
+ou le maintien de l'épaule sans soutien 
+en abduction
+ (**) : 
+- avec un angle supérieur ou égal à 60° 
+pendant au moins deux heures par jour 
+en cumulé ou 
+- avec un angle supérieur ou égal à 90° 
+pendant au moins une heure par jour en 
+cumulé.
+Travaux comportant des mouvements 
+ou le maintien de l'épaule sans soutien 
+en abduction
+ (**) :
+ - avec un angle supérieur ou égal à 60° 
+pendant au moins deux heures par jour 
+en cumulé 
+ou 
+- avec un angle supérieur ou égal à 90° 
+pendant au moins une heure par jour en 
+cumulé.
+- B - Coude
+Tendinopathie d'insertion des muscles 
+épicondyliens associée ou non à un 
+syndrome du tunnel radial.
+Tendinopathie d'insertion des muscles 
+épitrochléens.
+Hygromas : épanchement des bourses 
+séreuses ou atteintes inflammatoires des 
+tissus sous-cutanés des zones d'appui du 
+coude.
+- Forme aiguë.
+- Forme chronique.
+Syndrome canalaire du nerf ulnaire dans 
+la gouttière épitrochléo-olécrânienne 
+confirmé par électroneuromyographie 
+(EMG).
+14 jours
+14 jours
+ 
+7 jours
+90 jours
+90 jours (sous réserve 
+d'une durée d'exposition 
+de 90 jours)
+Travaux comportant habituellement des 
+mouvements répétés de préhension ou 
+d'extension de la main sur l'avant-bras 
+ou des mouvements de pronosupination.
+Travaux comportant habituellement 
+des mouvements répétés d'adduction 
+ou de flexion et pronation de la main 
+et du poignet ou des mouvements de  
+pronosupination.
+Travaux comportant habituellement un 
+appui prolongé sur la face postérieure 
+du coude
+Travaux comportant habituellement 
+des mouvements répétitifs et/ou des 
+postures maintenues en flexion forcée. 
+Travaux comportant habituellement un 
+appui prolongé sur la face postérieure 
+du coude.
+12
+TJ 18
+Désignation des maladies Délai de prise  
+en charge
+Liste limitative des travaux 
+susceptibles de provoquer  
+ces maladies
+- C - Poignet - Main et doigt
+Tendinite.
+Ténosynovite.
+Syndrome du canal carpien.
+Syndrome de la loge de Guyon.
+7 jours
+7 jours
+30 jours
+30 jours
+Travaux comportant de façon habituelle 
+des mouvements répétés ou prolongés 
+des tendons fléchisseurs ou extenseurs 
+de la main et des doigts.
+Travaux comportant de façon habituelle, 
+soit des mouvements répétés ou 
+prolongés d'extension du poignet ou 
+de préhension de la main, soit un appui 
+carpien, soit une pression prolongée ou 
+répétée sur le talon de la main.
+- D - Genou
+Syndrome de compression du nerf 
+sciatique poplité externe.
+Hygromas :
+- hygroma aigu des bourses séreuses ou 
+atteinte inflammatoire des tissus sous-
+cutanés des zones d'appui du genou ;
+- hygroma chronique des bourses 
+séreuses.
+Tendinite sous-quadricipitale ou 
+rotulienne.
+Tendinite de la patte d'oie.
+7 jours
+ 
+7 jours
+90 jours
+7 jours
+7 jours
+Travaux comportant de manière 
+habituelle une position accroupie 
+prolongée
+Travaux comportant de manière 
+habituelle un appui prolongé sur le genou.
+Travaux comportant de manière 
+habituelle un appui prolongé sur le 
+genou.
+Travaux comportant de manière 
+habituelle des mouvements répétés 
+d'extension ou de flexion prolongées  
+du genou.
+Travaux comportant de manière 
+habituelle des mouvements répétés 
+d'extension ou de flexion prolongées  
+du genou.
+- E - Cheville et pied
+Tendinite achiléenne. 7 jours Travaux comportant de manière 
+habituelle des efforts pratiqués en station 
+prolongée sur la pointe des pieds.
+(*) Ou un arthroscanner en cas de contre-indication à l'IRM
+(**) Les mouvements en abduction correspondent aux mouvements entraînant un décollement des bras par rapport au corps
+Tableau n° 79 
+Lésions chroniques du ménisque
+Création : Décret n° 85-630 du 19 juin 1985
+Dernière mise à jour : Décret n° 91-877 du 3 septembre 1991
+Désignation des maladies Délai de prise  
+en charge
+Liste limitative des travaux 
+susceptibles de provoquer  
+ces maladies
+Lésions chroniques du ménisque à 
+caractère dégénératif, confirmées par 
+examens complémentaires ou au cours 
+de l’intervention curative, ainsi que leurs 
+complications : fissuration ou rupture du 
+ménisque.
+2 ans Travaux comportant des efforts 
+ou des ports de charges exécutés 
+habituellement en position agenouillée 
+ou accroupie.
+13
+TJ 18
+Tableau n° 98 
+Affections chroniques du rachis lombaire provoquées par la manutention manuelle  
+de charges lourdes 
+Création : Décret n° 99-95 du 15 février 1999
+Désignation des maladies Délai de prise  
+en charge
+Liste limitative des travaux 
+susceptibles de provoquer  
+ces maladies
+Sciatique par hernie discale L4-L5 
+ou L5-S1 avec atteinte radiculaire de 
+topographie concordante.
+Radiculalgie crurale par hernie discale 
+L2-L3 ou L3-L4 ou L4-L5, avec atteinte 
+radiculaire de topographie concordante.
+6 mois
+(sous réserve
+d’une durée d’exposition
+de 5 ans)
+Travaux de manutention manuelle 
+habituelle de charges lourdes effectués :
+- dans le fret routier, maritime, 
+ferroviaire, aérien ;
+- dans le bâtiment, le gros œuvre, les 
+travaux publics ;
+- dans les mines et carrières ;
+- dans le ramassage d’ordures ménagères 
+et de déchets industriels ;
+- dans le déménagement, les garde-
+meubles ;
+- dans les abattoirs et les entreprises 
+d’équarrissage ;
+- dans le chargement et le déchargement 
+en cours de fabrication, dans la livraison, 
+y compris pour le compte d’autrui, le 
+stockage et la répartition des produits 
+industriels et alimentaires, agricoles et 
+forestiers ;
+- dans le cadre des soins médicaux et 
+paramédicaux incluant la manutention 
+des personnes ;
+- dans le cadre du brancardage et du 
+transport des malades ;
+- dans les travaux funéraires.
+14
+TJ 18
+ANNEXES
+ANNEXE 1
+Liste des textes cités 
+• Convention de l’Organisation internationale du 
+travail n° 127 du 28 juin 1967, concernant le poids 
+maximal des charges pouvant être transportées par 
+un seul travailleur.
+• Recommandation de l’Organisation internationale 
+du travail n° 128 du 28 juin 1967, concernant le poids 
+maximal des charges pouvant être transportées par 
+un seul travailleur.
+• Décret n° 72-1010 du 2 novembre 1972, modifié 
+par les décrets n° 82-783 du 15 septembre 1982, 
+n° 85-630 du 19 juin 1985, n° 91-877 du 3 septembre 
+1991, n° 2011-1315 du 17 octobre 2011 et n° 2012-937 
+du 1er août 2012, complétant les tableaux de maladies 
+professionnelles annexés au décret n° 46-2959 du 31 
+décembre 1946, pris pour l’application du livre IV du 
+Code de la sécurité sociale relatif à la prévention et à 
+la réparation des accidents du travail et des maladies 
+professionnelles.
+• Décret n° 85-630 du 19 juin 1985, modifié par 
+décret n° 91-877 du 3 septembre 1991, révisant et 
+complétant les tableaux de maladies professionnelles 
+annexés au décret n° 46-2959 du 31 décembre 1946, 
+pris pour l’application du livre IV du Code de la sécu-
+rité sociale relatif à la prévention et à la réparation des 
+accidents du travail et des maladies professionnelles.
+• Décret n° 92-958 du 3 septembre 1992 relatif 
+aux prescriptions minimales de sécurité et de santé 
+concernant la manutention manuelle de charges 
+comportant des risques, notamment dorsolombaires, 
+pour les travailleurs et transposant la directive (CEE) 
+n° 90-269 du conseil du 29 mai 1990.
+• Arrêté du 29 janvier 1993 portant application de 
+l’article R. 231-68 du Code du travail relatif aux élé-
+ments de référence et aux autres facteurs de risque à 
+prendre en compte pour l’évaluation préalable des 
+risques et l’organisation des postes de travail lors des 
+manutentions manuelles de charges comportant des 
+risques, notamment dorsolombaires.
+• Décret n° 99-95 du 15 février 1999 modifiant et 
+complétant les tableaux de maladies professionnelles 
+annexés au livre IV du Code de la sécurité sociale 
+(deuxième partie : décrets en Conseil d’État).
+• Décret n° 2015-1888 du 30 décembre 2015 relatif à 
+la simplification du compte personnel de prévention 
+de la pénibilité et à la modification de certains fac-
+teurs et seuils de pénibilité.  
+• Risques dus aux moyens de manutention à pous-
+sée et/ou à traction manuelle. Recommandation 
+CNAMTS R 367, 1993.
+• L'évaluation des risques liés à la manutention 
+manuelle des charges au poste d'encaissement dans 
+les hypermarchés et supermarchés. Recommandation 
+CNAMTS R 440, 2008.
+• Mise en rayon. Prévenir les risques liés à la manu-
+tention manuelle. Recommandation CNAMTS R 
+478, 2015. 
+• Manutention manuelle de charges pour soulever, 
+déplacer et pousser / tirer. Norme AFNOR X 35-109, 
+octobre 2011. 
+• Surveillance médico-professionnelle du risque 
+lombaire pour les travailleurs exposés à la manipu-
+lation de charges. Recommandations de bonne pra-
+tique de la Société française de médecine du travail 
+(SFMT), septembre 2013.
+• Méthode d'analyse de la charge physique de travail. 
+INRS, ED 6161, 2014.
+15
+TJ 18
+ANNEXES
+e) La charge est susceptible, du fait de son aspect exté-
+rieur et/ou de sa consistance, d’entraîner des lésions 
+pour le travailleur, notamment en cas de heurt.
+2. Effort physique requis
+Un effort physique peut présenter un risque notam-
+ment dans les cas suivants :
+a) Il est trop important ;
+b) Il ne peut être réalisé que par un mouvement de 
+torsion du tronc ;
+c) Il peut entraîner un mouvement brusque de la 
+charge ;
+d) Il est accompli alors que le corps est en position 
+instable.
+3. Caractéristiques du milieu de travail
+Les caractéristiques du milieu de travail peuvent 
+accroître un risque, notamment dans les cas suivants :
+a) L’espace libre, notamment vertical, est insuffisant 
+pour l’exercice de l’activité concernée ;
+b) Le sol est inégal, donc source de trébuchements, 
+ou bien glissant pour les chaussures que porte le 
+travailleur ;
+c) L’emplacement ou le milieu de travail ne permettent 
+pas au travailleur la manutention manuelle de charges 
+à une hauteur sûre et dans une bonne posture ;
+d) Le sol ou le point d’appui sont instables ;
+e) La température, l’humidité ou la circulation de l’air 
+sont inadéquates.
+4. Exigences de l’activité
+L’activité peut présenter un risque, notamment lors-
+qu’elle comporte l’une ou plusieurs des exigences 
+suivantes :
+a) Efforts physiques sollicitant notamment le rachis, 
+trop fréquents ou trop prolongés ;
+b) Période de repos physiologique ou de récupération 
+insuffisante ;
+c) Distances trop grandes d’élévation, d’abaissement 
+ou de transport ;
+d) Cadence imposée par un processus non suscep-
+tible d’être modulé par le travailleur.
+5. Autres facteurs de risque
+Les risques peuvent être aggravés, notamment :
+a) Par l’inadéquation des vêtements, chaussures ou 
+autres effets personnels portés par le travailleur ;
+b) Par l’insuffisance ou l’inappropriation des connais-
+sances ou de la formation. 
+ANNEXE 2
+Arrêté du 29 janvier 1993 portant appli-
+cation de l’article R. 231-68 du Code du 
+travail relatif aux éléments de référence 
+et aux autres facteurs de risque à prendre 
+en compte pour l’évaluation préalable des 
+risques et l’organisation des postes de tra-
+vail lors des manutentions manuelles de 
+charges comportant des risques, notam-
+ment dorsolombaires
+Le ministre de l’agriculture et du développement 
+rural et le ministre du travail, de l’emploi et de la 
+formation professionnelle,
+Vu le Code du travail, et notamment l’article R. 231-68 ;
+Vu les avis du Conseil supérieur de la prévention des 
+risques professionnels et de la Commission nationale 
+d’hygiène et de sécurité du travail en agriculture,
+Arrêtent :
+Art. 1er. - Pour l’application de l’alinéa 2 de l’article 
+R. 231-68 du Code du travail, la liste non exhaustive 
+des éléments de référence et des autres facteurs de 
+risque à prendre en compte pour l’évaluation préa-
+lable des risques et l’organisation des postes de travail 
+est précisée en annexe au présent arrêté.
+Art. 2. - Le directeur des relations du travail et le 
+directeur des exploitations, de la politique sociale 
+et de l’emploi sont chargés, chacun en ce qui le 
+concerne, de l’exécution du présent arrêté, qui sera 
+publié au Journal officiel de la République française.
+ANNEXE
+ÉLÉMENTS DE RÉFÉRENCE ET  
+AUTRES FACTEURS DE RISQUE
+L’évaluation des conditions de la manutention 
+manuelle doit s’appuyer sur les éléments de réfé-
+rence et les autres facteurs de risque tels que définis 
+ci-dessous, combinés toutes les fois qu’une analyse 
+multifactorielle s’avère nécessaire.
+1. Caractéristiques de la charge
+La manutention manuelle d’une charge peut présen-
+ter un risque notamment dans les cas suivants :
+a) La charge est trop lourde ou trop grande ;
+b) La charge est encombrante ou difficile à saisir ;
+c) La charge est en équilibre instable ou son contenu 
+risque de se déplacer ;
+d) La charge est déplacée de telle façon qu’elle doit 
+être tenue ou manipulée à distance du tronc ou avec 
+une flexion ou une torsion du tronc ;
+Ces aide-mémoire présentent de manière synthétique  
+la réglementation sur un sujet précis.
+TJ  5  Aération et assainissement des lieux de travail
+TJ  10 Restauration d’entreprise
+TJ  11  Installations sanitaires des entreprises
+TJ  13 Éclairage des locaux de travail
+TJ  14 Salariées en état de grossesse
+TJ  16 Le bruit
+TJ  18 Manutention manuelle
+TJ  19  Les maladies professionnelles. Régime général
+TJ  20  Prévention des incendies sur les lieux de travail
+TJ  22  Hygiène et sécurité dans le domaine 
+de la distribution alimentaire
+TJ  24  Les risques biologiques sur les lieux de travail 
+COLLECTION DES AIDE-MÉMOIRE JURIDIQUES
+Pour obtenir en prêt les audiovisuels et multimédias et pour commander les brochures et les affiches 
+de l’INRS, adressez-vous au service Prévention de votre Carsat, Cram ou CGSS.
+Carsat ALSACE-MOSELLE
+(67 Bas-Rhin)
+14 rue Adolphe-Seyboth 
+CS 10392
+67010 Strasbourg cedex 
+tél. 03 88 14 33 00
+fax 03 88 23 54 13
+prevention.documentation@carsat-am.fr
+www.carsat-alsacemoselle.fr
+(57 Moselle)
+3 place du Roi-George
+BP 31062
+57036 Metz cedex 1  
+tél. 03 87 66 86 22
+fax 03 87 55 98 65
+www.carsat-alsacemoselle.fr
+(68 Haut-Rhin)
+11 avenue De-Lattre-de-Tassigny 
+BP 70488
+68018 Colmar cedex 
+tél. 03 69 45 10 12
+www.carsat-alsacemoselle.fr
+Carsat AQUITAINE
+(24 Dordogne, 33 Gironde, 
+40 Landes, 47 Lot-et-Garonne, 
+64 Pyrénées-Atlantiques)
+80 avenue de la Jallère
+33053 Bordeaux cedex 
+tél. 05 56 11 64 36
+fax 05 57 57 70 04
+documentation.prevention@ 
+carsat-aquitaine.fr 
+www.carsat.aquitaine.fr
+Carsat AUVERGNE
+(03 Allier, 15 Cantal,  
+43 Haute-Loire, 
+63 Puy-de-Dôme)
+Espace Entreprises  
+Clermont République 
+63036 Clermont-Ferrand cedex 9
+tél. 04 73 42 70 76 
+offredoc@carsat-auvergne.fr 
+www.carsat-auvergne.fr
+Carsat BOURGOGNE 
+et FRANCHE-COMTÉ
+(21 Côte-d’Or, 25 Doubs,  
+39 Jura, 58 Nièvre,  
+70 Haute-Saône,  
+71 Saône-et-Loire, 89 Yonne, 
+90 Territoire de Belfort)
+ZAE Cap-Nord, 38 rue de Cracovie
+21044 Dijon cedex 
+tél. 03 80 70 51 32 
+fax 03 80 70 52 89
+prevention@carsat-bfc.fr
+www.carsat-bfc.fr
+Carsat BRETAGNE
+(22 Côtes-d’Armor, 29 Finistère, 
+35 Ille-et-Vilaine, 56 Morbihan)
+236 rue de Châteaugiron
+35030 Rennes cedex 
+tél. 02 99 26 74 63
+fax 02 99 26 70 48
+drpcdi@carsat-bretagne.fr
+www.carsat-bretagne.fr
+Carsat CENTRE
+(18 Cher, 28 Eure-et-Loir, 36 Indre, 
+37 Indre-et-Loire, 41 Loir-et-Cher, 45 Loiret)
+36 rue Xaintrailles
+45033 Orléans cedex 1
+tél. 02 38 81 50 00
+fax 02 38 79 70 29
+prev@carsat-centre.fr 
+www.carsat-centre.fr
+Carsat CENTRE-OUEST
+(16 Charente, 17 Charente-Maritime, 
+19 Corrèze, 23 Creuse, 79 Deux-Sèvres, 
+86 Vienne, 87 Haute-Vienne)
+37 avenue du président René-Coty
+87048 Limoges cedex 
+tél. 05 55 45 39 04
+fax 05 55 45 71 45
+cirp@carsat-centreouest.fr 
+www.carsat-centreouest.fr
+Cram ÎLE-DE-FRANCE
+(75 Paris, 77 Seine-et-Marne, 
+78 Yvelines, 91 Essonne, 
+92 Hauts-de-Seine, 93 Seine-Saint-Denis, 
+94 Val-de-Marne, 95 Val-d’Oise)
+17-19 place de l’Argonne
+75019 Paris
+tél. 01 40 05 32 64
+fax 01 40 05 38 84
+demande.de.doc.inrs@cramif.cnamts.fr  
+www.cramif.fr
+Carsat LANGUEDOC-ROUSSILLON
+(11 Aude, 30 Gard, 34 Hérault, 
+48 Lozère, 66 Pyrénées-Orientales)
+29 cours Gambetta
+34068 Montpellier cedex 2
+tél. 04 67 12 95 55
+fax 04 67 12 95 56
+prevdoc@carsat-lr.fr
+www.carsat-lr.fr
+Carsat MIDI-PYRÉNÉES
+(09 Ariège, 12 Aveyron, 31 Haute-Garonne, 
+32 Gers, 46 Lot, 65 Hautes-Pyrénées, 
+81 Tarn, 82 Tarn-et-Garonne)
+2 rue Georges-Vivent
+31065 Toulouse cedex 9
+fax 05 62 14 88 24
+doc.prev@carsat-mp.fr
+www.carsat-mp.fr
+Carsat NORD-EST
+(08 Ardennes, 10 Aube, 51 Marne, 
+52 Haute-Marne, 54 Meurthe-et-Moselle, 
+55 Meuse, 88 Vosges)
+81 à 85 rue de Metz
+54073 Nancy cedex 
+tél. 03 83 34 49 02
+fax 03 83 34 48 70
+documentation.prevention@carsat-nordest.fr 
+www.carsat-nordest.fr
+Carsat NORD-PICARDIE
+(02 Aisne, 59 Nord, 60 Oise, 
+62 Pas-de-Calais, 80 Somme)
+11 allée Vauban
+59662 Villeneuve-d’Ascq cedex 
+tél. 03 20 05 60 28
+fax 03 20 05 79 30
+bedprevention@carsat-nordpicardie.fr
+www.carsat-nordpicardie.fr
+Carsat NORMANDIE
+(14 Calvados, 27 Eure, 50 Manche, 
+61 Orne, 76 Seine-Maritime)
+Avenue du Grand-Cours, 2022 X
+76028 Rouen cedex
+tél. 02 35 03 58 22
+fax 02 35 03 60 76
+prevention@carsat-normandie.fr 
+www.carsat-normandie.fr
+Carsat PAYS DE LA LOIRE
+(44 Loire-Atlantique, 49 Maine-et-Loire, 
+53 Mayenne, 72 Sarthe, 85 Vendée)
+2 place de Bretagne
+44932 Nantes cedex 9
+tél. 02 51 72 84 08
+fax 02 51 82 31 62
+documentation.rp@carsat-pl.fr
+www.carsat-pl.fr
+Carsat RHÔNE-ALPES
+(01 Ain, 07 Ardèche, 26 Drôme, 38 Isère, 
+42 Loire, 69 Rhône, 73 Savoie, 
+74 Haute-Savoie)
+26 rue d’Aubigny
+69436 Lyon cedex  3
+tél. 04 72 91 96 96
+fax 04 72 91 97 09
+preventionrp@carsat-ra.fr
+www.carsat-ra.fr
+Carsat SUD-EST
+(04 Alpes-de-Haute-Provence, 
+05 Hautes-Alpes, 06 Alpes-Maritimes, 
+13 Bouches-du-Rhône, 2A Corse-du-Sud, 
+2B Haute-Corse, 83 Var, 84 Vaucluse)
+35 rue George
+13386 Marseille cedex 5
+tél. 04 91 85 85 36
+fax 04 91 85 75 66
+documentation.prevention@carsat-sudest.fr  
+www.carsat-sudest.fr
+Services Prévention des CGSS
+CGSS GUADELOUPE
+Immeuble CGRR, Rue Paul-Lacavé, 97110 Pointe-à-Pitre
+tél. 05 90 21 46 00 – fax 05 90 21 46 13
+lina.palmont@cgss-guadeloupe.fr
+CGSS GUYANE
+Direction des risques professionnels
+CS 37015, 97307 Cayenne cedex 
+tél. 05 94 29 83 04 – fax 05 94 29 83 01
+prevention-rp@cgss-guyane.fr
+CGSS LA RÉUNION
+4 boulevard Doret, 97704 Saint-Denis Messag cedex 9
+tél. 02 62 90 47 00 – fax 02 62 90 47 01
+prevention@cgss-reunion.fr
+CGSS MARTINIQUE
+Quartier Place-d’Armes, 97210 Le Lamentin cedex 2
+tél. 05 96 66 51 31 et 05 96 66 51 32 – fax 05 96 51 81 54
+prevention972@cgss-martinique.fr
+www.cgss-martinique.fr 
+Services Prévention des Carsat et Cram
+L’Institut national de recherche et de sécurité (INRS)
+Dans le domaine de la prévention des risques 
+professionnels, l’INRS est un organisme scientifique 
+et technique qui travaille, au plan institutionnel, 
+avec la CNAMTS, les Carsat, Cramif, CGSS
+et plus ponctuellement pour les services de l’État
+ainsi que pour tout autre organisme s’occupant 
+de prévention des risques professionnels. 
+Il développe un ensemble de savoir-faire pluridisciplinaires 
+qu’il met à la disposition de tous ceux qui, en entreprise, 
+sont chargés de la prévention : chef d’entreprise, 
+médecin du travail, CHSCT, salariés. Face à la complexité 
+des problèmes, l’Institut dispose de compétences 
+scientifiques, techniques et médicales couvrant 
+une très grande variété de disciplines, toutes 
+au service de la maîtrise des risques professionnels.
+Ainsi, l’INRS élabore et diffuse des documents 
+intéressant l’hygiène et la sécurité du travail : 
+publications (périodiques ou non), affiches, 
+audiovisuels, multimédias, site Internet… 
+Les publications de l’INRS sont distribuées 
+par les Carsat. Pour les obtenir, adressez-vous 
+au service Prévention de la caisse régionale 
+ou de la caisse générale de votre circonscription, 
+dont l’adresse est mentionnée en fin de brochure.
+L’INRS est une association sans but lucratif (loi 1901) 
+constituée sous l’égide de la CNAMTS et soumise 
+au contrôle financier de l’État. Géré par un conseil 
+d’administration constitué à parité d’un collège 
+représentant les employeurs et d’un collège 
+représentant les salariés, il est présidé alternativement 
+par un représentant de chacun des deux collèges. 
+Son financement est assuré en quasi-totalité 
+par la CNAMTS sur le Fonds national de prévention 
+des accidents du travail et des maladies professionnelles. 
+Les caisses d’assurance retraite et de la santé au travail (Carsat),
+la caisse régionale d’assurance maladie d’Île-de-France (Cramif)
+et les caisses générales de sécurité sociale (CGSS)
+Les caisses d’assurance retraite et de la santé au travail, 
+la caisse régionale d’assurance maladie d’Île-de-France 
+et les caisses générales de sécurité sociale disposent, 
+pour participer à la diminution des risques professionnels 
+dans leur région, d’un service Prévention composé 
+d’ingénieurs-conseils et de contrôleurs de sécurité. 
+Spécifiquement formés aux disciplines de la prévention 
+des risques professionnels et s’appuyant sur l’expérience 
+quotidienne de l’entreprise, ils sont en mesure 
+de conseiller et, sous certaines conditions, de soutenir 
+les acteurs de l’entreprise (direction, médecin du travail, 
+CHSCT, etc.) dans la mise en œuvre des démarches 
+et outils de prévention les mieux adaptés à chaque 
+situation. Ils assurent la mise à disposition 
+de tous les documents édités par l’INRS.
+Toute représentation ou reproduction intégrale ou partielle faite sans le consentement de l’INRS, 
+de l’auteur ou de ses ayants droit ou ayants cause, est illicite. 
+Il en est de même pour la traduction, l’adaptation ou la transformation, l’arrangement ou la reproduction, 
+par un art ou un procédé quelconque (article L. 122-4 du code de la propriété intellectuelle). 
+La violation des droits d’auteur constitue une contrefaçon punie d’un emprisonnement de trois ans 
+et d’une amende de 300 000 euros (article L. 335-2 et suivants du code de la propriété intellectuelle).
+Achevé d’imprimer par xxxxxxx - Code postal Ville
+N° d’imprimeur : xxxxxx - Dépôt légal : août 2016 - Imprimé en France
+ Institut national de recherche et de sécurité 
+pour la prévention des accidents du travail et des maladies professionnelles
+65, boulevard Richard-Lenoir 75011 Paris 
+ Tél. 01 40 44 30 00  info@inrs.fr
+Édition INRS TJ 18
+4e édition  juin 2016  1 500 ex.  ISBN 978-2-7389-2228-1
+ L’INRS est ﬁ  nancé par la Sécurité sociale - Assurance maladie / Risques professionnels 
+Cet aide-mémoire juridique présente les dispositions 
+réglementaires relatives à la manutention manuelle 
+de charges. Sont ainsi précisées les règles relatives 
+à l’organisation du travail (limitation du recours à la 
+manutention manuelle et évaluation des facteurs de 
+risques liés aux méthodes de travail) et les mesures 
+de prévention à mettre en œuvre (limites de port de 
+charges, formation des travailleurs à la sécurité et 
+formation aux gestes et postures, information des salariés 
+sur les risques, le poids des charges et les conditions 
+de manutention…). Les modalités de la surveillance 
+médicale des travailleurs sont également rappelées.
+

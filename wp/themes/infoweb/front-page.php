@@ -103,10 +103,13 @@ $exclus = $une ? [$une->ID] : [];
       }
       if (!$ids) { continue; }
 
+      // On n'exclut que l'article de tête : une famille doit pouvoir afficher
+      // ses publications même si elles figurent déjà dans « À la une ». Sinon
+      // les rubriques restent vides tant que le site est jeune.
       $q = new WP_Query([
           'category__in'        => $ids,
           'posts_per_page'      => 3,
-          'post__not_in'        => $exclus,
+          'post__not_in'        => $une ? [$une->ID] : [],
           'ignore_sticky_posts' => true,
           'no_found_rows'       => true,
       ]);
