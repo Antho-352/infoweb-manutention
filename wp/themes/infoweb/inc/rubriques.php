@@ -1,17 +1,16 @@
 <?php
 /**
- * Rubriques éditoriales.
+ * Rubriques éditoriales — les six domaines du média.
  *
- * Les familles de matériel sont des catégories de premier niveau, parce
- * qu'elles portent les URLs héritées sous lesquelles les articles sont déjà
- * nestés (voir docs/strategie-media-industrie.md §3.2). Les rubriques, elles,
- * ne sont pas une taxonomie : ce serait une seconde hiérarchie à maintenir en
- * base pour un regroupement purement éditorial, et cela ferait apparaître le
- * chemin complet des ancêtres dans les URLs d'articles.
+ * Depuis la 0.5.3, les rubriques sont AUSSI de vraies catégories WordPress
+ * (elles apparaissent dans le menu et peuvent recevoir des articles en direct).
+ * Mais les familles de matériel restent des catégories de premier niveau
+ * distinctes, parce qu'elles portent les URLs héritées sous lesquelles les
+ * articles sont déjà nichés (/manutention/chariot-diable/, /levage/…).
  *
- * Elles vivent donc ici, dans une carte. Ajouter une rubrique ou déplacer une
- * famille est une modification de ce tableau, sans effet sur les URLs ni sur
- * la base.
+ * Cette carte relie chaque domaine à ses familles : elle pilote les blocs
+ * « Les rubriques » de l'accueil et le fil d'Ariane. La modifier n'a aucun
+ * effet sur les URLs ni sur la base.
  *
  * @package infoweb
  */
@@ -20,34 +19,40 @@ defined('ABSPATH') || exit;
 
 function infoweb_rubriques(): array {
     return [
-        'equipements' => [
-            'nom'      => 'Équipements',
-            'promesse' => 'Le matériel, famille par famille : ce qu\'il fait, ses limites, son prix.',
+        'manutention-levage' => [
+            'nom'      => 'Manutention & levage',
+            'promesse' => 'Le matériel, famille par famille : ce qu\'il fait, ses limites, son coût.',
             'familles' => [
+                'manutention-levage',
                 'chariot-elevateur', 'gerbeur', 'transpalette', 'diable-chariot',
                 'nacelle', 'treuil-palonnier', 'aimant-de-levage', 'pont-roulant',
-                'table-elevatrice', 'monte-charge', 'rayonnage',
+                'table-elevatrice', 'monte-charge', 'levage', 'manutention',
             ],
         ],
-        'reglementation' => [
-            'nom'      => 'Réglementation',
-            'promesse' => 'CACES, autorisation de conduite, VGP. Sourcé, daté, vérifié.',
-            'familles' => ['reglementation', 'securite'],
+        'logistique-entrepots' => [
+            'nom'      => 'Logistique & entrepôts',
+            'promesse' => 'Stockage, rayonnage, flux de préparation, organisation de l\'entrepôt.',
+            'familles' => ['logistique-entrepots', 'stockage', 'rayonnage'],
         ],
-        'couts' => [
-            'nom'      => 'Coûts',
-            'promesse' => 'Budgets, coût de possession, achat contre location, financement.',
-            'familles' => ['couts'],
+        'automatisation-robotique' => [
+            'nom'      => 'Automatisation & robotique',
+            'promesse' => 'AGV, AMR, convoyeurs, transstockeurs : quand et comment automatiser.',
+            'familles' => ['automatisation-robotique'],
         ],
-        'exploitation' => [
-            'nom'      => 'Exploitation',
-            'promesse' => 'Méthodes d\'entrepôt, flux, maintenance, gestion de parc.',
-            'familles' => ['exploitation', 'stockage'],
+        'energie' => [
+            'nom'      => 'Énergie',
+            'promesse' => 'Batteries, hydrogène, recharge, coût énergétique d\'un parc.',
+            'familles' => ['energie'],
         ],
-        'marche' => [
-            'nom'      => 'Marché',
-            'promesse' => 'Constructeurs, distributeurs, réseaux de service.',
-            'familles' => ['entreprise'],
+        'btp-construction' => [
+            'nom'      => 'BTP & Construction',
+            'promesse' => 'Levage et manutention de chantier, engins, contraintes du gros œuvre.',
+            'familles' => ['btp-construction'],
+        ],
+        'chimie-pharma' => [
+            'nom'      => 'Chimie & Pharma',
+            'promesse' => 'ATEX, salle propre, traçabilité : manutention en milieu contraint.',
+            'familles' => ['chimie-pharma'],
         ],
     ];
 }
@@ -78,13 +83,21 @@ function infoweb_rubrique_du_post(?int $post_id = null): ?array {
 
 /**
  * Catégorie principale d'un article : la première rattachée à une rubrique,
- * à défaut la première tout court. Une catégorie unique par article est la
- * règle éditoriale (un article, un silo), cette fonction n'est qu'un garde-fou.
+ * à défaut la première tout court. La catégorie qui porte l'URL (famille de
+ * matériel) prime, car c'est elle qui situe l'article dans son silo.
  */
 function infoweb_categorie_principale(?int $post_id = null): ?WP_Term {
     $cats = get_the_category($post_id ?: get_the_ID());
     if (empty($cats)) {
         return null;
+    }
+    // Priorité à une famille de matériel (pas au domaine lui-même), pour que
+    // le fil d'Ariane pointe la catégorie la plus précise.
+    $rubriques_slugs = array_keys(infoweb_rubriques());
+    foreach ($cats as $cat) {
+        if (infoweb_rubrique_de($cat->slug) && !in_array($cat->slug, $rubriques_slugs, true)) {
+            return $cat;
+        }
     }
     foreach ($cats as $cat) {
         if (infoweb_rubrique_de($cat->slug)) {

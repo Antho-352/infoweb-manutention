@@ -145,7 +145,7 @@ $exclus = $une ? [$une->ID] : [];
   endforeach; ?>
 
   <?php // Par application : le second axe du cocon, secteur par secteur. ?>
-  <section class="sect">
+  <section class="sect" id="par-application">
     <div class="sect-h">
       <h2>Par application</h2>
       <span>Les contraintes de manutention, secteur par secteur</span>

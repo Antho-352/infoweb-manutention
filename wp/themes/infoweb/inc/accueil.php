@@ -16,85 +16,36 @@
 defined('ABSPATH') || exit;
 
 /**
- * Taxonomie « application » : le second axe du cocon, distinct des catégories
- * d'équipement. La garder séparée est indispensable — un article rangé à la
- * fois dans une catégorie d'équipement et un secteur ne doit pas voir son URL
- * /equipement/article/ cassée par un %category% ambigu.
+ * Secteurs d'application — le second axe éditorial du média.
  *
- * De premier niveau, publique, avec archives en /application/{slug}/.
- */
-add_action('init', function () {
-    register_taxonomy('application', 'post', [
-        'labels'            => [
-            'name'          => 'Applications',
-            'singular_name' => 'Application',
-            'menu_name'     => 'Applications',
-        ],
-        'public'            => true,
-        'hierarchical'      => false,
-        'show_admin_column' => true,
-        'show_in_rest'      => true,
-        'rewrite'           => ['slug' => 'application', 'with_front' => false],
-    ]);
-}, 5);
-
-/**
- * Amorçage des 14 secteurs comme termes de la taxonomie, une seule fois.
- * Idempotent : ne recrée pas ce qui existe, ne réécrit pas ce que l'éditeur
- * a pu modifier.
- */
-add_action('init', function () {
-    if (get_option('infoweb_secteurs_amorces') === INFOWEB_VERSION) {
-        return;
-    }
-    foreach (infoweb_secteurs() as $s) {
-        if (!term_exists($s['slug'], 'application')) {
-            wp_insert_term($s['nom'], 'application', ['slug' => $s['slug']]);
-        }
-    }
-    update_option('infoweb_secteurs_amorces', INFOWEB_VERSION);
-    // Les règles /application/{slug}/ n'existent qu'après un flush ; une fois
-    // par version suffit, en fin de requête quand tout est enregistré.
-    add_action('shutdown', static fn () => flush_rewrite_rules(false));
-}, 20);
-
-/**
- * Lien d'archive d'un secteur, que le terme existe déjà ou non.
- */
-function infoweb_secteur_lien(string $slug): string {
-    $terme = get_term_by('slug', $slug, 'application');
-    if ($terme && !is_wp_error($terme)) {
-        $lien = get_term_link($terme);
-        if (!is_wp_error($lien)) {
-            return $lien;
-        }
-    }
-    return home_url('/application/' . $slug . '/');
-}
-
-/**
- * Secteurs d'application (second axe du cocon). Filtrable pour qu'un plugin
- * ou le fichier enfant puisse en ajouter sans toucher au thème.
+ * Depuis la 0.5.3, ce sont de vraies catégories WordPress (gérées dans
+ * wp-admin), et non plus une taxonomie séparée : elles apparaissent dans le
+ * menu « Par application » et reçoivent des articles comme n'importe quelle
+ * catégorie. La liste ci-dessous ne sert qu'à l'affichage (libellé court des
+ * contraintes) et à l'ordre sur l'accueil ; les slugs correspondent aux
+ * catégories créées.
  *
  * @return array<int,array{slug:string,nom:string,note:string}>
  */
 function infoweb_secteurs(): array {
     return apply_filters('infoweb_secteurs', [
-        ['slug' => 'agroalimentaire',      'nom' => 'Agroalimentaire',            'note' => 'Inox · froid · HACCP'],
-        ['slug' => 'sante-pharma',         'nom' => 'Santé & pharma',             'note' => 'Salle propre · traçabilité'],
-        ['slug' => 'chimie',               'nom' => 'Chimie',                     'note' => 'ATEX · rétention'],
-        ['slug' => 'metallurgie',          'nom' => 'Métallurgie & sidérurgie',   'note' => 'Charges lourdes · chaleur'],
-        ['slug' => 'automobile',           'nom' => 'Automobile',                 'note' => 'Cadence · ergonomie'],
-        ['slug' => 'aeronautique',         'nom' => 'Aéronautique & spatial',     'note' => 'Charges longues · précision'],
-        ['slug' => 'btp',                  'nom' => 'BTP & construction',         'note' => 'Tout-terrain · chantier'],
-        ['slug' => 'energie',              'nom' => 'Énergie',                    'note' => 'Nucléaire · éolien'],
-        ['slug' => 'defense',              'nom' => 'Défense',                    'note' => 'Sûreté · gabarits'],
-        ['slug' => 'transport-logistique', 'nom' => 'Transports & logistique',    'note' => 'Quais · massification'],
-        ['slug' => 'electronique',         'nom' => 'Électronique & informatique','note' => 'ESD · petits contenants'],
-        ['slug' => 'matieres-premieres',   'nom' => 'Matières premières',         'note' => 'Vrac · bennes'],
-        ['slug' => 'telecoms',             'nom' => 'Télécoms',                   'note' => 'Travail en hauteur'],
-        ['slug' => 'environnement',        'nom' => 'Environnement',              'note' => 'Déchets · tri'],
+        ['slug' => 'agroalimentaire',        'nom' => 'Agroalimentaire',          'note' => 'Inox · froid · HACCP'],
+        ['slug' => 'sante',                  'nom' => 'Santé',                    'note' => 'Salle propre · traçabilité'],
+        ['slug' => 'automobile',             'nom' => 'Automobile',               'note' => 'Cadence · ergonomie'],
+        ['slug' => 'aeronautique-spatial',   'nom' => 'Aéronautique & spatial',   'note' => 'Charges longues · précision'],
+        ['slug' => 'telecoms',               'nom' => 'Télécoms',                 'note' => 'Travail en hauteur'],
+        ['slug' => 'environnement',          'nom' => 'Environnement',            'note' => 'Déchets · tri'],
+        ['slug' => 'electronique',           'nom' => 'Électronique',             'note' => 'ESD · petits contenants'],
+        ['slug' => 'metallurgie-siderurgie', 'nom' => 'Métallurgie & sidérurgie', 'note' => 'Charges lourdes · chaleur'],
     ]);
+}
+
+/**
+ * Lien vers l'archive de catégorie d'un secteur.
+ */
+function infoweb_secteur_lien(string $slug): string {
+    $cat = get_category_by_slug($slug);
+    return $cat ? get_category_link($cat->term_id) : home_url('/' . $slug . '/');
 }
 
 /**

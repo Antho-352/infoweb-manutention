@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || exit;
 
-const INFOWEB_VERSION = '0.5.2';
+const INFOWEB_VERSION = '0.5.3';
 
 /**
  * Chargement des modules. Chacun est autonome et n'expose que des hooks —
