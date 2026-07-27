@@ -7,7 +7,7 @@
 
 defined('ABSPATH') || exit;
 
-const INFOWEB_VERSION = '0.4.0';
+const INFOWEB_VERSION = '0.5.0';
 
 /**
  * Chargement des modules. Chacun est autonome et n'expose que des hooks —
@@ -26,6 +26,7 @@ foreach ([
     'performance',  // nettoyage des sorties inutiles de WordPress
     'prix',         // points de prix + code court [prix]
     'leads',        // formulaire de devis, écran d'administration, export
+    'accueil',      // secteurs, agenda des salons, capture newsletter
     'produits',     // fiches produit, code court [comparatif], redirections /go/
     'provisioning', // pages système et menus créés à l'activation
 ] as $module) {

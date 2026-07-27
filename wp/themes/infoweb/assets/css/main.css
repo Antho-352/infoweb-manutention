@@ -232,6 +232,52 @@ p,ul,ol,figure,table{margin:0}
 .redac-note{font-size:12.5px;color:var(--mut);margin-top:7px}
 .redac .btn{margin-left:auto}
 
+/* ---------- par application ---------- */
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px}
+.app{background:var(--card);border:1px solid var(--rul);border-radius:11px;padding:13px 12px;
+  min-height:74px;display:flex;flex-direction:column;justify-content:space-between;gap:6px;
+  text-decoration:none;color:var(--ink);font-size:13px;font-weight:650;line-height:1.28}
+.app:hover{border-color:var(--ink)}
+.app u{text-decoration:none;font-size:10.5px;color:var(--mut);font-weight:600}
+.aff-note{font-size:11.5px;color:var(--mut);margin-top:13px;padding:9px 12px;
+  background:#efece4;border-radius:8px}
+
+/* ---------- agenda des salons ---------- */
+.agenda{display:grid;gap:0}
+.ev{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;
+  padding:13px 0;border-bottom:1px solid var(--rul);text-decoration:none;color:var(--ink)}
+.ev:hover .ev-n{color:var(--blu)}
+.ev-d{background:var(--ink);color:#fff;border-radius:9px;text-align:center;padding:7px 4px}
+.ev-d b{display:block;font-size:18px;font-weight:800;line-height:1}
+.ev-d span{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase}
+.ev-n{display:block;font-size:14.5px;font-weight:700}
+.ev-t small{color:var(--mut);font-size:12px}
+
+/* ---------- newsletter ---------- */
+.nl{background:var(--ink);color:#fff;border-radius:18px;padding:28px 24px;display:grid;gap:22px}
+.nl h2{font-size:23px;margin-bottom:10px}
+.nl-t p{color:#a9aeb6;font-size:14px;max-width:50ch}
+.nl-f form{display:flex;flex-direction:column;gap:8px}
+.nl-f input[type=email]{width:100%;border:0;border-radius:9px;padding:13px 14px;
+  font:inherit;font-size:14px;color:var(--ink)}
+.nl-f button{width:100%;border:0;border-radius:9px;padding:13px 20px;background:var(--amb);
+  color:var(--ink);font:inherit;font-weight:800;font-size:14px;cursor:pointer}
+.nl-rgpd{display:block;margin-top:11px;font-size:11.5px;color:#8d939c}
+.nl-msg{background:rgba(255,255,255,.12);border-radius:8px;padding:9px 12px;font-size:13px;margin-bottom:10px}
+.nl-piege{position:absolute;left:-9999px}
+
+@media(min-width:540px){
+  .nl-f form{flex-direction:row;flex-wrap:wrap}
+  .nl-f input[type=email]{flex:1 1 190px;width:auto}
+  .nl-f button{width:auto}
+}
+@media(min-width:760px){
+  .agenda{grid-template-columns:1fr 1fr;column-gap:30px}
+}
+@media(min-width:900px){
+  .nl{grid-template-columns:minmax(0,1fr) minmax(0,400px);align-items:center;padding:34px 40px}
+}
+
 /* ============ BLOC PRIX ============ */
 .bloc-prix{border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;margin:24px 0}
 .bp-h{background:var(--ink);color:#fff;padding:9px 15px;font-size:11px;font-weight:800;

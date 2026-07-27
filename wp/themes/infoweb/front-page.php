@@ -133,6 +133,57 @@ $exclus = $une ? [$une->ID] : [];
       <?php wp_reset_postdata();
   endforeach; ?>
 
+  <?php // Par application : le second axe du cocon, secteur par secteur. ?>
+  <section class="sect">
+    <div class="sect-h">
+      <h2>Par application</h2>
+      <span>Les contraintes de manutention, secteur par secteur</span>
+    </div>
+    <div class="apps">
+      <?php foreach (infoweb_secteurs() as $s) : ?>
+        <a class="app" href="<?php echo esc_url(infoweb_secteur_lien($s['slug'])); ?>">
+          <span class="app-n"><?php echo esc_html($s['nom']); ?></span>
+          <u><?php echo esc_html($s['note']); ?></u>
+        </a>
+      <?php endforeach; ?>
+    </div>
+  </section>
+
+  <?php
+  // Comparatifs et guides d'achat : la brique d'affiliation. Masquée tant
+  // qu'aucun comparatif n'est publié — pas de rubrique creuse.
+  $cat_cmp = get_category_by_slug(apply_filters('infoweb_categorie_comparatifs', 'comparatif'));
+  if ($cat_cmp && $cat_cmp->count > 0) :
+      $q_cmp = new WP_Query([
+          'cat'                 => $cat_cmp->term_id,
+          'posts_per_page'      => 4,
+          'ignore_sticky_posts' => true,
+          'no_found_rows'       => true,
+      ]);
+      if ($q_cmp->have_posts()) : ?>
+        <section class="sect">
+          <div class="sect-h">
+            <h2><a href="<?php echo esc_url(get_category_link($cat_cmp->term_id)); ?>">Comparatifs et guides d'achat</a></h2>
+            <span>Testés sur critères, prix relevés et datés</span>
+          </div>
+          <div class="grille">
+            <?php while ($q_cmp->have_posts()) : $q_cmp->the_post(); ?>
+              <a class="carte" href="<?php the_permalink(); ?>">
+                <?php if (has_post_thumbnail()) : ?>
+                  <span class="vign"><?php the_post_thumbnail('infoweb-carte', ['loading' => 'lazy']); ?></span>
+                <?php endif; ?>
+                <span class="eyebrow">Comparatif</span>
+                <h3><?php the_title(); ?></h3>
+                <span class="meta"><?php echo esc_html(get_the_date()); ?></span>
+              </a>
+            <?php endwhile; ?>
+          </div>
+          <p class="aff-note">Certains liens de cette rubrique sont des liens commerciaux : si vous achetez, nous percevons une commission, sans surcoût pour vous. Le classement ne s'achète pas.</p>
+        </section>
+      <?php endif;
+      wp_reset_postdata();
+  endif; ?>
+
   <?php
   // Combien ça coûte : la démonstration éditoriale, avec dates visibles.
   $reperes = function_exists('infoweb_prix_recents') ? infoweb_prix_recents(6) : [];
@@ -152,6 +203,77 @@ $exclus = $une ? [$une->ID] : [];
       </div>
     </section>
   <?php endif; ?>
+
+  <?php
+  // Agenda des salons : masqué tant qu'il est vide — jamais de date inventée.
+  $evenements = function_exists('infoweb_evenements') ? infoweb_evenements(6) : [];
+  if ($evenements) : ?>
+    <section class="sect">
+      <div class="sect-h"><h2>Agenda professionnel</h2><span>Salons manutention, intralogistique et industrie</span></div>
+      <div class="agenda">
+        <?php foreach ($evenements as $ev) :
+          $p = infoweb_evenement_pastille($ev['date']);
+          $lien = !empty($ev['url']); ?>
+          <<?php echo $lien ? 'a' : 'div'; ?> class="ev"<?php echo $lien ? ' href="' . esc_url($ev['url']) . '"' : ''; ?>>
+            <span class="ev-d"><b><?php echo esc_html($p['jour']); ?></b><span><?php echo esc_html($p['mois']); ?></span></span>
+            <span class="ev-t">
+              <span class="ev-n"><?php echo esc_html($ev['nom']); ?></span>
+              <?php if (!empty($ev['lieu'])) : ?><small><?php echo esc_html($ev['lieu']); ?></small><?php endif; ?>
+            </span>
+          </<?php echo $lien ? 'a' : 'div'; ?>>
+        <?php endforeach; ?>
+      </div>
+    </section>
+  <?php endif; ?>
+
+  <?php // La lettre : cœur du modèle média, toujours présente. ?>
+  <section class="sect" id="newsletter">
+    <div class="nl">
+      <div class="nl-t">
+        <h2>La lettre de la manutention</h2>
+        <p>Une fois par mois : les évolutions réglementaires qui vous concernent, les relevés de prix mis à jour et les comparatifs publiés. Rien d'autre.</p>
+      </div>
+      <div class="nl-f">
+        <?php $msg = function_exists('infoweb_newsletter_message') ? infoweb_newsletter_message() : ''; ?>
+        <?php if ($msg) : ?><p class="nl-msg"><?php echo esc_html($msg); ?></p><?php endif; ?>
+        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post">
+          <input type="hidden" name="action" value="infoweb_newsletter">
+          <input type="hidden" name="page_source" value="<?php echo esc_url(home_url('/')); ?>">
+          <?php wp_nonce_field('infoweb_newsletter', 'infoweb_news_nonce'); ?>
+          <p class="nl-piege" aria-hidden="true"><label>Ne pas remplir<input type="text" name="site_internet" tabindex="-1" autocomplete="off"></label></p>
+          <input type="email" name="email" required placeholder="Votre e-mail professionnel" aria-label="Votre e-mail professionnel">
+          <button type="submit">S'abonner</button>
+        </form>
+        <label class="nl-rgpd">Vos données servent uniquement à l'envoi de cette lettre. Désinscription en un clic.</label>
+      </div>
+    </div>
+  </section>
+
+  <?php
+  // Le fil : la profondeur du média, sous les briques de conversion.
+  $fil = new WP_Query([
+      'posts_per_page'      => 6,
+      'post__not_in'        => $exclus,
+      'ignore_sticky_posts' => true,
+      'no_found_rows'       => true,
+  ]);
+  if ($fil->have_posts()) : ?>
+    <section class="sect">
+      <div class="sect-h"><h2>Le fil des publications</h2><span>Guides, analyses et retours d'exploitation</span></div>
+      <div class="grille">
+        <?php while ($fil->have_posts()) : $fil->the_post();
+          $c = infoweb_categorie_principale(); ?>
+          <a class="carte" href="<?php the_permalink(); ?>">
+            <?php if ($c) : ?><span class="eyebrow"><?php echo esc_html($c->name); ?></span><?php endif; ?>
+            <h3><?php the_title(); ?></h3>
+            <?php if (has_excerpt()) : ?><p><?php echo esc_html(wp_trim_words(get_the_excerpt(), 18, '…')); ?></p><?php endif; ?>
+            <span class="meta"><?php echo esc_html(get_the_date()); ?></span>
+          </a>
+        <?php endwhile; ?>
+      </div>
+    </section>
+  <?php endif;
+  wp_reset_postdata(); ?>
 
   <?php get_template_part('template-parts/redaction'); ?>
 </div>
