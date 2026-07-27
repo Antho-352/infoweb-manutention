@@ -78,6 +78,12 @@ function infoweb_mise_en_place(): void {
 function infoweb_pages_systeme(): array {
     $site = get_bloginfo('name');
     return [
+        'devis' => [
+            'titre'   => 'Demander un devis — matériel de manutention',
+            'gabarit' => 'template-devis.php',
+            'chapo'   => 'Décrivez votre besoin en une minute. Nous transmettons votre demande à des fournisseurs de votre département, qui vous répondent directement. Gratuit et sans engagement.',
+            'contenu' => "<!-- wp:heading --><h2>Ce qui fait varier un devis</h2><!-- /wp:heading -->\n<!-- wp:paragraph --><p>Quatre paramètres pèsent réellement sur une offre. Les connaître avant de comparer évite de mettre en regard des devis qui ne portent pas sur la même chose.</p><!-- /wp:paragraph -->\n<!-- wp:list --><ul><li><strong>La machine et sa capacité</strong> — un besoin ponctuel et un parc permanent n'appellent pas la même réponse.</li><li><strong>Achat, location courte ou longue durée</strong> — le bon montage dépend de la durée d'usage et de l'intensité.</li><li><strong>L'énergie</strong> — l'électrique s'impose en intérieur, le thermique sort en extérieur, sous réserve des restrictions de circulation en centre-ville.</li><li><strong>La zone d'intervention</strong> — la proximité d'un service après-vente pèse souvent plus lourd que l'écart de prix à l'achat.</li></ul><!-- /wp:list -->\n<!-- wp:paragraph --><p>Notre rôle s'arrête à la mise en relation : nous ne vendons pas de matériel, nous n'avons aucun loueur au capital, et vos coordonnées ne sont jamais revendues à des tiers.</p><!-- /wp:paragraph -->",
+        ],
         'annuaire' => [
             'titre'   => 'Annuaire des prestataires',
             'chapo'   => 'Loueurs, concessionnaires, réparateurs et organismes de contrôle de la manutention et du levage, département par département.',
