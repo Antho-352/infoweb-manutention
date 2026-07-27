@@ -7,6 +7,18 @@
   "description_seo": "Le CACES n'est pas obligatoire, l'autorisation de conduite l'est (R.4323-56). Catégories R.489 et R.485, et ce qui a changé au 1er octobre 2025.",
   "chapo": "Le CACES n'est pas une obligation légale. Ce que la loi impose, c'est l'autorisation de conduite délivrée par l'employeur. Et depuis le 1er octobre 2025, sa délivrance ne passe plus par la vérification de l'aptitude médicale — un changement que la plupart des pages sur le sujet n'ont pas encore intégré.",
   "verifie_le": "2026-07-27",
+  "essentiel": [
+    "Le CACES n'est pas une obligation légale : c'est l'autorisation de conduite délivrée par l'employeur qui l'est, au titre de l'article R.4323-56 du Code du travail.",
+    "Depuis le 1er octobre 2025, la délivrance de l'autorisation de conduite ne nécessite plus la vérification de l'aptitude médicale du conducteur.",
+    "Les huit recommandations CACES continuent de mentionner l'aptitude tant qu'elles ne sont pas révisées : c'est le Code du travail qui prime, pas la recommandation.",
+    "R.489 couvre les chariots à conducteur porté, R.485 les gerbeurs à conducteur accompagnant : c'est la position du conducteur qui tranche, pas le modèle.",
+    "Les anciens CACES R.3xx, dont la R.389, restent valables jusqu'à leur échéance ; aucune équivalence automatique avec les nouvelles catégories."
+  ],
+  "sources_meta": [
+    "Réglementation | Article R.4323-56 du Code du travail — autorisation de conduite | Légifrance · consulté le 27.07.2026",
+    "Institutionnel | FAQ CACES 2020, édition 7 — aptitude médicale et autorisation de conduite | INRS · applicable au 1er mars 2026",
+    "Réglementation | Arrêtés du 26 septembre 2025 | Journal officiel · en vigueur au 1er octobre 2025"
+  ],
   "sources_verifiees": [
     {
       "affirmation": "Depuis le 1er octobre 2025, la délivrance de l'autorisation de conduite ne nécessite plus la vérification de l'aptitude médicale des conducteurs",
