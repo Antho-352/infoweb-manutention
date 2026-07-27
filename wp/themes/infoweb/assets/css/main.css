@@ -282,6 +282,13 @@ p,ul,ol,figure,table{margin:0}
 .ev-d span{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase}
 .ev-n{display:block;font-size:14.5px;font-weight:700}
 .ev-t small{color:var(--mut);font-size:12px}
+.ev--passe{opacity:.6}
+
+/* ---------- page d'un événement ---------- */
+.ev-meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin:14px 0 18px;font-size:15px;color:var(--sub)}
+.ev-meta b{color:var(--ink)}
+.ev-img{margin:0 0 20px}.ev-img img{border-radius:var(--r)}
+.ev-cta{margin:22px 0}
 
 /* ---------- newsletter ---------- */
 .nl{background:var(--ink);color:#fff;border-radius:18px;padding:28px 24px;display:grid;gap:22px}

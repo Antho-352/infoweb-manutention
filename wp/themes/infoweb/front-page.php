@@ -220,7 +220,7 @@ $exclus = $une ? [$une->ID] : [];
   $evenements = function_exists('infoweb_evenements') ? infoweb_evenements(6) : [];
   if ($evenements) : ?>
     <section class="sect">
-      <div class="sect-h"><h2>Agenda professionnel</h2><span>Salons manutention, intralogistique et industrie</span></div>
+      <div class="sect-h"><h2><a href="<?php echo esc_url(get_post_type_archive_link('evenement') ?: home_url('/agenda/')); ?>">Agenda professionnel</a></h2><span>Salons manutention, intralogistique et industrie</span></div>
       <div class="agenda">
         <?php foreach ($evenements as $ev) :
           $p = infoweb_evenement_pastille($ev['date']);

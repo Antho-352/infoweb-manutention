@@ -48,63 +48,9 @@ function infoweb_secteur_lien(string $slug): string {
     return $cat ? get_category_link($cat->term_id) : home_url('/' . $slug . '/');
 }
 
-/**
- * Agenda des salons. Piloté par l'option « infoweb_evenements » : rien n'est
- * codé en dur, car une date de salon inventée décrédibiliserait le média.
- * Ne renvoie que les évènements à venir, triés par date, dédupliqués.
- *
- * Format d'un évènement : ['date' => 'YYYY-MM-DD', 'fin' => 'YYYY-MM-DD',
- *   'nom' => '…', 'lieu' => '…', 'url' => '…'].
- *
- * @return array<int,array<string,string>>
- */
-add_action('init', function () {
-    register_setting('options', 'infoweb_evenements', [
-        'type'         => 'array',
-        'default'      => [],
-        'show_in_rest' => [
-            'schema' => [
-                'type'  => 'array',
-                'items' => [
-                    'type'       => 'object',
-                    'properties' => [
-                        'date' => ['type' => 'string'],
-                        'fin'  => ['type' => 'string'],
-                        'nom'  => ['type' => 'string'],
-                        'lieu' => ['type' => 'string'],
-                        'url'  => ['type' => 'string'],
-                    ],
-                ],
-            ],
-        ],
-    ]);
-});
-
-function infoweb_evenements(int $max = 6): array {
-    $brut = get_option('infoweb_evenements', []);
-    if (!is_array($brut) || !$brut) {
-        return [];
-    }
-    $aujourdhui = current_time('Y-m-d');
-    $a_venir = array_filter($brut, static function ($e) use ($aujourdhui) {
-        $fin = $e['fin'] ?? ($e['date'] ?? '');
-        return !empty($e['date']) && !empty($e['nom']) && $fin >= $aujourdhui;
-    });
-    usort($a_venir, static fn($x, $y) => strcmp($x['date'], $y['date']));
-    return array_slice(array_values($a_venir), 0, $max);
-}
-
-/**
- * Formate la pastille de date d'un évènement : ['jour' => '30', 'mois' => 'Mars'].
- *
- * @return array{jour:string,mois:string}
- */
-function infoweb_evenement_pastille(string $date): array {
-    $t = strtotime($date);
-    return $t
-        ? ['jour' => date_i18n('d', $t), 'mois' => ucfirst(date_i18n('M', $t))]
-        : ['jour' => '', 'mois' => ''];
-}
+// L'agenda (infoweb_evenements / infoweb_evenement_pastille) vit désormais
+// dans inc/evenements.php : chaque salon est un contenu « Événement » avec sa
+// propre page, éditable dans wp-admin.
 
 /**
  * Capture newsletter. Même socle de sécurité que les demandes de devis
