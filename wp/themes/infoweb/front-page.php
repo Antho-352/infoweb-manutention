@@ -102,21 +102,25 @@ $exclus = $une ? [$une->ID] : [];
     <div class="sect-h"><h2>Les rubriques</h2><span>Six univers, une même exigence</span></div>
     <div class="rubs">
       <?php foreach (infoweb_rubriques() as $cle => $rubrique) :
-        $rub_cat  = get_category_by_slug($cle);
-        $familles = [];
+        $rub_cat = get_category_by_slug($cle);
+        $ids = [];
         foreach ($rubrique['familles'] as $slug) {
-            if ($slug === $cle) { continue; }
             $c = get_category_by_slug($slug);
-            if ($c) { $familles[] = $c; }
+            if ($c) { $ids[] = $c->term_id; }
         }
+        $q = $ids ? new WP_Query([
+            'category__in'        => $ids,
+            'posts_per_page'      => 4,
+            'ignore_sticky_posts' => true,
+            'no_found_rows'       => true,
+        ]) : null;
         ?>
         <div class="rub">
           <h3><?php if ($rub_cat) : ?><a href="<?php echo esc_url(get_category_link($rub_cat->term_id)); ?>"><?php echo esc_html($rubrique['nom']); ?></a><?php else : echo esc_html($rubrique['nom']); endif; ?></h3>
-          <?php if ($familles) : ?>
-            <?php foreach (array_slice($familles, 0, 6) as $c) : ?>
-              <a class="li" href="<?php echo esc_url(get_category_link($c->term_id)); ?>"><?php echo esc_html($c->name); ?><?php
-                if ($c->description) : ?><small><?php echo esc_html(wp_trim_words($c->description, 9)); ?></small><?php endif; ?></a>
-            <?php endforeach; ?>
+          <?php if ($q && $q->have_posts()) : ?>
+            <?php while ($q->have_posts()) : $q->the_post(); ?>
+              <a class="li" href="<?php the_permalink(); ?>"><?php the_title(); ?><small><?php echo esc_html(get_the_date()); ?> · <?php echo esc_html(infoweb_temps_lecture()); ?> min de lecture</small></a>
+            <?php endwhile; wp_reset_postdata(); ?>
           <?php else : ?>
             <span class="rub-soon"><?php echo esc_html($rubrique['promesse']); ?></span>
           <?php endif; ?>
