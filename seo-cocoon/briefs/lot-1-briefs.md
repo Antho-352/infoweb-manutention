@@ -77,3 +77,34 @@ Volume 320 · KGR 0,49 · SERP analysée 2026-07-28 · ⚠️ **DÉCISION DE CAN
 | pont roulant prix | **écrire** (page prix) | prix/lead | LEAD |
 | huile hydraulique transpalette | **écrire** (pousseur) | how-to | AFF |
 | caces obligatoire | **NE PAS créer** → fusionner dans « est-il obligatoire d'avoir un CACES » | satellite | AUTORITÉ |
+
+---
+
+# ✅ Corrections appliquées après relecture indépendante (décisions finales)
+
+> La relecture ([relecture-lot-1.md](relecture-lot-1.md)) a été vérifiée sur pièces et acceptée. Ces décisions **remplacent** les points signalés.
+
+## Brief 1 — autorisation de conduite chariot élévateur → **PRÊT (recentré)**
+- **Partage d'angle tranché** : le **guide CACES publié POSSÈDE** l'exposé du 1er oct. 2025 (aptitude médicale). Cette page n'en fait qu'**une phrase + lien** vers le guide, et se différencie sur ce que le guide ne couvre pas : **le document** (forme, nominatif, pas de modèle officiel), la **délivrance sans CACES**, la **validité/le retrait**.
+- Le tableau = angle « document/formalités », **pas** « catégories d'engins » (évite le doublon avec le guide).
+- **Title** : « Autorisation de conduite chariot élévateur : obligations 2026 » · **Meta** : « L'autorisation de conduite (R.4323-56) est obligatoire, pas le CACES. Document nominatif, conditions, validité, délivrance sans CACES : ce qu'il faut réunir en 2026. »
+- « R.4323-56 » = entité, pas mot-clé → ne pas suroptimiser en title/H2.
+
+## Brief 2 — pont roulant prix → **PRÊT**
+- Guide ponts roulants = 1 seule mention « prix », aucune section → page prix dédiée OK. Le guide **renverra** vers cette page prix (complémentarité, pas doublon).
+- **Ajout obligatoire** : les fourchettes `[prix]` portent une **date de constat** + péremption 6-12 mois (protocole fiabilité).
+- **Title** resserré : « Prix d'un pont roulant : fourchette 2026 par type ».
+
+## Brief 3 — huile → **PRÊT (URL re-ciblée)**
+- **Cible = l'URL héritée** `/chariot-elevateur/choix-de-lhuile-hydraulique-pour-chariot-elevateur/`, catégorie `chariot-elevateur` (récupère le volume cumulé 590) — **surtout pas** une nouvelle URL sous `/transpalette/`.
+- **Mot-clé principal = « huile transpalette »** (forme courte, terme gagnant historique) ; « huile hydraulique transpalette » (70) en secondaire.
+- Couvrir **transpalette ET chariot élévateur** (l'huile hydraulique du matériel de manutention). Maillage sortant → money page Transpalettes.
+- **Title** : « Huile hydraulique transpalette : laquelle et comment la remplir ».
+
+## Brief 4 — caces obligatoire → **PRÊT (Hn ajouté)**
+- Fusion confirmée sur `/chariot-elevateur/est-il-obligatoire-davoir-un-caces/` (volume cumulé 1922). **Mot-clé principal = « caces obligatoire »**.
+- Angle 1er oct. 2025 = **une phrase + lien** vers le guide CACES (pas un 3e exposé complet).
+- **Plan Hn** : H1 → chapô → L'essentiel → H2 Le CACES est-il obligatoire ? (non — R.4323-56) → H2 Ce qui EST obligatoire : l'autorisation de conduite → H2 Peut-on conduire sans CACES ? → H2 CACES obligatoire pour le chef d'entreprise ? → H2 CACES ≠ autorisation (bref + lien guide) → FAQ (PAA).
+- **Title** : « CACES obligatoire ? Ce que la loi impose vraiment » · **Meta** : « Le CACES n'est pas obligatoire : c'est l'autorisation de conduite qui l'est (R.4323-56). Peut-on conduire sans CACES, et qui est concerné. »
+
+**Règle de process ajoutée (pour tous les futurs briefs)** : avant de figer un brief, (1) `grep` le contenu déjà publié sur l'angle/les entités clés, (2) croiser `data/permaliens-a-forcer.csv` pour toute URL héritée sur le même sujet.
