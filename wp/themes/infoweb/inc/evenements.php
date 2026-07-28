@@ -34,7 +34,7 @@ add_action('init', function () {
         'public'        => true,
         'has_archive'   => 'agenda',
         'menu_icon'     => 'dashicons-calendar-alt',
-        'supports'      => ['title', 'editor', 'thumbnail', 'excerpt'],
+        'supports'      => ['title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'],
         'rewrite'       => ['slug' => 'agenda', 'with_front' => false],
         'show_in_rest'  => true,
     ]);

@@ -94,55 +94,36 @@ $exclus = $une ? [$une->ID] : [];
   wp_reset_postdata(); ?>
 
   <?php
-  // Les rubriques : sommaire du média et moteur de redistribution.
-  foreach (infoweb_rubriques() as $cle => $rubrique) :
-      $ids = [];
-      foreach ($rubrique['familles'] as $slug) {
-          $c = get_category_by_slug($slug);
-          if ($c && $c->count > 0) { $ids[] = $c->term_id; }
-      }
-      if (!$ids) { continue; }
-
-      // On n'exclut que l'article de tête : une famille doit pouvoir afficher
-      // ses publications même si elles figurent déjà dans « À la une ». Sinon
-      // les rubriques restent vides tant que le site est jeune.
-      $q = new WP_Query([
-          'category__in'        => $ids,
-          'posts_per_page'      => 3,
-          'post__not_in'        => $une ? [$une->ID] : [],
-          'ignore_sticky_posts' => true,
-          'no_found_rows'       => true,
-      ]);
-      if (!$q->have_posts()) { wp_reset_postdata(); continue; } ?>
-
-      <section class="sect">
-        <div class="sect-h">
-          <h2><a href="<?php echo esc_url(home_url('/' . $cle . '/')); ?>"><?php echo esc_html($rubrique['nom']); ?></a></h2>
-          <span><?php echo esc_html($rubrique['promesse']); ?></span>
-        </div>
-        <div class="grille">
-          <?php while ($q->have_posts()) : $q->the_post(); ?>
-            <a class="carte" href="<?php the_permalink(); ?>">
-              <h3><?php the_title(); ?></h3>
-              <?php if (has_excerpt()) : ?>
-                <p><?php echo esc_html(wp_trim_words(get_the_excerpt(), 20, '…')); ?></p>
-              <?php endif; ?>
-              <span class="meta"><?php echo esc_html(get_the_date()); ?></span>
-            </a>
-          <?php endwhile; ?>
-        </div>
-
-        <?php // Les familles de la rubrique : ancres descriptives, pas « en savoir plus ». ?>
-        <div class="familles">
-          <?php foreach ($rubrique['familles'] as $slug) :
+  // Les rubriques : les six univers du média, en colonnes — fidèle au modèle.
+  // Un seul bloc « Les rubriques », chaque univers listant ses familles (les
+  // sous-catégories), navigable même quand le site est jeune.
+  ?>
+  <section class="sect">
+    <div class="sect-h"><h2>Les rubriques</h2><span>Six univers, une même exigence</span></div>
+    <div class="rubs">
+      <?php foreach (infoweb_rubriques() as $cle => $rubrique) :
+        $rub_cat  = get_category_by_slug($cle);
+        $familles = [];
+        foreach ($rubrique['familles'] as $slug) {
+            if ($slug === $cle) { continue; }
             $c = get_category_by_slug($slug);
-            if (!$c) { continue; } ?>
-            <a href="<?php echo esc_url(get_category_link($c->term_id)); ?>"><?php echo esc_html($c->name); ?></a>
-          <?php endforeach; ?>
+            if ($c) { $familles[] = $c; }
+        }
+        ?>
+        <div class="rub">
+          <h3><?php if ($rub_cat) : ?><a href="<?php echo esc_url(get_category_link($rub_cat->term_id)); ?>"><?php echo esc_html($rubrique['nom']); ?></a><?php else : echo esc_html($rubrique['nom']); endif; ?></h3>
+          <?php if ($familles) : ?>
+            <?php foreach (array_slice($familles, 0, 6) as $c) : ?>
+              <a class="li" href="<?php echo esc_url(get_category_link($c->term_id)); ?>"><?php echo esc_html($c->name); ?><?php
+                if ($c->description) : ?><small><?php echo esc_html(wp_trim_words($c->description, 9)); ?></small><?php endif; ?></a>
+            <?php endforeach; ?>
+          <?php else : ?>
+            <span class="rub-soon"><?php echo esc_html($rubrique['promesse']); ?></span>
+          <?php endif; ?>
         </div>
-      </section>
-      <?php wp_reset_postdata();
-  endforeach; ?>
+      <?php endforeach; ?>
+    </div>
+  </section>
 
   <?php // Par application : le second axe du cocon, secteur par secteur. ?>
   <section class="sect" id="par-application">
@@ -220,7 +201,8 @@ $exclus = $une ? [$une->ID] : [];
   $evenements = function_exists('infoweb_evenements') ? infoweb_evenements(6) : [];
   if ($evenements) : ?>
     <section class="sect">
-      <div class="sect-h"><h2><a href="<?php echo esc_url(get_post_type_archive_link('evenement') ?: home_url('/agenda/')); ?>">Agenda professionnel</a></h2><span>Salons manutention, intralogistique et industrie</span></div>
+      <?php $lien_agenda = get_post_type_archive_link('evenement') ?: home_url('/agenda/'); ?>
+      <div class="sect-h"><h2><a href="<?php echo esc_url($lien_agenda); ?>">Agenda professionnel</a></h2><span>Salons manutention, intralogistique et industrie</span><a class="plus" href="<?php echo esc_url($lien_agenda); ?>">Tout l'agenda →</a></div>
       <div class="agenda">
         <?php foreach ($evenements as $ev) :
           $p = infoweb_evenement_pastille($ev['date']);
