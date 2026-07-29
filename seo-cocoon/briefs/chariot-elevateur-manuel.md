@@ -33,3 +33,30 @@ Page **hub / guide d'achat parapluie** qui :
 - **Métadonnées** : *Title* « Chariot élévateur manuel : quel type choisir et à quel prix » (≤60) · *Meta* « Gerbeur, table élévatrice, diable ou transpalette élévateur : quel “chariot élévateur manuel” pour votre besoin, avec fourchettes de prix 2026. » (≤155)
 - **Maillage** : **hub sortant** → familles gerbeur / transpalette / diable / table élévatrice (le jus va aux familles + money pages) ; **entrant** ← pilier Équipements. **Ne pas** mailler vers le réglementaire (hors intention).
 - **Cannibalisation** : ce hub **résume et renvoie**, il ne réécrit pas les familles. Un transpalette élévateur détaillé reste sur la page transpalettes.
+
+---
+
+# ✅ Corrections appliquées après relecture indépendante (décisions finales)
+
+> Relecture ([relecture-chariot-elevateur-manuel.md](relecture-chariot-elevateur-manuel.md)) vérifiée sur pièces et acceptée. Ces décisions **remplacent** les points signalés. Note initiale 6/10 → à intégrer avant rédaction.
+
+**Intention** : reformulée en **transactionnelle pure** (`si_transactional=true`, `si_commercial=false`) — ton « aide à acheter maintenant », pas pédagogique.
+
+**1. Fin de la 4ᵉ famille « transpalette élévateur ».** On aligne sur `transpalettes.json` : **> 1,20 m de levée = gerbeur**, pas une famille à part. Les 3 vraies familles derrière « chariot élévateur manuel » :
+- **Gerbeur manuel** (à manivelle/pédale) — lève en hauteur ; c'est le « chariot élévateur manuel » au sens propre. (Ce que des fiches produit nomment « transpalette élévateur » à haute levée EST un gerbeur.)
+- **Table élévatrice manuelle** (à ciseaux) — monte une charge à hauteur de travail.
+- **Déplacer sans gerber** : transpalette (levée de quelques cm) et diable (bascule sur essieu — **pas** un appareil de levage vertical, à traiter séparément).
+
+**2. AUCUNE mention CACES / réglementaire** dans ce hub (terrain du Silo B + futur guide gerbeur). Zéro « R.485/R.489/obligation ». On reste « appareil / capacité / hauteur / prix ».
+
+**3. Maillage gerbeur** → pointe vers le **guide famille générique** `/manutention/gerbeur/` (à venir), **jamais** l'article Fenwick premium (électrique 1-1,6 t, 5 000-6 000 € — trompeur pour qui cherche un manuel à 300-800 €). Si le guide générique n'existe pas encore au moment de la rédaction, pointer vers l'archive catégorie `/gerbeur/`, pas l'article marque.
+
+**4. Prix = fourchettes PAR FAMILLE reconstituées** (constatées 07/2026, indicatives), **jamais** un prix de listing marchand identifiable recopié (pas de « VEVOR 248 € », « CORMAK 440 € »). Maille « famille », jamais « modèle » (le comparatif de modèles = rôle des futures money pages famille). **Pas de bouton “Acheter”/widget** — liens `[comparatif]` en texte contextuel, on est un média.
+
+**Structure resserrée (requête transactionnelle)** : L'essentiel → **1 seul H2** « Les 3 familles derrière ce nom » (sous-blocs courts + liens) → **H2 Comment choisir** (charge × hauteur × usage × budget) + **tableau de choix** → **H2 Prix indicatifs par famille** → H2 Neuf ou occasion → FAQ. (« Comment choisir » et prix remontés tôt.)
+
+**Secondaires ajoutés** : « chariot élévateur manuel prix », « quel chariot élévateur manuel choisir », « petit chariot élévateur manuel ».
+
+**Métadonnées finales** :
+- *Title* : « Chariot élévateur manuel : gerbeur, table ou diable ? » (55 car.)
+- *Meta* : « Chariot élévateur manuel : gerbeur, table élévatrice ou diable — comment choisir selon charge, hauteur et budget, avec fourchettes de prix 2026. » (147 car.)
